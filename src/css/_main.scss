@@ -1,0 +1,440 @@
+// Footer Style Start
+
+
+
+// Footer Style End
+
+// Blog Card Style Start
+
+
+
+// Blog Card Style End
+
+// Button with arrow Style Start
+
+.button {
+
+  &.categories {
+    @apply h-[38px] min-h-[38px] min-w-fit bg-LightBlue border-LightBlue text-body px-4 text-blue100 hover:border-blue100 hover:text-blue100 disabled:border-DarkBlue10 disabled:text-DarkBlue50
+  }
+
+  &.btn-small {
+    @apply h-[33px] min-h-[33px] text-body2 min-w-[0] px-5 md:px-3
+  }
+
+  &.btn-medium {
+    @apply h-10 min-h-10 text-body min-w-[98px] px-5
+  }
+
+  &.hoverColor {
+    @apply hover:bg-LagunaBlue hover:text-white hover:border-LagunaBlue
+  }
+
+  &.width-full {
+    @apply w-full;
+  }
+
+  &.db-btn {
+    @apply h-12 min-h-12 md:h-11 md:min-h-11 md:text-body min-w-fit rounded-xl px-5 text-body2 font-semibold
+  }
+
+  &.btn-icons {
+    @apply bg-LightBlue text-blue100 hover:bg-blue100 hover:text-white
+  }
+
+  &.btn-icons-blue {
+    @apply bg-blue100 text-white hover:bg-white hover:text-blue100
+  }
+
+  &.width-auto {
+    @apply min-w-[0px]
+  }
+
+  &.big-btn-1 {
+    @apply max-w-[475px] w-full
+  }
+
+  @apply h-14 min-h-14 px-8 min-w-[129px] w-fit flex items-center justify-center rounded-4xl text-white text-base text-center font-semibold bg-blue100 border border-blue100 transition-all hover:bg-transparent hover:text-blue100;
+}
+
+// Button with arrow Style End
+
+// Checkbox Style Start
+
+
+
+// Checkbox Style End
+
+// Pagination Style Start
+
+
+
+// Pagination Style End
+
+// FAQ Style Start
+
+
+
+// FAQ Style End
+
+// Mega Menu Header Style Start
+
+
+
+// Mega Menu Header Style End
+
+// Splide slider Start
+
+
+
+// Splide slider End
+
+// Text Block Style Start
+
+
+
+// Text Block Style End
+
+.bg-gradient-main {
+  background: linear-gradient(0deg, rgba(5, 9, 62, 0.40) 0%, rgba(5, 9, 62, 0.40) 100%);
+}
+
+.main-title {
+  @apply text-h2 font-bold md:text-h2Mob
+}
+
+.section {
+  @apply my-16 lg:my-10
+}
+
+.Border-wave {
+  background: url("../img/icons/Border-wave.svg") repeat-x center;
+  background-size: 41px 10px;
+  display: block;
+  width: 100%;
+  height: 10px;
+}
+
+// Text Content Start
+.text-content {
+
+  p {
+    @apply text-base md:text-body -tracking-018 text-DarkBlue50 font-medium
+  }
+
+  ol {
+    @apply list-decimal text-base -tracking-018 text-DarkBlue50 font-medium pl-6
+  }
+
+  ul {
+    @apply list-disc text-base -tracking-018 text-DarkBlue50 font-medium pl-6
+  }
+
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    @apply font-bold mb-4 block
+  }
+}
+
+.text-content--tou {
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    @apply text-DarkBlue100 font-semibold
+  }
+}
+// Text Content End
+
+//
+.active-tag {
+
+  span {
+    @apply text-blue100 font-semibold
+  }
+
+  @apply border-blue100
+}
+//
+
+.alphabet-list > div {
+  max-width: calc(25% - 24px);
+  width: 100%;
+
+  @media (max-width: 1023.98px) {
+    max-width: calc(33% - 20px);
+  }
+
+  @media (max-width: 767.98px) {
+    max-width: calc(50% - 16px);
+  }
+
+  @media (max-width: 639.98px) {
+    max-width: 100%;
+  }
+}
+
+.checkboxes-alphabet-list {
+  overflow: inherit;
+
+  input {
+    @apply hidden
+  }
+
+  label {
+    @apply w-10 min-w-10 h-10 flex items-center justify-center border border-DarkBlue30 rounded-full overflow-hidden bg-Backgroung cursor-pointer
+  }
+
+  .swiper-slide {
+    width: auto;
+  }
+
+  @apply flex flex-wrap gap-2 mx-auto w-full justify-center mt-10
+}
+
+.checkboxes-alphabet-list label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkboxes-alphabet-list label.bg-blue-500 {
+  background-color: #32CDD7; /* Синий фон при активации */
+  border-color: #32CDD7;
+  color: #fff;
+}
+
+/* Стиль для отключенных кнопок */
+.checkboxes-alphabet-list input:disabled + span {
+  background-color: #F9FBFF; /* Серый фон для отключенной кнопки */
+  color: #05093E1A; /* Текст серого цвета */
+  cursor: not-allowed;
+}
+
+// Pagination Start
+
+.pagination-button {
+  &--disabled {
+    @apply bg-transparent
+  }
+
+  @apply w-12 h-12 min-w-12 flex items-center justify-center rounded-full overflow-hidden border border-Grey text-none bg-blue100 disabled:bg-transparent hover:cursor-pointer
+}
+
+// Pagination End
+
+.inactive-tag {
+  span {
+    @apply text-DarkBlue50 font-medium
+  }
+
+  @apply border-DarkBlue10
+}
+
+// swiper Start
+
+.swiper-custom {
+  .swiper-pagination-bullet {
+    @apply w-6 h-6 lg:w-[18px] lg:h-[18px] opacity-100 bg-DarkBlue10
+  }
+
+  .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next,
+  .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev,
+  .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next,
+  .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
+    transform: scale(0.6);
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply bg-blue100
+  }
+
+  .swiper-button-prev:after, .swiper-button-next:after {
+    display: none;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+
+  .swiper-button-arrow {
+    .swiper-button-icon {
+      width: auto;
+      height: auto;
+    }
+
+    .swiper-button-icon--grey {
+      @apply hidden
+    }
+
+    .swiper-button-icon--white {
+      @apply block
+    }
+
+    &.swiper-button-disabled {
+      @apply opacity-100 border border-Grey bg-transparent
+    }
+    @apply w-12 h-12 rounded-full flex justify-center items-center overflow-hidden bg-blue100
+  }
+
+  .swiper-button-arrow.swiper-button-disabled {
+    .swiper-button-icon--grey {
+      @apply block
+    }
+
+    .swiper-button-icon--white {
+      @apply hidden
+    }
+  }
+}
+
+.condition-swiper {
+  overflow: inherit;
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  @media (max-width: 639.98px) {
+    .swiper-slide {
+      width: auto;
+    }
+  }
+}
+
+.swiper-zoom-container {
+  img {
+    @apply hover:cursor-zoom-in
+  }
+}
+
+.gallery-swiper-big {
+
+  .swiper-slide {
+    @apply rounded-6xl overflow-hidden border border-DarkBlue10 flex justify-center items-center
+  }
+
+  img {
+    @apply object-center object-cover max-h-[448px] bg-white
+  }
+}
+
+.gallery-swiper {
+  .swiper-slide {
+    @apply rounded-2xl overflow-hidden border border-DarkBlue10 flex justify-center items-center cursor-pointer
+  }
+
+  img {
+    @apply object-center object-cover max-h-[448px] bg-white
+  }
+}
+
+.swiper-blog {
+  overflow: inherit;
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  @media (max-width: 1023.98px) {
+    .swiper-slide {
+      width: auto;
+    }
+  }
+}
+
+.swiper-brands {
+
+  @media (max-width: 1023.98px) {
+    overflow: inherit;
+
+    .swiper-slide {
+      width: auto;
+    }
+  }
+
+
+  @apply px-2 -mx-2
+}
+// swiper End
+
+//Other
+.hero-bg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(5, 9, 62, 0.50) 0%, rgba(5, 9, 62, 0.50) 100%);
+}
+
+.top-line {
+  @apply relative
+}
+
+.top-line:before {
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-right: 1px solid #05093E1A;
+  height: 20px;
+  display: block;
+
+  @apply lg:-right-2
+}
+
+.w-text {
+  max-width: calc(100% - 40px);
+}
+
+.icon-40 {
+  @apply md:w-10 md:h-10
+}
+
+.icon-40-lg {
+  @media (max-width: 1023.98px) {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+.icon-72 {
+  @media (max-width: 1023.98px) {
+    width: 72px !important;
+    height: 72px !important;
+  }
+}
+
+.icon-16 {
+  @apply md:w-4 md:h-4 md:min-w-4
+}
+
+.icon-25 {
+  @apply md:w-[25px] md:h-[25px] md:min-w-[25px]
+}
+
+.menu-item-active {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 10px);
+    display: block;
+    border-bottom: 2px solid #3D65FF;
+  }
+}
+
+.consultation-list {
+  .consultation-list__item:not(:last-child) {
+    padding-bottom: 32px;
+    border-bottom: 1px solid #05093E1A;
+    margin-bottom: 24px;
+  }
+}
