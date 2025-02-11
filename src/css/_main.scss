@@ -15,7 +15,7 @@
 .button {
 
   &.categories {
-    @apply h-[38px] min-h-[38px] min-w-fit bg-LightBlue border-LightBlue text-body px-4 text-blue100 hover:border-blue100 hover:text-blue100 disabled:border-DarkBlue10 disabled:text-DarkBlue50
+    @apply h-[38px] min-h-[38px] min-w-fit bg-LightGrey border-LightGrey text-body px-4 text-blue100 hover:border-blue100 hover:text-blue100 disabled:border-DarkBlue100 disabled:text-DarkBlue100
   }
 
   &.btn-small {
@@ -27,7 +27,7 @@
   }
 
   &.hoverColor {
-    @apply hover:bg-LagunaBlue hover:text-white hover:border-LagunaBlue
+    @apply hover:bg-LightGrey hover:text-white hover:border-LightGrey
   }
 
   &.width-full {
@@ -39,7 +39,7 @@
   }
 
   &.btn-icons {
-    @apply bg-LightBlue text-blue100 hover:bg-blue100 hover:text-white
+    @apply bg-LightGrey text-blue100 hover:bg-blue100 hover:text-white
   }
 
   &.btn-icons-blue {
@@ -178,7 +178,7 @@
   }
 
   label {
-    @apply w-10 min-w-10 h-10 flex items-center justify-center border border-DarkBlue30 rounded-full overflow-hidden bg-Backgroung cursor-pointer
+    @apply w-10 min-w-10 h-10 flex items-center justify-center border border-DarkBlue100 rounded-full overflow-hidden bg-white cursor-pointer
   }
 
   .swiper-slide {
@@ -224,14 +224,14 @@
     @apply text-DarkBlue50 font-medium
   }
 
-  @apply border-DarkBlue10
+  @apply border-DarkBlue100
 }
 
 // swiper Start
 
 .swiper-custom {
   .swiper-pagination-bullet {
-    @apply w-6 h-6 lg:w-[18px] lg:h-[18px] opacity-100 bg-DarkBlue10
+    @apply w-6 h-6 lg:w-[18px] lg:h-[18px] opacity-100 bg-DarkBlue100
   }
 
   .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next,
@@ -311,7 +311,7 @@
 .gallery-swiper-big {
 
   .swiper-slide {
-    @apply rounded-6xl overflow-hidden border border-DarkBlue10 flex justify-center items-center
+    @apply rounded-6xl overflow-hidden border border-DarkBlue100 flex justify-center items-center
   }
 
   img {
@@ -321,7 +321,7 @@
 
 .gallery-swiper {
   .swiper-slide {
-    @apply rounded-2xl overflow-hidden border border-DarkBlue10 flex justify-center items-center cursor-pointer
+    @apply rounded-2xl overflow-hidden border border-DarkBlue100 flex justify-center items-center cursor-pointer
   }
 
   img {

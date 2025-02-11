@@ -1,7 +1,7 @@
-@import "../../node_modules/swiper/swiper";
-@import "../../node_modules/swiper/swiper-bundle";
-@import "../../node_modules/@splidejs/splide/src/css/template/default/index";
-@import "./tailwind";
-@import "./typography";
-@import "./icons";
-@import "./main";
+@forward "../../node_modules/swiper/swiper";
+@forward "../../node_modules/swiper/swiper-bundle";
+@forward "../../node_modules/@splidejs/splide/src/css/template/default/index";
+@forward "./tailwind";
+@forward "./typography";
+@forward "./icons";
+@forward "./main";

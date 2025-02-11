@@ -27,11 +27,11 @@
 
 @layer base {
   html {
-    font-family: 'Montserrat', system-ui, sans-serif;
+    font-family: 'Poppins', system-ui, sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     scroll-behavior: smooth;
-    @apply text-DarkBlue100 bg-pageBg;
+    @apply text-Text bg-white;
   }
 }
 
@@ -73,8 +73,8 @@ section {
   }
 
   @apply px-4 py-[10px] bg-white flex items-center rounded-2xl text-body font-medium h-14 md:h-[50px] md:text-body2
-  w-full text-DarkBlue100 border border-DarkBlue10 transition-all focus:shadow-3xl
-  focus:ring-0 outline-0 focus:outline-0 focus:outline-inherit focus:border-DarkBlue10
+  w-full text-DarkBlue100 border border-DarkBlue100 transition-all focus:shadow-v1
+  focus:ring-0 outline-0 focus:outline-0 focus:outline-inherit focus:border-DarkBlue100
 }
 
 .input-radio-block {
