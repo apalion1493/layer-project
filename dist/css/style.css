@@ -2164,6 +2164,9 @@ html {
 .mb-5{
   margin-bottom: 1.25rem;
 }
+.mb-6{
+  margin-bottom: 1.5rem;
+}
 .ml-2{
   margin-left: 0.5rem;
 }
@@ -2248,6 +2251,9 @@ html {
 .w-full{
   width: 100%;
 }
+.w-\[72px\]{
+  width: 72px;
+}
 .min-w-5{
   min-width: 1.25rem;
 }
@@ -2307,12 +2313,19 @@ html {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
 }
+.gap-x-4{
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
 .gap-x-8{
   -moz-column-gap: 2rem;
        column-gap: 2rem;
 }
 .gap-y-1{
   row-gap: 0.25rem;
+}
+.gap-y-2{
+  row-gap: 0.5rem;
 }
 .self-end{
   align-self: flex-end;
@@ -2437,6 +2450,10 @@ html {
 .text-center{
   text-align: center;
 }
+.text-Top3{
+  font-size: 20px;
+  line-height: 130%;
+}
 .text-base{
   font-size: 18px;
   line-height: 130%;
@@ -2487,6 +2504,13 @@ html {
 .text-Error{
   --tw-text-opacity: 1;
   color: rgb(242 95 95 / var(--tw-text-opacity, 1));
+}
+.text-Text2{
+  color: #7B8BB3CC;
+}
+.text-Title{
+  --tw-text-opacity: 1;
+  color: rgb(20 20 43 / var(--tw-text-opacity, 1));
 }
 .text-blue100{
   --tw-text-opacity: 1;
@@ -3416,10 +3440,6 @@ p{
   margin-bottom: 24px;
 }
 
-.hover\:cursor-auto:hover{
-  cursor: auto;
-}
-
 .hover\:cursor-default:hover{
   cursor: default;
 }
@@ -3427,6 +3447,11 @@ p{
 .hover\:border-blue100:hover{
   --tw-border-opacity: 1;
   border-color: rgb(0 78 213 / var(--tw-border-opacity, 1));
+}
+
+.hover\:bg-bgLight:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 249 255 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:bg-transparent:hover{

@@ -86,6 +86,7 @@ module.exports = {
             colors: {
                 transparent: 'transparent',
                 pageBg: '#FAFBFF',
+                bgLight: '#F6F9FF',
                 blue100: '#004ED5',
                 DarkBlue100: '#060B52',
                 DarkBlue50: '#1B3C7480',
@@ -93,6 +94,7 @@ module.exports = {
                 Grey: '#7B8BB3',
                 Error: '#F25F5F',
                 Text: '#001E60',
+                Text2: '#7B8BB3CC',
                 Title: '#14142B',
                 Yellow: '#FFBF16',
             },
