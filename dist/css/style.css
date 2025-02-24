@@ -2226,6 +2226,9 @@ html {
 .h-\[48px\]{
   height: 48px;
 }
+.h-\[72px\]{
+  height: 72px;
+}
 .max-h-44{
   max-height: 11rem;
 }
@@ -2244,6 +2247,9 @@ html {
 .w-6{
   width: 1.5rem;
 }
+.w-\[72px\]{
+  width: 72px;
+}
 .w-fit{
   width: -moz-fit-content;
   width: fit-content;
@@ -2251,11 +2257,11 @@ html {
 .w-full{
   width: 100%;
 }
-.w-\[72px\]{
-  width: 72px;
-}
 .min-w-5{
   min-width: 1.25rem;
+}
+.min-w-\[72px\]{
+  min-width: 72px;
 }
 .max-w-\[305px\]{
   max-width: 305px;
@@ -2320,6 +2326,10 @@ html {
 .gap-x-8{
   -moz-column-gap: 2rem;
        column-gap: 2rem;
+}
+.gap-x-\[6px\]{
+  -moz-column-gap: 6px;
+       column-gap: 6px;
 }
 .gap-y-1{
   row-gap: 0.25rem;
@@ -2847,6 +2857,16 @@ p{
   display: block;
   height: 40px;
   width: 40px;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Star-icon {
+  background: url("../img/icons/Star.svg");
+  display: block;
+  height: 18px;
+  width: 18px;
   background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
