@@ -2155,6 +2155,10 @@ html {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+.my-5{
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
 .mb-2{
   margin-bottom: 0.5rem;
 }
@@ -2262,6 +2266,9 @@ html {
 }
 .min-w-\[72px\]{
   min-width: 72px;
+}
+.max-w-\[269px\]{
+  max-width: 269px;
 }
 .max-w-\[305px\]{
   max-width: 305px;
@@ -2463,6 +2470,10 @@ html {
 .text-Top3{
   font-size: 20px;
   line-height: 130%;
+}
+.text-Top5{
+  font-size: 28px;
+  line-height: 100%;
 }
 .text-base{
   font-size: 18px;
@@ -3474,6 +3485,11 @@ p{
   background-color: rgb(246 249 255 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-blue100:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 78 213 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-transparent:hover{
   background-color: transparent;
 }
@@ -3481,6 +3497,11 @@ p{
 .hover\:text-gray-700:hover{
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .focus\:border-0:focus{
