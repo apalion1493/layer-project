@@ -2224,6 +2224,9 @@ html {
 .h-6{
   height: 1.5rem;
 }
+.h-\[160px\]{
+  height: 160px;
+}
 .h-\[161px\]{
   height: 161px;
 }
@@ -2232,6 +2235,9 @@ html {
 }
 .h-\[72px\]{
   height: 72px;
+}
+.h-full{
+  height: 100%;
 }
 .max-h-44{
   max-height: 11rem;
@@ -2420,6 +2426,10 @@ html {
 }
 .fill-white{
   fill: #fff;
+}
+.object-cover{
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .p-1{
   padding: 0.25rem;
@@ -3553,6 +3563,10 @@ p{
 
 .group:hover .group-hover\:fill-white{
   fill: #fff;
+}
+
+.group:hover .group-hover\:stroke-Yellow{
+  stroke: #FFBF16;
 }
 
 @media (max-width: 1023px){
