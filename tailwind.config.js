@@ -100,7 +100,7 @@ module.exports = {
                 Yellow: '#FFBF16',
             },
             letterSpacing: {
-                '018': '-0.18px'
+                '04': '-0.4px'
             },
             padding: {
                 '1/4': '25%',
