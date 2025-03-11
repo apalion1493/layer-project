@@ -2394,6 +2394,9 @@ html {
 .max-w-\[calc\(25\%-15px\)\]{
   max-width: calc(25% - 15px);
 }
+.max-w-\[calc\(33\%-15px\)\]{
+  max-width: calc(33% - 15px);
+}
 .flex-1{
   flex: 1 1 0%;
 }
@@ -2417,6 +2420,9 @@ html {
 }
 .basis-\[calc\(25\%-15px\)\]{
   flex-basis: calc(25% - 15px);
+}
+.basis-\[calc\(33\%-15px\)\]{
+  flex-basis: calc(33% - 15px);
 }
 .-translate-x-\[50\%\]{
   --tw-translate-x: -50%;
