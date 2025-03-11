@@ -14,8 +14,88 @@
 
 <body class="">
 <main id="content" class="flex flex-col items-center min-h-screen overflow-hidden">
-    <header class="w-full relative">
+    <header class="w-full bg-white border-b border-LightGrey shadow-v2 py-6 relative">
+    <div class="container">
+        <div class="flex justify-between items-center width-full gap-x-5">
+            <a class="flex items-center gap-x-2" href="#">
+                <img width="44" height="44" src="img/icons/Logo-icon.png" alt="Logo Lawyers">
+                <span class="text-Top3 font-semibold text-Text">LawyersAI</span>
+            </a>
+            <div>
+                <div class="flex gap-x-6 items-center relative">
+                    <div x-data="{ showDropdown: false }" class="">
+                        <button @click="showDropdown = !showDropdown" class="flex items-center">
+                            <span>Lawyers by Location</span>
+                            <svg :class="showDropdown ? 'rotate-180' : ''" class="ml-2 transition-all" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                <path d="M9.125 0.778823L5 5.22113L0.875 0.778823" stroke="#001E60" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
 
+                        <div x-cloak @click.outside="showDropdown = false" x-show="showDropdown" class="bg-white absolute top-20 left-[50%] -translate-x-[50%] p-4 border border-LightGrey shadow-v1 rounded-lg">
+                            <div class="flex flex-col gap-y-2 w-[800px]">
+                                <a href="#">Australia</a>
+                                <a href="#">Canada</a>
+                                <a href="#">United States</a>
+                                <a href="#">United Kingdom</a>
+                                <a href="#">France</a>
+                                <a href="#">Germany</a>
+                                <a href="#">Netherlands</a>
+                                <a href="#">Spain</a>
+                                <a href="#">Italy</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-data="{ showDropdown: false }" class="">
+                        <button @click="showDropdown = !showDropdown" class="flex items-center">
+                            <span>Lawyers by Practice Area</span>
+                            <svg :class="showDropdown ? 'rotate-180' : ''" class="ml-2 transition-all" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                <path d="M9.125 0.778823L5 5.22113L0.875 0.778823" stroke="#001E60" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+
+                        <div x-cloak @click.outside="showDropdown = false" x-show="showDropdown" class="bg-white absolute top-20 left-[50%] -translate-x-[50%] p-4 border border-LightGrey shadow-v1 rounded-lg">
+                            <div class="flex flex-col gap-y-2 w-[800px]">
+                                <a href="#">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3 States</a>
+                                <a href="#">4 Kingdom</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                                <a href="#">7</a>
+                                <a href="#">Spain</a>
+                                <a href="#">Italy</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-data="{ showDropdown: false }" class="">
+                        <button @click="showDropdown = !showDropdown" class="flex items-center">
+                            <span>Legal Topics Q&A</span>
+                            <svg :class="showDropdown ? 'rotate-180' : ''" class="ml-2 transition-all" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                <path d="M9.125 0.778823L5 5.22113L0.875 0.778823" stroke="#001E60" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+
+                        <div x-cloak @click.outside="showDropdown = false" x-show="showDropdown" class="bg-white absolute top-20 left-[50%] -translate-x-[50%] p-4 border border-LightGrey shadow-v1 rounded-lg">
+                            <div class="flex flex-col gap-y-2 w-[800px]">
+                                <a href="#">sd</a>
+                                <a href="#">Csdfaanada</a>
+                                <a href="#">asdfasdf States</a>
+                                <a href="#">Unitedasdfasd Kingdom</a>
+                                <a href="#">Francsadfe</a>
+                                <a href="#">asdfasd</a>
+                                <a href="#">sadf</a>
+                                <a href="#">Spagfdgin</a>
+                                <a href="#">jhgj</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="button " href="#">
+    <span class="">Contact Us</span>
+</a>
+        </div>
+    </div>
 </header>
 
 
