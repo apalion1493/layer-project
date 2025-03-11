@@ -22,8 +22,8 @@
     @apply min-w-[0px]
   }
 
-  @apply h-[52px] min-h-[52px] px-8 min-w-[93px] w-fit flex items-center justify-center rounded-lg
-  text-white text-body text-center font-medium bg-blue100 transition-all hover:bg-Text disabled:bg-Grey disabled:cursor-not-allowed;
+  @apply h-[52px] min-h-[52px] px-5 min-w-[130px] w-fit flex items-center justify-center rounded-lg
+  text-white text-body text-center whitespace-nowrap font-medium bg-blue100 transition-all hover:bg-Text disabled:bg-Grey disabled:cursor-not-allowed;
 }
 
 // Button with arrow Style End

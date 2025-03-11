@@ -1,7 +1,65 @@
-<footer class="w-full mt-auto overflow-hidden rounded-t-[40px] pt-20 md:pt-12 md:pb-8 pb-10">
+<footer class="w-full mt-auto overflow-hidden py-10 bg-bgLight">
     <div class="container">
-        <div class="row gap-x-8 md:gap-x-0 lg:gap-y-14 md:gap-y-4">
-
+        <div class="row gap-x-5">
+            <div class="col-span-2">
+                <a class="flex items-center gap-x-2" href="#">
+                    <img width="44" height="44" src="img/icons/Logo-icon.png" alt="Logo Lawyers">
+                    <span class="text-Top3 font-semibold text-Text">Lawyers</span>
+                </a>
+            </div>
+            <div class="col-span-4">
+                <div class="flex justify-around gap-x-5">
+                    <ul class="flex flex-col gap-y-3">
+                        <li class="flex items-center">
+                            <a class="text-body text-Text hover:underline transition-all" href="#">Class Actions</a>
+                        </li>
+                        <li class="flex items-center">
+                            <a class="text-body text-Text hover:underline transition-all" href="#">Lawyers by
+                                Location</a>
+                        </li>
+                        <li class="flex items-center">
+                            <a class="text-body text-Text hover:underline transition-all" href="#">Lawyers by Practice
+                                Area</a>
+                        </li>
+                        <li class="flex items-center">
+                            <a class="text-body text-Text hover:underline transition-all" href="#">Legal Topics Q&A</a>
+                        </li>
+                    </ul>
+                    <ul class="flex flex-col gap-y-3">
+                        <li class="flex items-center">
+                            <a class="text-body text-Text hover:underline transition-all" href="#">Terms</a>
+                        </li>
+                        <li class="flex items-center">
+                            <a class="text-body text-Text hover:underline transition-all" href="#">Privacy</a>
+                        </li>
+                        <li class="flex items-center">
+                            <a class="text-body text-Text hover:underline transition-all" href="#">Disclaimer</a>
+                        </li>
+                        <li class="flex items-center">
+                            <a class="text-body text-Text hover:underline transition-all" href="#">Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-span-6">
+                <div class="flex justify-between">
+                    <p class="text-body2 italic text-Text max-w-[440px] leading-[22px]">Attorney Advertising, Prior Results Do Not Guarantee A Similar Outcome. This website is for
+                        informational purposes only and does not contain legal advice. Results may vary depending on
+                        your particular facts and legal circumstances.</p>
+                    @@include('Link.html', {
+                    'style': 'ml-16',
+                    'url': '#',
+                    'title': 'Contact Us',
+                    })
+                </div>
+            </div>
+        </div>
+        <div class="row mt-10">
+            <div class="col-span-12">
+                <div class="flex items-center justify-center pt-8 w-full border-t border-LightGrey">
+                    <span class="text-body2 text-Grey">2025 © Lorem Ipsum | Created by Someone - Powered by Lorem Ipsum</span>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
