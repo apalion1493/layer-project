@@ -1,0 +1,20 @@
+<div class="p-5 flex gap-x-5 rounded-xl border border-LightGrey shadow-v1 transition-all hover:border-blue100 @@Style">
+    <div class="rounded-lg overflow-hidden flex items-center justify-center min-h-full min-w-[121px] w-[121px]">
+        <img class="w-full h-full object-cover object-center" src="img/Img-component-1.png" alt="What is Bankruptcy?">
+    </div>
+    <div class="flex flex-col">
+        @@include('Category-elem.html', {
+        'style-main': 'mb-4',
+        'URL': '#',
+        'style-title': '',
+        'Title': 'Category',
+        })
+        <span class="text-body font-medium tracking-04 block mb-2">Lorem ipsum dolor amet, consect eli.</span>
+        <p class="text-Grey text-body2">Lorem ipsum dolor sit amet, consectetur.</p>
+        @@include('Link-arrow.html', {
+        'STYLE_LINK': 'mt-2',
+        'URL_LINK': '#',
+        'TITLE_LINK': 'Read more',
+        })
+    </div>
+</div>
