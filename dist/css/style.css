@@ -2181,6 +2181,9 @@ html {
 .col-span-6{
   grid-column: span 6 / span 6;
 }
+.col-span-3{
+  grid-column: span 3 / span 3;
+}
 .my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -2233,6 +2236,9 @@ html {
 }
 .mt-auto{
   margin-top: auto;
+}
+.mt-6{
+  margin-top: 1.5rem;
 }
 .block{
   display: block;
@@ -2352,6 +2358,9 @@ html {
 .min-w-48{
   min-width: 12rem;
 }
+.min-w-\[1014px\]{
+  min-width: 1014px;
+}
 .max-w-\[269px\]{
   max-width: 269px;
 }
@@ -2370,11 +2379,44 @@ html {
 .max-w-xs{
   max-width: 20rem;
 }
+.max-w-\[1014px\]{
+  max-width: 1014px;
+}
+.max-w-\[calc\(25\%-0\.5rem\)\]{
+  max-width: calc(25% - 0.5rem);
+}
+.max-w-\[calc\(25\%-10px\)\]{
+  max-width: calc(25% - 10px);
+}
+.max-w-\[calc\(25\%-12px\)\]{
+  max-width: calc(25% - 12px);
+}
+.max-w-\[calc\(25\%-15px\)\]{
+  max-width: calc(25% - 15px);
+}
+.flex-1{
+  flex: 1 1 0%;
+}
 .flex-shrink-0{
   flex-shrink: 0;
 }
 .shrink-0{
   flex-shrink: 0;
+}
+.basis-1\/4{
+  flex-basis: 25%;
+}
+.basis-\[calc\(25\%-0\.5rem\)\]{
+  flex-basis: calc(25% - 0.5rem);
+}
+.basis-\[calc\(25\%-10px\)\]{
+  flex-basis: calc(25% - 10px);
+}
+.basis-\[calc\(25\%-12px\)\]{
+  flex-basis: calc(25% - 12px);
+}
+.basis-\[calc\(25\%-15px\)\]{
+  flex-basis: calc(25% - 15px);
 }
 .-translate-x-\[50\%\]{
   --tw-translate-x: -50%;
@@ -2405,6 +2447,9 @@ html {
 }
 .flex-col{
   flex-direction: column;
+}
+.flex-wrap{
+  flex-wrap: wrap;
 }
 .items-start{
   align-items: flex-start;

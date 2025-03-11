@@ -22,7 +22,7 @@
                 <span class="text-Top3 font-semibold text-Text">LawyersAI</span>
             </a>
             <div>
-                <div class="flex gap-x-6 items-center relative">
+                <div class="flex gap-x-6 items-center relative w-full">
                     <div x-data="{ showDropdown: false }" class="">
                         <button @click="showDropdown = !showDropdown" class="flex items-center">
                             <span>Lawyers by Location</span>
@@ -31,17 +31,18 @@
                             </svg>
                         </button>
 
-                        <div x-cloak @click.outside="showDropdown = false" x-show="showDropdown" class="bg-white absolute top-20 left-[50%] -translate-x-[50%] p-4 border border-LightGrey shadow-v1 rounded-lg">
-                            <div class="flex flex-col gap-y-2 w-[800px]">
-                                <a href="#">Australia</a>
-                                <a href="#">Canada</a>
-                                <a href="#">United States</a>
-                                <a href="#">United Kingdom</a>
-                                <a href="#">France</a>
-                                <a href="#">Germany</a>
-                                <a href="#">Netherlands</a>
-                                <a href="#">Spain</a>
-                                <a href="#">Italy</a>
+                        <div x-cloak @click.outside="showDropdown = false" x-show="showDropdown" class="bg-white absolute top-20 left-[50%] -translate-x-[50%] p-6 border border-LightGrey shadow-v1 rounded-lg">
+                            <div class="flex w-[800px]">
+                                <div class="flex flex-col">
+                                    <span>Browse by Popular Cities:</span>
+                                    <ul class="flex flex-col gap-y-3">
+                                        <li class="">
+                                            <a href="#"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <span></span>
+                                <div></div>
                             </div>
                         </div>
                     </div>
@@ -53,17 +54,214 @@
                             </svg>
                         </button>
 
-                        <div x-cloak @click.outside="showDropdown = false" x-show="showDropdown" class="bg-white absolute top-20 left-[50%] -translate-x-[50%] p-4 border border-LightGrey shadow-v1 rounded-lg">
-                            <div class="flex flex-col gap-y-2 w-[800px]">
-                                <a href="#">1</a>
-                                <a href="#">2</a>
-                                <a href="#">3 States</a>
-                                <a href="#">4 Kingdom</a>
-                                <a href="#">5</a>
-                                <a href="#">6</a>
-                                <a href="#">7</a>
-                                <a href="#">Spain</a>
-                                <a href="#">Italy</a>
+                        <div x-cloak @click.outside="showDropdown = false" x-show="showDropdown" class="bg-white min-w-[1014px] w-full absolute top-20 left-[50%] -translate-x-[50%] p-6 border border-LightGrey shadow-v1 rounded-lg">
+                            <div class="flex flex-col gap-y-2 w-full">
+                               <span class="text-body2 font-medium text-Text block mb-6">Choose an area of law that your issue relates to:</span>
+                                <div class="flex flex-wrap gap-x-5 gap-y-3">
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Appeals</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Debt Collection</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Foreclosure</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Probate</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Bankruptcy & Debt</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Divorce and Separation</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">General Practice</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Real Estate</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Business</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Domestic Violence</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Immigration</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Residential</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Car Accidents</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">DUI and DWI</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Intellectual Property</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Sex Crime</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Child Custody</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Elder Law</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Landlord or Tenant</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Social Security & Disability</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Child Support</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Employment and Labor</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Lawsuits and Disputes</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Speeding and Traffic Ticket</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Civil Rights</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Estate Planning</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Litigation</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Tax</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Consumer Protection</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Education</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Medical Malpractice</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Violent Crime</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Contracts and Agreements</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Family</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Personal Injury</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Workers Compensation</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Criminal Defense</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Federal Crime</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Privacy</span>
+                                        </a>
+                                    </div>
+                                    <div class="flex-1 basis-[calc(25%-15px)] max-w-[calc(25%-15px)]">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text">Wrongful Death</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a class="button mt-6" href="#">
+    <span class="">See All Practice Areas</span>
+</a>
                             </div>
                         </div>
                     </div>
@@ -75,7 +273,7 @@
                             </svg>
                         </button>
 
-                        <div x-cloak @click.outside="showDropdown = false" x-show="showDropdown" class="bg-white absolute top-20 left-[50%] -translate-x-[50%] p-4 border border-LightGrey shadow-v1 rounded-lg">
+                        <div x-cloak @click.outside="showDropdown = false" x-show="showDropdown" class="bg-white absolute top-20 left-[50%] -translate-x-[50%] p-6 border border-LightGrey shadow-v1 rounded-lg">
                             <div class="flex flex-col gap-y-2 w-[800px]">
                                 <a href="#">sd</a>
                                 <a href="#">Csdfaanada</a>
