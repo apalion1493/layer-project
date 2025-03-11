@@ -14,47 +14,16 @@
 
 .button {
 
-  &.categories {
-    @apply h-[38px] min-h-[38px] min-w-fit bg-LightGrey border-LightGrey text-body px-4 text-blue100 hover:border-blue100 hover:text-blue100 disabled:border-DarkBlue100 disabled:text-DarkBlue100
-  }
-
-  &.btn-small {
-    @apply h-[33px] min-h-[33px] text-body2 min-w-[0] px-5 md:px-3
-  }
-
-  &.btn-medium {
-    @apply h-10 min-h-10 text-body min-w-[98px] px-5
-  }
-
-  &.hoverColor {
-    @apply hover:bg-LightGrey hover:text-white hover:border-LightGrey
-  }
-
   &.width-full {
     @apply w-full;
-  }
-
-  &.db-btn {
-    @apply h-12 min-h-12 md:h-11 md:min-h-11 md:text-body min-w-fit rounded-xl px-5 text-body2 font-semibold
-  }
-
-  &.btn-icons {
-    @apply bg-LightGrey text-blue100 hover:bg-blue100 hover:text-white
-  }
-
-  &.btn-icons-blue {
-    @apply bg-blue100 text-white hover:bg-white hover:text-blue100
   }
 
   &.width-auto {
     @apply min-w-[0px]
   }
 
-  &.big-btn-1 {
-    @apply max-w-[475px] w-full
-  }
-
-  @apply h-14 min-h-14 px-8 min-w-[129px] w-fit flex items-center justify-center rounded-4xl text-white text-base text-center font-semibold bg-blue100 border border-blue100 transition-all hover:bg-transparent hover:text-blue100;
+  @apply h-[52px] min-h-[52px] px-8 min-w-[93px] w-fit flex items-center justify-center rounded-lg
+  text-white text-body text-center font-medium bg-blue100 transition-all hover:bg-Text disabled:bg-Grey disabled:cursor-not-allowed;
 }
 
 // Button with arrow Style End
