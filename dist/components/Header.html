@@ -5,7 +5,7 @@
                 <img width="44" height="44" src="img/icons/Logo-icon.png" alt="Logo Lawyers">
                 <span class="text-Top3 font-semibold text-Text">LawyersAI</span>
             </a>
-            <div>
+            <div id="mobile-menu">
                 <div class="flex gap-x-6 items-center relative w-full">
                     <div x-data="{ showDropdown: false }" class="">
                         <button @click="showDropdown = !showDropdown" class="flex items-center">
@@ -419,10 +419,16 @@
                         </div>
                     </div>
                 </div>
+                <div class="minlg:hidden">
+
+                </div>
             </div>
-            <a class="button " href="#">
+            <div>
+                <a class="button " href="#">
     <span class="">Contact Us</span>
 </a>
+                <button id="burger-button" type="button">B</button>
+            </div>
         </div>
     </div>
 </header>
