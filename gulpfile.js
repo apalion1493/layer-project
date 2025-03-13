@@ -13,6 +13,10 @@ const pngquant = require('imagemin-pngquant') // imagemin plugin
 const purgecss = require('gulp-purgecss') // Remove Unused CSS from Styles
 const logSymbols = require('log-symbols') //For Symbolic Console logs :) :P
 const includePartials = require('gulp-file-include') //For supporting partials if required
+const replace = require('gulp-replace');
+
+
+const imagePath = '../img/';
 
 //Load Previews on Browser on dev
 function livePreview(done) {
@@ -50,6 +54,7 @@ function devStyles() {
 	return src(`${options.paths.src.css}/**/*.scss`)
 		.pipe(sass().on('error', sass.logError))
 		.pipe(postcss([tailwindcss(options.config.tailwindjs), autoprefixer()]))
+		.pipe(replace('__IMAGE_PATH__', imagePath))
 		.pipe(concat({ path: 'style.css' }))
 		.pipe(dest(options.paths.dist.css))
 }

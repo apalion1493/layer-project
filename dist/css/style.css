@@ -3060,7 +3060,7 @@ p{
 }
 
 .Fast-icon {
-  background: url("../img/icons/Fast-icon.svg");
+  background: url("../img/Fast-icon.svg");
   display: block;
   height: 40px;
   width: 40px;
@@ -3070,7 +3070,7 @@ p{
 }
 
 .Star-icon {
-  background: url("../img/icons/Star.svg");
+  background: url("../img/Star.svg");
   display: block;
   height: 18px;
   width: 18px;
@@ -3080,7 +3080,7 @@ p{
 }
 
 .arrow-right {
-  background: url("../img/icons/arrow-right.svg");
+  background: url("../img/arrow-right.svg");
   display: block;
   height: 15px;
   width: 15px;

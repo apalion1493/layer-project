@@ -1,14 +1,14 @@
 .Fast-icon {
-  background: url("../img/icons/Fast-icon.svg");
+  background: url("__IMAGE_PATH__Fast-icon.svg");
   @apply block h-[40px] w-[40px] bg-100-auto bg-center bg-no-repeat;
 }
 
 .Star-icon {
-  background: url("../img/icons/Star.svg");
+  background: url("__IMAGE_PATH__Star.svg");
   @apply block h-[18px] w-[18px] bg-100-auto bg-center bg-no-repeat;
 }
 
 .arrow-right {
-  background: url("../img/icons/arrow-right.svg");
+  background: url("__IMAGE_PATH__arrow-right.svg");
   @apply block h-[15px] w-[15px] bg-100-auto bg-center bg-no-repeat;
 }
