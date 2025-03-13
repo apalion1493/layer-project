@@ -152,6 +152,10 @@ input[type='search']::-webkit-search-results-decoration {
     background-size: cover !important;
   }
 
+  .disable-transition {
+    transition: none !important;
+  }
+
 }
 
 @media (max-width: 767.98px) {

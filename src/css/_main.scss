@@ -48,7 +48,13 @@
 
 // Mega Menu Header Style Start
 
+.show-mobile-menu {
+  &__list {
+    @apply minlg:hidden
+  }
 
+  @apply lg:overflow-y-auto lg:fixed lg:top-[50px] lg:left-0 lg:w-[100vw] lg:h-full lg:min-h-screen lg:bg-white lg:z-50 lg:flex lg:flex-col lg:gap-10 lg:py-10 lg:px-10
+}
 
 // Mega Menu Header Style End
 
@@ -407,3 +413,4 @@
     margin-bottom: 24px;
   }
 }
+
