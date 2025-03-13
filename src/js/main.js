@@ -136,6 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const toggleMenu = () => {
         mobileMenu.classList.toggle('active');
         document.body.classList.toggle('overflow-hidden');
+        burgerButton.classList.toggle('open');
     };
 
     burgerButton?.addEventListener('click', toggleMenu);

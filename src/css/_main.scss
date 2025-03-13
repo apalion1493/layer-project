@@ -53,7 +53,11 @@
     @apply minlg:hidden
   }
 
-  @apply lg:overflow-y-auto lg:fixed lg:top-[50px] lg:left-0 lg:w-[100vw] lg:h-full lg:min-h-screen lg:bg-white lg:z-50 lg:flex lg:flex-col lg:gap-10 lg:py-10 lg:px-10
+  &.active {
+    @apply lg:left-0
+  }
+
+  @apply transition-all duration-300 lg:overflow-y-auto lg:fixed lg:top-[85px] lg:-left-[100%] lg:w-[100vw] lg:h-full lg:min-h-screen lg:bg-white lg:z-50 lg:flex lg:flex-col lg:gap-10 lg:py-8 lg:px-4
 }
 
 // Mega Menu Header Style End

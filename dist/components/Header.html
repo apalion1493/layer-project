@@ -1,4 +1,4 @@
-<header class="w-full bg-white border-b border-LightGrey shadow-v2 py-6 relative">
+<header class="w-full bg-white border-b border-LightGrey shadow-v2 py-6 lg:py-5 relative">
     <div class="container">
         <div class="flex justify-between items-center width-full gap-x-5">
             <a class="flex items-center gap-x-2" href="#">
@@ -678,11 +678,22 @@
 </a>
                 </div>
             </div>
-            <div>
-                <a class="button " href="#">
+            <div class="flex items-center">
+                <a class="button lg:hidden" href="#">
     <span class="">Contact Us</span>
 </a>
-<!--                <button id="burger-button" type="button">B</button>-->
+                <button id="burger-button" class="minlg:hidden ml-5 flex gap-y-[6px] flex-col items-center justify-center group"
+                        aria-label="Mobile Burger Button">
+                    <svg class="transition-transform duration-300 group-[.open]:rotate-45 group-[.open]:translate-y-2" xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                        <path d="M19.1667 0H0.833333C0.373096 0 0 0.447714 0 0.999998C0 1.55228 0.373096 2 0.833333 2H19.1667C19.6269 2 20 1.55228 20 0.999998C20 0.447714 19.6269 0 19.1667 0Z" fill="#051944"/>
+                    </svg>
+                    <svg class="transition-opacity duration-300 group-[.open]:opacity-0" xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                        <path d="M19.1667 0H0.833333C0.373096 0 0 0.447714 0 0.999998C0 1.55228 0.373096 2 0.833333 2H19.1667C19.6269 2 20 1.55228 20 0.999998C20 0.447714 19.6269 0 19.1667 0Z" fill="#051944"/>
+                    </svg>
+                    <svg class="transition-transform duration-300 group-[.open]:-rotate-45 group-[.open]:-translate-y-2" xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                        <path d="M19.1667 0H0.833333C0.373096 0 0 0.447714 0 0.999998C0 1.55228 0.373096 2 0.833333 2H19.1667C19.6269 2 20 1.55228 20 0.999998C20 0.447714 19.6269 0 19.1667 0Z" fill="#051944"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
