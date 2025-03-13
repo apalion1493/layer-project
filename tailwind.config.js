@@ -90,6 +90,7 @@ module.exports = {
                 pageBg: '#FAFBFF',
                 bgLight: '#F6F9FF',
                 blue100: '#004ED5',
+                blue101: '#0053E2',
                 DarkBlue100: '#060B52',
                 DarkBlue50: '#1B3C7480',
                 LightGrey: '#E1E9F5',

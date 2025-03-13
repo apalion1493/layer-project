@@ -24,10 +24,10 @@
             <div id="mobile-menu" class="show-mobile-menu">
                 <div class="flex gap-x-6 items-center lg:items-start relative w-full lg:flex-col lg:gap-y-6">
                     <div x-data="{ showDropdown: false }" class="">
-                        <button @click="showDropdown = !showDropdown" :class="showDropdown ? 'pb-5' : ''" class="flex items-center lg:">
+                        <button @click="showDropdown = !showDropdown" :class="showDropdown ? 'lg:pb-5 text-blue101' : ''" class="flex items-center lg:">
                             <span>Lawyers by Location</span>
                             <svg :class="showDropdown ? 'rotate-180' : ''" class="ml-2 transition-all" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
-                                <path d="M9.125 0.778823L5 5.22113L0.875 0.778823" stroke="#001E60" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path :class="showDropdown ? 'stroke-blue101' : ''" d="M9.125 0.778823L5 5.22113L0.875 0.778823" stroke="#001E60" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
 
@@ -241,21 +241,18 @@
                                         </a>
                                     </div>
                                 </div>
-                                <button @click="showAllList = !showAllList" class="button mt-6" type="button" aria-label="">
+                                <button @click="showAllList = !showAllList" class="button mt-6 minlg:hidden" type="button" aria-label="">
                                     <span x-show="!showAllList">Show more</span>
                                     <span x-show="showAllList">Hide</span>
                                 </button>
-                                <a class="button mt-6 lg:mt-3" href="#">
-    <span class="">Browse All Legal Topics</span>
-</a>
                             </div>
                         </div>
                     </div>
                     <div x-data="{ showDropdown: false }" class="">
-                        <button @click="showDropdown = !showDropdown" :class="showDropdown ? 'pb-5' : ''" class="flex items-center lg:">
+                        <button @click="showDropdown = !showDropdown" :class="showDropdown ? 'lg:pb-5 text-blue101' : ''" class="flex items-center lg:">
                             <span>Lawyers by Practice Area</span>
                             <svg :class="showDropdown ? 'rotate-180' : ''" class="ml-2 transition-all" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
-                                <path d="M9.125 0.778823L5 5.22113L0.875 0.778823" stroke="#001E60" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path :class="showDropdown ? 'stroke-blue101' : ''" d="M9.125 0.778823L5 5.22113L0.875 0.778823" stroke="#001E60" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
 
@@ -469,21 +466,21 @@
                                         </a>
                                     </div>
                                 </div>
-                                <button @click="showAllList = !showAllList" class="button mt-6" type="button" aria-label="">
+                                <button @click="showAllList = !showAllList" class="button mt-6 minlg:hidden" type="button" aria-label="">
                                     <span x-show="!showAllList">Show more</span>
                                     <span x-show="showAllList">Hide</span>
                                 </button>
                                 <a class="button mt-6 lg:mt-3" href="#">
-    <span class="">Browse All Legal Topics</span>
+    <span class="">See All Practice Areas</span>
 </a>
                             </div>
                         </div>
                     </div>
                     <div x-data="{ showDropdown: false }" class="">
-                        <button @click="showDropdown = !showDropdown" :class="showDropdown ? 'pb-5' : ''" class="flex items-center lg:">
+                        <button @click="showDropdown = !showDropdown" :class="showDropdown ? 'lg:pb-5 text-blue101' : ''" class="flex items-center lg:">
                             <span>Legal Topics Q&A</span>
                             <svg :class="showDropdown ? 'rotate-180' : ''" class="ml-2 transition-all" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
-                                <path d="M9.125 0.778823L5 5.22113L0.875 0.778823" stroke="#001E60" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path :class="showDropdown ? 'stroke-blue101' : ''" d="M9.125 0.778823L5 5.22113L0.875 0.778823" stroke="#001E60" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
 
@@ -647,7 +644,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <button @click="showAllList = !showAllList" class="button mt-6" type="button" aria-label="">
+                                <button @click="showAllList = !showAllList" class="button mt-6 minlg:hidden" type="button" aria-label="">
                                     <span x-show="!showAllList">Show more</span>
                                     <span x-show="showAllList">Hide</span>
                                 </button>
@@ -701,7 +698,7 @@
                 <a class="button " href="#">
     <span class="">Contact Us</span>
 </a>
-                <button id="burger-button" type="button">B</button>
+<!--                <button id="burger-button" type="button">B</button>-->
             </div>
         </div>
     </div>
