@@ -2231,6 +2231,9 @@ html {
 .mt-auto{
   margin-top: auto;
 }
+.mt-4{
+  margin-top: 1rem;
+}
 .block{
   display: block;
 }
@@ -2263,9 +2266,6 @@ html {
 .h-16{
   height: 4rem;
 }
-.h-5{
-  height: 1.25rem;
-}
 .h-6{
   height: 1.5rem;
 }
@@ -2280,6 +2280,9 @@ html {
 }
 .h-\[161px\]{
   height: 161px;
+}
+.h-\[18px\]{
+  height: 18px;
 }
 .h-\[38px\]{
   height: 38px;
@@ -2311,14 +2314,14 @@ html {
 .w-16{
   width: 4rem;
 }
-.w-5{
-  width: 1.25rem;
-}
 .w-6{
   width: 1.5rem;
 }
 .w-\[121px\]{
   width: 121px;
+}
+.w-\[18px\]{
+  width: 18px;
 }
 .w-\[72px\]{
   width: 72px;
@@ -2333,14 +2336,14 @@ html {
 .min-w-10{
   min-width: 2.5rem;
 }
-.min-w-5{
-  min-width: 1.25rem;
-}
 .min-w-\[1014px\]{
   min-width: 1014px;
 }
 .min-w-\[121px\]{
   min-width: 121px;
+}
+.min-w-\[18px\]{
+  min-width: 18px;
 }
 .min-w-\[72px\]{
   min-width: 72px;
@@ -2681,9 +2684,6 @@ html {
   --tw-text-opacity: 1;
   color: rgb(6 11 82 / var(--tw-text-opacity, 1));
 }
-.text-DarkBlue50{
-  color: #1B3C7480;
-}
 .text-Error{
   --tw-text-opacity: 1;
   color: rgb(242 95 95 / var(--tw-text-opacity, 1));
@@ -2945,8 +2945,14 @@ input[type=search]::-webkit-search-results-decoration {
 .custom-checkbox {
   position: relative;
   display: inline-flex;
-  align-items: center;
   cursor: pointer;
+}
+.custom-checkbox a{
+  --tw-text-opacity: 1;
+  color: rgb(0 30 96 / var(--tw-text-opacity, 1));
+}
+.custom-checkbox a:hover{
+  text-decoration-line: underline;
 }
 
 .custom-checkbox input[type=checkbox]{
@@ -3109,6 +3115,16 @@ p{
 .Mail-input {
   background: url("../img/Mail-input.svg") 12px center no-repeat;
   background-size: 20px 20px;
+}
+
+.Checkbox {
+  background: url("../img/Checkbox.svg");
+  display: block;
+  height: 18px;
+  width: 18px;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .button{

@@ -119,8 +119,11 @@ input[type='search']::-webkit-search-results-decoration {
 .custom-checkbox {
   position: relative;
   display: inline-flex;
-  align-items: center;
   cursor: pointer;
+
+  a {
+    @apply text-Text hover:underline;
+  }
 }
 
 .custom-checkbox input[type='checkbox'] {
