@@ -424,6 +424,10 @@
 }
 
 .bg-2 {
-  background: url("__IMAGE_PATH__bg-2.png") no-repeat bottom;
+  background: url("__IMAGE_PATH__bg-2.png") no-repeat center bottom;
   background-size: cover;
+
+  @media (max-width: 1023.98px) {
+    background: url("__IMAGE_PATH__bg-2-mob.png") no-repeat center bottom;
+  }
 }

@@ -14,8 +14,8 @@
     @@include('components/AI-section.html')
     <section class="section">
         <div class="container">
-            <div class="row gap-x-5">
-                <div class="col-span-8">
+            <div class="row gap-x-5 lg:gap-x-0">
+                <div class="col-span-8 lg:col-span-12">
                     <div class="flex flex-col">
                         <nav class="mb-10" aria-label="breadcrumb">
                             <ol class="flex flex-wrap items-center gap-2 capitalize">
@@ -46,16 +46,16 @@
                         <article class="flex flex-col text-block">
                             @@include('components/Title-component.html', {
                             'Style_common': '',
-                            'Style_title': 'text-h3',
+                            'Style_title': 'text-h3 lg:text-Top5 mb-0',
                             'Title_tag': 'h2',
                             'Title': 'Who Can File for Chapter 13 Bankruptcy?',
-                            'Style_line': 'my-5',
+                            'Style_line': 'my-5 lg:my-4',
                             })
                             <p>Etiam at porttitor lectus. Donec ut ligula purus. Donec porttitor tellus at scelerisque volutpat. Maecenas a arcu nec sem pellentesque tristique vel eu dui. Fusce convallis, libero sed bibendum lacinia, orci enim convallis arcu, non imperdiet urna sem vel augue. Nullam bibendum gravida velit.</p>
                             <br>
                             <address class="not-italic">By <a href="#">Maddy Teka</a>, Esq. | Legally reviewed by <a
                                     href="#">Bridget Molitor, J.D.</a></address>
-                            <div class="flex items-center gap-x-2 mt-5 mb-12">
+                            <div class="flex items-center flex-wrap gap-2 mt-5 mb-12">
                                 <div class="flex items-center gap-x-1 font-medium text-Grey">
                                     <i class="User-icon"></i>
                                     <span>Maddy Teka</span>
@@ -71,14 +71,14 @@
                                     <time datetime="2024-01-27"><span class="font-normal">Last review :</span> <span class="italic">Jan 27, 2024</span></time>
                                 </div>
                             </div>
-                            <h3 id="article-title-1" class="text-Top5 mb-4">Requirements for Chapter 13 Bankruptcy?</h3>
+                            <h3 id="article-title-1" class="text-Top5 lg:text-Top3 mb-4">Requirements for Chapter 13 Bankruptcy?</h3>
                             <p>Morbi iaculis fermentum tellus, eget hendrerit neque ultrices nec. Curabitur molestie ut mauris vel viverra.
                                 Ut luctus ullamcorper mattis. Morbi venenatis consequat fringilla. Vestibulum sit amet sollicitudin velit. Ut pharetra porta magna et faucibus. Etiam vel sem in
                                 <a href="#">nunc placerat</a> tempus. Maecenas tortor elit, convallis nec commodo id, rhoncus eget urna. Phasellus dapibus eget justo nec sodales. Sed in sodales lorem, eget fringilla lectus. In elementum, nulla ut placerat cursus, velit enim mattis ipsum, id ultricies eros erat nec metus. Vivamus id neque a nunc lacinia posuere vel in felis.
                                 <a href="#">Donec faucibus</a> maximus tortor sed vestibulum. Ut ut erat vitae justo dictum consectetur a non erat.</p>
                             <br>
                             <br>
-                            <h3 id="article-title-2" class="text-Top5 mb-4">You Are Not Barred by a Prior Bankruptcy.</h3>
+                            <h3 id="article-title-2" class="text-Top5 lg:text-Top3 mb-4">You Are Not Barred by a Prior Bankruptcy.</h3>
                             <p>A debtor cannot file for Chapter 13 or Chapter 7 if a prior bankruptcy petition was dismissed during the preceding 180 days for either of the following reasons:</p>
                             <br>
                             <ul>
@@ -95,17 +95,17 @@
                             <p>Aliquam dictum eget elit eget aliquam. Sed lobortis lorem vel nisi interdum rutrum. Donec maximus arcu nec neque cursus sagittis ac eget purus. Sed ac nulla dui. Morbi vel lectus ornare, suscipit neque eget, dignissim magna. Vestibulum varius dolor in risus interdum convallis. Cras eget nunc ante. Nunc erat dolor, imperdiet et justo ac, maximus fermentum turpis. Ut non volutpat odio, sed placerat ex. Cras eu orci risus. Donec nec ante vitae est rutrum mattis sit amet eu mi.</p>
                             <br>
                             <br>
-                            <h3 id="article-title-3" class="text-Top5 mb-4">Requirements for Chapter 13 Bankruptcy?</h3>
+                            <h3 id="article-title-3" class="text-Top5 lg:text-Top3 mb-4">Requirements for Chapter 13 Bankruptcy?</h3>
                             <p>Aliquam dictum eget elit eget aliquam. Sed lobortis lorem vel nisi interdum rutrum. Donec maximus arcu nec neque cursus sagittis ac eget purus. Sed ac nulla dui. Morbi vel lectus ornare, suscipit neque eget, dignissim magna. Vestibulum varius dolor in risus interdum convallis. Cras eget nunc ante. Nunc erat dolor, imperdiet et justo ac, maximus fermentum turpis. Ut non volutpat odio, sed placerat ex. Cras eu orci risus. Donec nec ante vitae est rutrum mattis sit amet eu mi.</p>
                             <br>
                             <p>Morbi iaculis fermentum tellus, eget hendrerit neque ultrices nec. Curabitur molestie ut mauris vel viverra.
                                 Ut luctus ullamcorper mattis. Morbi venenatis consequat fringilla. Vestibulum sit amet sollicitudin velit. Ut pharetra porta magna et faucibus. Etiam vel sem in
                                 <a href="#">nunc placerat</a> tempus. Maecenas tortor elit, convallis nec commodo id, rhoncus eget urna. Phasellus dapibus eget justo nec sodales. Sed in sodales lorem, eget fringilla lectus. In elementum, nulla ut placerat cursus, velit enim mattis ipsum, id ultricies eros erat nec metus. Vivamus id neque a nunc lacinia posuere vel in felis.
                                 <a href="#">Donec faucibus</a> maximus tortor sed vestibulum. Ut ut erat vitae justo dictum consectetur a non erat.</p>
-                            <div class="my-8 rounded-2xl p-10 overflow-hidden text-white bg-2 italic text-base font-medium">
-                                <p class="text-base">“Aliquam dictum eget elit eget aliquam. Sed lobortis lorem vel nisi interdum rutrum. Donec maximus arcu nec neque cursus sagittis ac eget purus. Sed ac nulla dui. Morbi vel lectus ornare, suscipit neque eget, dignissim magna. Vestibulum varius dolor in risus interdum convallis. Cras eget nunc ante. Nunc erat dolor, imperdiet et justo ac, maximus fermentum turpis. Ut non volutpat odio, sed placerat ex. Cras eu orci risus. Donec nec ante vitae est rutrum sit amet mi.”</p>
+                            <div class="my-8 rounded-2xl p-10 lg:p-5 overflow-hidden text-white bg-2 italic text-base font-medium">
+                                <p class="text-base lg:text-body">“Aliquam dictum eget elit eget aliquam. Sed lobortis lorem vel nisi interdum rutrum. Donec maximus arcu nec neque cursus sagittis ac eget purus. Sed ac nulla dui. Morbi vel lectus ornare, suscipit neque eget, dignissim magna. Vestibulum varius dolor in risus interdum convallis. Cras eget nunc ante. Nunc erat dolor, imperdiet et justo ac, maximus fermentum turpis. Ut non volutpat odio, sed placerat ex. Cras eu orci risus. Donec nec ante vitae est rutrum sit amet mi.”</p>
                             </div>
-                            <h3 id="article-title-4" class="text-Top5 mb-4">You Are Not Barred by a Prior Bankruptcy.</h3>
+                            <h3 id="article-title-4" class="text-Top5 lg:text-Top3 mb-4">You Are Not Barred by a Prior Bankruptcy.</h3>
                             <p>A debtor cannot file for Chapter 13 or Chapter 7 if a prior bankruptcy petition was dismissed during the preceding 180 days for either of the following reasons:</p>
                             <br>
                             <ul>
@@ -123,7 +123,7 @@
                         </article>
                     </div>
                 </div>
-                <div class="col-span-4">
+                <div class="col-span-4 lg:hidden">
                     <div class="sticky top-10">
                         <div class="max-w-[373px] ml-auto rounded-xl overflow-hidden shadow-v1 p-5 flex flex-col gap-y-5 bg-white border border-LightGrey">
                             @@include('components/Title-component.html', {
@@ -153,6 +153,36 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="section bg-bgLight minlg:hidden border-t border-LightGrey border-dashed">
+        <div class="container">
+            <div class="max-w-full rounded-xl overflow-hidden shadow-v1 p-5 flex flex-col gap-y-5 bg-white border border-LightGrey">
+                @@include('components/Title-component.html', {
+                'Style_common': '',
+                'Style_title': 'text-h5',
+                'Title_tag': 'h5',
+                'Title': 'Related Posts',
+                'Style_line': 'mt-5',
+                })
+                <ul class="main-ul">
+                    <li>
+                        <a href="#article-title-1">Benefits of Bankruptcy</a>
+                    </li>
+                    <li>
+                        <a href="#article-title-2">What is Bankruptcy?</a>
+                    </li>
+                    <li>
+                        <a href="#article-title-3">Benefits of Bankruptcy</a>
+                    </li>
+                    <li>
+                        <a href="#article-title-4">Lorem ipsume dolor sit amet</a>
+                    </li>
+                    <li>
+                        <a href="#article-title-4">What is Bankruptcy?</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
