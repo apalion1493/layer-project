@@ -26,6 +26,10 @@ p {
   @apply text-body md:text-body
 }
 
+.main-ul {
+  @apply list-disc pl-6 text-Text flex flex-col gap-y-2
+}
+
 .text-block {
 
   h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -33,10 +37,10 @@ p {
   }
 
   a {
-    @apply font-medium underline text-blue100
+    @apply italic underline text-blue100
   }
 
   ul {
-    @apply list-disc pl-6
+    @apply list-disc font-medium pl-6
   }
 }

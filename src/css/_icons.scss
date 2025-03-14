@@ -37,3 +37,23 @@
   background: url("__IMAGE_PATH__bg-1.png") no-repeat center;
   background-size: cover;
 }
+
+.AI-icon {
+  background: url("__IMAGE_PATH__AI-icon.svg");
+  @apply block h-[40px] w-[40px] bg-100-auto bg-center bg-no-repeat;
+}
+
+.User-icon {
+  background: url("__IMAGE_PATH__User-icon.svg");
+  @apply block h-[20px] w-[20px] bg-100-auto bg-center bg-no-repeat;
+}
+
+.calendar {
+  background: url("__IMAGE_PATH__calendar.svg");
+  @apply block h-[18px] w-[20px] bg-100-auto bg-center bg-no-repeat;
+}
+
+.Pensil {
+  background: url("__IMAGE_PATH__Pensil.svg");
+  @apply block h-[20px] w-[20px] bg-100-auto bg-center bg-no-repeat;
+}

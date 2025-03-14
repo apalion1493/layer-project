@@ -6,8 +6,159 @@
 })
 
 <body class="">
-<main id="content" class="flex flex-col items-center min-h-screen overflow-hidden">
+<main id="content" class="flex flex-col items-center min-h-screen">
+    @@include('components/Header.html', {
+    'commonStyle': ' ',
+    })
 
+    @@include('components/AI-section.html')
+    <section class="section">
+        <div class="container">
+            <div class="row gap-x-5">
+                <div class="col-span-8">
+                    <div class="flex flex-col">
+                        <nav class="mb-10" aria-label="breadcrumb">
+                            <ol class="flex flex-wrap items-center gap-2 capitalize">
+                                <li class="flex items-center gap-2">
+                                    <a href="#" class="text-body2 text-Text3 hover:text-blue101 transition-all">Home</a>
+                                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 0.5L6 5L1 9.5" stroke="#A6AFBF"/>
+                                        <path d="M6 0.5L11 5L6 9.5" stroke="#A6AFBF"/>
+                                    </svg>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="#" class="text-body2 text-Text3 hover:text-blue101 transition-all">Questions</a>
+                                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 0.5L6 5L1 9.5" stroke="#A6AFBF"/>
+                                        <path d="M6 0.5L11 5L6 9.5" stroke="#A6AFBF"/>
+                                    </svg>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="#" class="text-body2 text-Text3 hover:text-blue101 transition-all">Consumer Law</a>
+                                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 0.5L6 5L1 9.5" stroke="#A6AFBF"/>
+                                        <path d="M6 0.5L11 5L6 9.5" stroke="#A6AFBF"/>
+                                    </svg>
+                                </li>
+                                <li class="flex items-center text-body2 text-Grey font-medium" aria-current="page">Returning a mattress that was bought online?</li>
+                            </ol>
+                        </nav>
+                        <article class="flex flex-col text-block">
+                            @@include('components/Title-component.html', {
+                            'Style_common': '',
+                            'Style_title': 'text-h3',
+                            'Title_tag': 'h2',
+                            'Title': 'Who Can File for Chapter 13 Bankruptcy?',
+                            'Style_line': 'my-5',
+                            })
+                            <p>Etiam at porttitor lectus. Donec ut ligula purus. Donec porttitor tellus at scelerisque volutpat. Maecenas a arcu nec sem pellentesque tristique vel eu dui. Fusce convallis, libero sed bibendum lacinia, orci enim convallis arcu, non imperdiet urna sem vel augue. Nullam bibendum gravida velit.</p>
+                            <br>
+                            <address class="not-italic">By <a href="#">Maddy Teka</a>, Esq. | Legally reviewed by <a
+                                    href="#">Bridget Molitor, J.D.</a></address>
+                            <div class="flex items-center gap-x-2 mt-5 mb-12">
+                                <div class="flex items-center gap-x-1 font-medium text-Grey">
+                                    <i class="User-icon"></i>
+                                    <span>Maddy Teka</span>
+                                </div>
+                                |
+                                <div class="flex items-center gap-x-1 font-medium text-Grey" >
+                                    <i class="calendar"></i>
+                                    <time datetime="2024-01-27">Jan 27, 2024</time>
+                                </div>
+                                |
+                                <div class="flex items-center gap-x-1 font-medium text-Grey" >
+                                    <i class="Pensil"></i>
+                                    <time datetime="2024-01-27"><span class="font-normal">Last review :</span> <span class="italic">Jan 27, 2024</span></time>
+                                </div>
+                            </div>
+                            <h3 id="article-title-1" class="text-Top5 mb-4">Requirements for Chapter 13 Bankruptcy?</h3>
+                            <p>Morbi iaculis fermentum tellus, eget hendrerit neque ultrices nec. Curabitur molestie ut mauris vel viverra.
+                                Ut luctus ullamcorper mattis. Morbi venenatis consequat fringilla. Vestibulum sit amet sollicitudin velit. Ut pharetra porta magna et faucibus. Etiam vel sem in
+                                <a href="#">nunc placerat</a> tempus. Maecenas tortor elit, convallis nec commodo id, rhoncus eget urna. Phasellus dapibus eget justo nec sodales. Sed in sodales lorem, eget fringilla lectus. In elementum, nulla ut placerat cursus, velit enim mattis ipsum, id ultricies eros erat nec metus. Vivamus id neque a nunc lacinia posuere vel in felis.
+                                <a href="#">Donec faucibus</a> maximus tortor sed vestibulum. Ut ut erat vitae justo dictum consectetur a non erat.</p>
+                            <br>
+                            <br>
+                            <h3 id="article-title-2" class="text-Top5 mb-4">You Are Not Barred by a Prior Bankruptcy.</h3>
+                            <p>A debtor cannot file for Chapter 13 or Chapter 7 if a prior bankruptcy petition was dismissed during the preceding 180 days for either of the following reasons:</p>
+                            <br>
+                            <ul>
+                                <li>The debtor willfully violated a court order or failed to appear before the court</li>
+                                <li>The debtor requested that the court dismiss the case after a creditor asked the court to lift automatic.</li>
+                            </ul>
+                            <br>
+                            <p>Aliquam dictum eget elit eget aliquam. Sed lobortis lorem vel nisi interdum rutrum. Donec maximus arcu nec neque cursus sagittis ac eget purus. Sed ac nulla dui. Morbi vel lectus ornare, suscipit neque eget, dignissim magna. Vestibulum varius dolor in risus interdum convallis. Cras eget nunc ante. Nunc erat dolor, imperdiet et justo ac, maximus fermentum turpis. Ut non volutpat odio, sed placerat ex. Cras eu orci risus. Donec nec ante vitae est rutrum mattis sit amet eu mi.</p>
+                            <br>
+                            <span class="uppercase text-base italic text-blue101">Lorem ipsum dolor sit amet, consectetur adipiscing.</span>
+                            <br>
+                            <p>Sed ultricies sapien at ante dapibus, et euismod ex sodales. Curabitur ac luctus mauris. Ut vel sem sit amet leo molestie fringilla. Nunc nec rhoncus ipsum. Phasellus et placerat nibh. Sed non lectus porta, cursus ante cursus, ultrices felis. Aliquam sollicitudin in eros a venenatis. Etiam at porttitor lectus. Donec ut ligula purus. Donec porttitor tellus at scelerisque volutpat. Maecenas a arcu nec sem pellentesque tristique vel eu dui. Fusce convallis, libero sed bibendum lacinia, orci enim convallis arcu, non imperdiet urna sem vel augue. Nullam bibendum gravida velit, a commodo sapien tristique ut. Aenean nec nulla in lacus tempor rhoncus.</p>
+                            <br>
+                            <p>Aliquam dictum eget elit eget aliquam. Sed lobortis lorem vel nisi interdum rutrum. Donec maximus arcu nec neque cursus sagittis ac eget purus. Sed ac nulla dui. Morbi vel lectus ornare, suscipit neque eget, dignissim magna. Vestibulum varius dolor in risus interdum convallis. Cras eget nunc ante. Nunc erat dolor, imperdiet et justo ac, maximus fermentum turpis. Ut non volutpat odio, sed placerat ex. Cras eu orci risus. Donec nec ante vitae est rutrum mattis sit amet eu mi.</p>
+                            <br>
+                            <br>
+                            <h3 id="article-title-3" class="text-Top5 mb-4">Requirements for Chapter 13 Bankruptcy?</h3>
+                            <p>Aliquam dictum eget elit eget aliquam. Sed lobortis lorem vel nisi interdum rutrum. Donec maximus arcu nec neque cursus sagittis ac eget purus. Sed ac nulla dui. Morbi vel lectus ornare, suscipit neque eget, dignissim magna. Vestibulum varius dolor in risus interdum convallis. Cras eget nunc ante. Nunc erat dolor, imperdiet et justo ac, maximus fermentum turpis. Ut non volutpat odio, sed placerat ex. Cras eu orci risus. Donec nec ante vitae est rutrum mattis sit amet eu mi.</p>
+                            <br>
+                            <p>Morbi iaculis fermentum tellus, eget hendrerit neque ultrices nec. Curabitur molestie ut mauris vel viverra.
+                                Ut luctus ullamcorper mattis. Morbi venenatis consequat fringilla. Vestibulum sit amet sollicitudin velit. Ut pharetra porta magna et faucibus. Etiam vel sem in
+                                <a href="#">nunc placerat</a> tempus. Maecenas tortor elit, convallis nec commodo id, rhoncus eget urna. Phasellus dapibus eget justo nec sodales. Sed in sodales lorem, eget fringilla lectus. In elementum, nulla ut placerat cursus, velit enim mattis ipsum, id ultricies eros erat nec metus. Vivamus id neque a nunc lacinia posuere vel in felis.
+                                <a href="#">Donec faucibus</a> maximus tortor sed vestibulum. Ut ut erat vitae justo dictum consectetur a non erat.</p>
+                            <div class="my-8 rounded-2xl p-10 overflow-hidden text-white bg-2 italic text-base font-medium">
+                                <p class="text-base">“Aliquam dictum eget elit eget aliquam. Sed lobortis lorem vel nisi interdum rutrum. Donec maximus arcu nec neque cursus sagittis ac eget purus. Sed ac nulla dui. Morbi vel lectus ornare, suscipit neque eget, dignissim magna. Vestibulum varius dolor in risus interdum convallis. Cras eget nunc ante. Nunc erat dolor, imperdiet et justo ac, maximus fermentum turpis. Ut non volutpat odio, sed placerat ex. Cras eu orci risus. Donec nec ante vitae est rutrum sit amet mi.”</p>
+                            </div>
+                            <h3 id="article-title-4" class="text-Top5 mb-4">You Are Not Barred by a Prior Bankruptcy.</h3>
+                            <p>A debtor cannot file for Chapter 13 or Chapter 7 if a prior bankruptcy petition was dismissed during the preceding 180 days for either of the following reasons:</p>
+                            <br>
+                            <ul>
+                                <li>The debtor willfully violated a court order or failed to appear before the court</li>
+                                <li>The debtor requested that the court dismiss the case after a creditor asked the court to lift automatic.</li>
+                            </ul>
+                            <br>
+                            <p>Aliquam dictum eget elit eget aliquam. Sed lobortis lorem vel nisi interdum rutrum. Donec maximus arcu nec neque cursus sagittis ac eget purus. Sed ac nulla dui. Morbi vel lectus ornare, suscipit neque eget, dignissim magna. Vestibulum varius dolor in risus interdum convallis. Cras eget nunc ante. Nunc erat dolor, imperdiet et justo ac, maximus fermentum turpis. Ut non volutpat odio, sed placerat ex. Cras eu orci risus. Donec nec ante vitae est rutrum mattis sit amet eu mi.</p>
+                            <br>
+                            <span class="uppercase text-base italic text-blue101">Lorem ipsum dolor sit amet, consectetur adipiscing.</span>
+                            <br>
+                            <p>Sed ultricies sapien at ante dapibus, et euismod ex sodales. Curabitur ac luctus mauris. Ut vel sem sit amet leo molestie fringilla. Nunc nec rhoncus ipsum. Phasellus et placerat nibh. Sed non lectus porta, cursus ante cursus, ultrices felis. Aliquam sollicitudin in eros a venenatis. Etiam at porttitor lectus. Donec ut ligula purus. Donec porttitor tellus at scelerisque volutpat. Maecenas a arcu nec sem pellentesque tristique vel eu dui. Fusce convallis, libero sed bibendum lacinia, orci enim convallis arcu, non imperdiet urna sem vel augue. Nullam bibendum gravida velit, a commodo sapien tristique ut. Aenean nec nulla in lacus tempor rhoncus.</p>
+                            <br>
+                            <p>Aliquam dictum eget elit eget aliquam. Sed lobortis lorem vel nisi interdum rutrum. Donec maximus arcu nec neque cursus sagittis ac eget purus. Sed ac nulla dui. Morbi vel lectus ornare, suscipit neque eget, dignissim magna. Vestibulum varius dolor in risus interdum convallis. Cras eget nunc ante. Nunc erat dolor, imperdiet et justo ac, maximus fermentum turpis. Ut non volutpat odio, sed placerat ex. Cras eu orci risus. Donec nec ante vitae est rutrum mattis sit amet eu mi.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="col-span-4">
+                    <div class="sticky top-10">
+                        <div class="max-w-[373px] ml-auto rounded-xl overflow-hidden shadow-v1 p-5 flex flex-col gap-y-5 bg-white border border-LightGrey">
+                            @@include('components/Title-component.html', {
+                            'Style_common': '',
+                            'Style_title': 'text-h5',
+                            'Title_tag': 'h5',
+                            'Title': 'Related Posts',
+                            'Style_line': 'mt-5',
+                            })
+                            <ul class="main-ul">
+                                <li>
+                                    <a href="#article-title-1">Benefits of Bankruptcy</a>
+                                </li>
+                                <li>
+                                    <a href="#article-title-2">What is Bankruptcy?</a>
+                                </li>
+                                <li>
+                                    <a href="#article-title-3">Benefits of Bankruptcy</a>
+                                </li>
+                                <li>
+                                    <a href="#article-title-4">Lorem ipsume dolor sit amet</a>
+                                </li>
+                                <li>
+                                    <a href="#article-title-4">What is Bankruptcy?</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('components/Contact-section.html')
+    @@include('components/Footer.html')
 </main>
 
 @@include('components/script.html')

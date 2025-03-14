@@ -2142,6 +2142,9 @@ html {
 .left-\[50\%\]{
   left: 50%;
 }
+.top-10{
+  top: 2.5rem;
+}
 .top-20{
   top: 5rem;
 }
@@ -2166,21 +2169,38 @@ html {
 .col-span-6{
   grid-column: span 6 / span 6;
 }
+.col-span-8{
+  grid-column: span 8 / span 8;
+}
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
 .my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .my-5{
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
+.my-8{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 .my-auto{
   margin-top: auto;
   margin-bottom: auto;
 }
-.mx-auto{
-  margin-left: auto;
-  margin-right: auto;
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+.mb-12{
+  margin-bottom: 3rem;
 }
 .mb-2{
   margin-bottom: 0.5rem;
@@ -2211,6 +2231,12 @@ html {
 }
 .ml-5{
   margin-left: 1.25rem;
+}
+.ml-auto{
+  margin-left: auto;
+}
+.mr-1{
+  margin-right: 0.25rem;
 }
 .mr-2{
   margin-right: 0.5rem;
@@ -2383,6 +2409,9 @@ html {
 .max-w-\[578px\]{
   max-width: 578px;
 }
+.max-w-\[628px\]{
+  max-width: 628px;
+}
 .max-w-\[672px\]{
   max-width: 672px;
 }
@@ -2455,6 +2484,10 @@ html {
 .gap-6{
   gap: 1.5rem;
 }
+.gap-x-1{
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+}
 .gap-x-10{
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
@@ -2490,6 +2523,9 @@ html {
 }
 .gap-y-4{
   row-gap: 1rem;
+}
+.gap-y-5{
+  row-gap: 1.25rem;
 }
 .gap-y-\[6px\]{
   row-gap: 6px;
@@ -2686,6 +2722,10 @@ html {
   font-size: 40px;
   line-height: 130%;
 }
+.text-h5{
+  font-size: 26px;
+  line-height: 130%;
+}
 .text-none{
   font-size: 0px;
   line-height: 0px;
@@ -2710,6 +2750,9 @@ html {
 }
 .italic{
   font-style: italic;
+}
+.not-italic{
+  font-style: normal;
 }
 .leading-100{
   line-height: 100%;
@@ -2744,6 +2787,10 @@ html {
 }
 .text-Text2{
   color: #7B8BB3CC;
+}
+.text-Text3{
+  --tw-text-opacity: 1;
+  color: rgb(166 175 191 / var(--tw-text-opacity, 1));
 }
 .text-Title{
   --tw-text-opacity: 1;
@@ -3095,12 +3142,22 @@ p{
   }
 }
 
+.main-ul{
+  display: flex;
+  list-style-type: disc;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  padding-left: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 30 96 / var(--tw-text-opacity, 1));
+}
+
 .text-block h1, .text-block h2, .text-block h3, .text-block h4, .text-block h5, .text-block h6, .text-block .h1, .text-block .h2, .text-block .h3, .text-block .h4, .text-block .h5, .text-block .h6{
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
 .text-block a{
-  font-weight: 500;
+  font-style: italic;
   --tw-text-opacity: 1;
   color: rgb(0 78 213 / var(--tw-text-opacity, 1));
   text-decoration-line: underline;
@@ -3108,6 +3165,7 @@ p{
 .text-block ul{
   list-style-type: disc;
   padding-left: 1.5rem;
+  font-weight: 500;
 }
 
 .Fast-icon {
@@ -3168,6 +3226,46 @@ p{
 .bg-1 {
   background: url("../img/bg-1.png") no-repeat center;
   background-size: cover;
+}
+
+.AI-icon {
+  background: url("../img/AI-icon.svg");
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.User-icon {
+  background: url("../img/User-icon.svg");
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.calendar {
+  background: url("../img/calendar.svg");
+  display: block;
+  height: 18px;
+  width: 20px;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Pensil {
+  background: url("../img/Pensil.svg");
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .button{
@@ -3688,6 +3786,16 @@ p{
   margin-bottom: 24px;
 }
 
+.bg-ai {
+  background: url("../img/bg-ai.png") no-repeat center;
+  background-size: cover;
+}
+
+.bg-2 {
+  background: url("../img/bg-2.png") no-repeat bottom;
+  background-size: cover;
+}
+
 .hover\:cursor-default:hover{
   cursor: default;
 }
@@ -3845,11 +3953,11 @@ p{
   .lg\:mt-3{
     margin-top: 0.75rem;
   }
-  .lg\:mt-6{
-    margin-top: 1.5rem;
-  }
   .lg\:mt-4{
     margin-top: 1rem;
+  }
+  .lg\:mt-6{
+    margin-top: 1.5rem;
   }
   .lg\:hidden{
     display: none;
@@ -3926,6 +4034,10 @@ p{
   }
   .lg\:pt-8{
     padding-top: 2rem;
+  }
+  .lg\:text-h2Mob{
+    font-size: 30px;
+    line-height: 120%;
   }
 }
 
