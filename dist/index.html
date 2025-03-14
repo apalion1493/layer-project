@@ -903,11 +903,12 @@ border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 t
 </div>
                     <p class="mt-3 text-Text minmd:hidden">We are in this together!</p>
                 </div>
-                <div class="xl:max-w-[400px] lg:mx-auto max-w-[578px] w-full h-full overflow-hidden rounded-2xl p-10 lg:p-5 bg-1 flex items-center justify-center">
-                    <img class="object-cover w-full" src="img/avatar-2.png" alt="Talk to us Anytime!">
+                <div id="form-img" class="xl:max-w-[400px] lg:mx-auto max-w-[578px] w-full max-h-[568px] overflow-hidden rounded-2xl p-10 lg:p-5 bg-1 flex items-center justify-center">
+                    <img class="object-cover w-full h-full" src="img/avatar-2.png" alt="Talk to us Anytime!">
                 </div>
-                <div class="flex flex-col px-10 py-8 rounded-xl bg-white shadow-v1 border border-LightGrey md:border-none md:p-0">
-                    <div class="flex flex-col md:hidden">
+                <div class="w-full flex flex-col px-10 py-8 rounded-xl bg-white shadow-v1 border border-LightGrey md:border-none md:p-0">
+                    <div id="wrapperForm">
+                        <div class="flex flex-col md:hidden">
     <h3 class="text-Text font-medium tracking-12 @@Style_title">Talk to us Anytime!</h3>
     <span class="flex items-center gap-x-2 mt-3">
         <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
@@ -918,8 +919,8 @@ border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 t
         </svg>
     </span>
 </div>
-                    <p class="mt-3 text-Text md:hidden">We are in this together!</p>
-                    <form action="" class="mt-8 md:mt-0 row gap-4 md:gap-x-0 md:gap-y-3">
+                        <p class="mt-3 text-Text md:hidden">We are in this together!</p>
+                        <form id="contactForm" action="" class="mt-8 md:mt-0 row gap-4 md:gap-x-0 md:gap-y-3">
     <div class="col-span-6 md:col-span-12">
         <div class="form-group flex flex-col items-start ">
     <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="nameID"></label>
@@ -971,7 +972,7 @@ border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 t
         <span class="custom-checkbox__block w-[18px] min-w-[18px] h-[18px]">
             <i class="w-[18px] min-w-[18px] h-[18px] rounded bg-white border border-blue100 flex"></i>
         </span>
-        <input type="checkbox">
+        <input type="checkbox" name="consent">
         <span class="checkmark">
              <i class="Checkbox"></i>
         </span>
@@ -990,6 +991,29 @@ border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 t
 </button>
     </div>
 </form>
+
+                    </div>
+                    <div id="thankYouMessage" class="hidden lg:pt-5 lg:pb-0 lg:px-0 lg:bg-white rounded-2xl">
+                        <div class="flex flex-col md:hidden">
+    <h3 class="text-Text font-medium tracking-12 @@Style_title">Thank you for Contacting Us!</h3>
+    <span class="flex items-center gap-x-2 mt-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+        </svg>
+    </span>
+</div>
+                        <p class="mt-3 text-Text md:hidden">We will contact you with a few minutes for answering questions you need.</p>
+                        <img class="max-w-full" src="img/ty-img.svg" alt="Thank you for Contacting!">
+                        <button id="resetFormButton" class="button w-full mt-8 md:mt-3" type="submit" aria-label="Return to the Form">
+                            <span class="">Return to the Form</span>
+                            <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                <path d="M4.88452 0.880859L9.19988 5.00007L4.88452 9.11928" stroke="white" stroke-width="1.28571" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
