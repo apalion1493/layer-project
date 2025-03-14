@@ -15,11 +15,11 @@ h4, .h4 {
 }
 
 h5, .h5 {
-  @apply text-Top1 md:text-body2
+  @apply text-Top1
 }
 
 h6, .h6 {
-  @apply text-Top3 md:text-body4
+  @apply text-Top3
 }
 
 p {
@@ -28,7 +28,15 @@ p {
 
 .text-block {
 
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    @apply mb-2 font-medium
+  }
+
   a {
-    @apply font-bold underline text-blue100
+    @apply font-medium underline text-blue100
+  }
+
+  ul {
+    @apply list-disc pl-6
   }
 }
