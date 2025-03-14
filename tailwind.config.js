@@ -102,7 +102,8 @@ module.exports = {
                 Yellow: '#FFBF16',
             },
             letterSpacing: {
-                '04': '-0.4px'
+                '04': '-0.4px', //tracking
+                '12': '-1.2px' //tracking
             },
             padding: {
                 '1/4': '25%',

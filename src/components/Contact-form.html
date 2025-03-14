@@ -1,0 +1,85 @@
+<div class="flex flex-col px-10 py-8 rounded-xl bg-white shadow-v1 border border-LightGrey">
+    @@include('Title-component.html', {
+    'Title_tag': 'h3',
+    'Title': 'Talk to us Anytime!',
+    'Style_line': 'mt-3',
+    })
+    <p class="mt-3 text-Text">We are in this together!</p>
+    <form action="" class="mt-8 row gap-4">
+        <div class="col-span-6">
+            @@include('input.html', {
+            'common-style': '',
+            'StyleLabel': 'hidden',
+            'idInput': 'nameID',
+            'label': '',
+            'styleInput': 'input-icon User-input',
+            'type': 'text',
+            'placeholder': 'First name',
+            'errorStyle': 'hidden',
+            'Name': 'first-name',
+            })
+        </div>
+        <div class="col-span-6">
+            @@include('input.html', {
+            'common-style': '',
+            'StyleLabel': 'hidden',
+            'idInput': 'last-nameID',
+            'label': '',
+            'styleInput': 'input-icon User-input',
+            'type': 'text',
+            'placeholder': 'Last name',
+            'errorStyle': 'hidden',
+            'Name': 'second-name',
+            })
+        </div>
+        <div class="col-span-6">
+            @@include('input.html', {
+            'common-style': '',
+            'StyleLabel': 'hidden',
+            'idInput': 'phoneID',
+            'label': '',
+            'styleInput': 'input-icon Phone-input',
+            'type': 'text',
+            'placeholder': 'Phone number',
+            'errorStyle': 'hidden',
+            'Name': 'phone',
+            })
+        </div>
+        <div class="col-span-6">
+            @@include('input.html', {
+            'common-style': '',
+            'StyleLabel': 'hidden',
+            'idInput': 'mailID',
+            'label': '',
+            'styleInput': 'input-icon Mail-input',
+            'type': 'email',
+            'placeholder': 'Email',
+            'errorStyle': 'hidden',
+            'Name': 'Email',
+            })
+        </div>
+        <div class="col-span-12">
+            @@include('textarea.html', {
+            'commonStyle': '',
+            'Style_label': 'hidden',
+            'idTextarea': 'commentID',
+            'label': '',
+            'styleTextarea': '',
+            'placeholder': 'Tell us what happend...',
+            'rows': '3',
+            'Name': 'comment',
+            })
+        </div>
+        <div class="col-span-12">
+
+        </div>
+        <div class="col-span-12">
+            @@include('button-icon.html', {
+            'style': 'w-full',
+            'type': 'submit',
+            'ariaLabel': 'Contact Us',
+            'title': 'Contact Us',
+            })
+        </div>
+    </form>
+</div>

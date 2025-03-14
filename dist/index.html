@@ -24,7 +24,7 @@
             <div id="mobile-menu" class="show-mobile-menu">
                 <div class="flex gap-x-6 items-center lg:items-start relative w-full lg:flex-col lg:gap-y-6">
                     <div x-data="{ showDropdown: false }" class="">
-                        <button @click="showDropdown = !showDropdown" :class="showDropdown ? 'lg:pb-5 text-blue101' : ''" class="flex items-center lg:">
+                        <button @click="showDropdown = !showDropdown" :class="showDropdown ? 'lg:pb-5 text-blue101' : ''" class="flex items-center hover:text-blue101 lg:">
                             <span>Lawyers by Location</span>
                             <svg :class="showDropdown ? 'rotate-180' : ''" class="ml-2 transition-all" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
                                 <path :class="showDropdown ? 'stroke-blue101' : ''" d="M9.125 0.778823L5 5.22113L0.875 0.778823" stroke="#001E60" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -249,7 +249,7 @@
                         </div>
                     </div>
                     <div x-data="{ showDropdown: false }" class="">
-                        <button @click="showDropdown = !showDropdown" :class="showDropdown ? 'lg:pb-5 text-blue101' : ''" class="flex items-center lg:">
+                        <button @click="showDropdown = !showDropdown" :class="showDropdown ? 'lg:pb-5 text-blue101' : ''" class="flex items-center hover:text-blue101 lg:">
                             <span>Lawyers by Practice Area</span>
                             <svg :class="showDropdown ? 'rotate-180' : ''" class="ml-2 transition-all" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
                                 <path :class="showDropdown ? 'stroke-blue101' : ''" d="M9.125 0.778823L5 5.22113L0.875 0.778823" stroke="#001E60" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -477,7 +477,7 @@
                         </div>
                     </div>
                     <div x-data="{ showDropdown: false }" class="">
-                        <button @click="showDropdown = !showDropdown" :class="showDropdown ? 'lg:pb-5 text-blue101' : ''" class="flex items-center lg:">
+                        <button @click="showDropdown = !showDropdown" :class="showDropdown ? 'lg:pb-5 text-blue101' : ''" class="flex items-center hover:text-blue101 lg:">
                             <span>Legal Topics Q&A</span>
                             <svg :class="showDropdown ? 'rotate-180' : ''" class="ml-2 transition-all" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
                                 <path :class="showDropdown ? 'stroke-blue101' : ''" d="M9.125 0.778823L5 5.22113L0.875 0.778823" stroke="#001E60" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -865,6 +865,103 @@ hover:text-white hover:bg-blue100 max-w-[269px]">
 border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all ">
     <span class="text-body text-Text">Category</span>
 </a>
+
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="flex flex-col @@Style_common">
+    <h1 class="text-Text font-medium tracking-12 @@Style_title">h1</h1>
+    <span class="flex items-center gap-x-2 @@Style_line">
+        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+        </svg>
+    </span>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row gap-x-5 lg:gap-y-10">
+                <div class="col-span-6"></div>
+                <div class="col-span-6">
+                    <div class="flex flex-col px-10 py-8 rounded-xl bg-white shadow-v1 border border-LightGrey">
+    <div class="flex flex-col @@Style_common">
+    <h3 class="text-Text font-medium tracking-12 @@Style_title">Talk to us Anytime!</h3>
+    <span class="flex items-center gap-x-2 mt-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+        </svg>
+    </span>
+</div>
+    <p class="mt-3 text-Text">We are in this together!</p>
+    <form action="" class="mt-8 row gap-4">
+        <div class="col-span-6">
+            <div class="form-group flex flex-col items-start ">
+    <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="nameID"></label>
+    <input
+        class="input input-icon User-input "
+        type="text" id="nameID" placeholder="First name" name="first-name" required>
+    <small class="self-end text-body2 text-Error mt-1 hidden">Error</small>
+</div>
+        </div>
+        <div class="col-span-6">
+            <div class="form-group flex flex-col items-start ">
+    <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="last-nameID"></label>
+    <input
+        class="input input-icon User-input "
+        type="text" id="last-nameID" placeholder="Last name" name="second-name" required>
+    <small class="self-end text-body2 text-Error mt-1 hidden">Error</small>
+</div>
+        </div>
+        <div class="col-span-6">
+            <div class="form-group flex flex-col items-start ">
+    <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="phoneID"></label>
+    <input
+        class="input input-icon Phone-input "
+        type="text" id="phoneID" placeholder="Phone number" name="phone" required>
+    <small class="self-end text-body2 text-Error mt-1 hidden">Error</small>
+</div>
+        </div>
+        <div class="col-span-6">
+            <div class="form-group flex flex-col items-start ">
+    <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="mailID"></label>
+    <input
+        class="input input-icon Mail-input "
+        type="email" id="mailID" placeholder="Email" name="Email" required>
+    <small class="self-end text-body2 text-Error mt-1 hidden">Error</small>
+</div>
+        </div>
+        <div class="col-span-12">
+            <div class="form-group flex flex-col items-start overflow-hidden ">
+    <label class="mb-3 font-semibold text-body hidden" for="commentID"></label>
+    <textarea
+        class="input h-[161px] resize-none "
+        id="commentID" placeholder="Tell us what happend..." rows="3" name="comment"></textarea>
+</div>
+        </div>
+        <div class="col-span-12">
+
+        </div>
+        <div class="col-span-12">
+            <button class="button w-full" type="submit" aria-label="Contact Us">
+    <span class="">Contact Us</span>
+    <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+        <path d="M4.88452 0.880859L9.19988 5.00007L4.88452 9.11928" stroke="white" stroke-width="1.28571" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
+        </div>
+    </form>
+</div>
                 </div>
             </div>
         </div>
@@ -887,32 +984,32 @@ border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 t
                 <div class="flex minmd:justify-around gap-x-5">
                     <ul class="flex flex-col gap-y-3 md:flex-1">
                         <li class="flex items-center">
-                            <a class="text-body text-Text hover:underline transition-all" href="#">Class Actions</a>
+                            <a class="text-body text-Text hover:text-blue101 transition-all" href="#">Class Actions</a>
                         </li>
                         <li class="flex items-center">
-                            <a class="text-body text-Text hover:underline transition-all" href="#">Lawyers by
+                            <a class="text-body text-Text hover:text-blue101 transition-all" href="#">Lawyers by
                                 Location</a>
                         </li>
                         <li class="flex items-center">
-                            <a class="text-body text-Text hover:underline transition-all" href="#">Lawyers by Practice
+                            <a class="text-body text-Text hover:text-blue101 transition-all" href="#">Lawyers by Practice
                                 Area</a>
                         </li>
                         <li class="flex items-center">
-                            <a class="text-body text-Text hover:underline transition-all" href="#">Legal Topics Q&A</a>
+                            <a class="text-body text-Text hover:text-blue101 transition-all" href="#">Legal Topics Q&A</a>
                         </li>
                     </ul>
                     <ul class="flex flex-col gap-y-3 md:flex-[0.5]">
                         <li class="flex items-center">
-                            <a class="text-body text-Text hover:underline transition-all" href="#">Terms</a>
+                            <a class="text-body text-Text hover:text-blue101 transition-all" href="#">Terms</a>
                         </li>
                         <li class="flex items-center">
-                            <a class="text-body text-Text hover:underline transition-all" href="#">Privacy</a>
+                            <a class="text-body text-Text hover:text-blue101 transition-all" href="#">Privacy</a>
                         </li>
                         <li class="flex items-center">
-                            <a class="text-body text-Text hover:underline transition-all" href="#">Disclaimer</a>
+                            <a class="text-body text-Text hover:text-blue101 transition-all" href="#">Disclaimer</a>
                         </li>
                         <li class="flex items-center">
-                            <a class="text-body text-Text hover:underline transition-all" href="#">Conditions</a>
+                            <a class="text-body text-Text hover:text-blue101 transition-all" href="#">Conditions</a>
                         </li>
                     </ul>
                 </div>

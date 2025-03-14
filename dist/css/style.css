@@ -2216,6 +2216,9 @@ html {
 .mt-2{
   margin-top: 0.5rem;
 }
+.mt-3{
+  margin-top: 0.75rem;
+}
 .mt-5{
   margin-top: 1.25rem;
 }
@@ -2414,11 +2417,11 @@ html {
 .justify-between{
   justify-content: space-between;
 }
-.justify-around{
-  justify-content: space-around;
-}
 .gap-2{
   gap: 0.5rem;
+}
+.gap-4{
+  gap: 1rem;
 }
 .gap-6{
   gap: 1.5rem;
@@ -2565,6 +2568,10 @@ html {
   padding-left: 0px;
   padding-right: 0px;
 }
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -2596,6 +2603,10 @@ html {
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .pr-6{
   padding-right: 1.5rem;
@@ -2662,6 +2673,9 @@ html {
 }
 .tracking-04{
   letter-spacing: -0.4px;
+}
+.tracking-12{
+  letter-spacing: -1.2px;
 }
 .text-DarkBlue100{
   --tw-text-opacity: 1;
@@ -2815,24 +2829,20 @@ section {
 
 .input {
     display: flex;
-    height: 3.5rem;
+    height: 52px;
     width: 100%;
     align-items: center;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     border-width: 1px;
     --tw-border-opacity: 1;
-    border-color: rgb(6 11 82 / var(--tw-border-opacity, 1));
+    border-color: rgb(225 233 245 / var(--tw-border-opacity, 1));
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 16px;
-    line-height: 130%;
-    font-weight: 500;
+    padding: 0.75rem;
+    font-size: 14px;
+    line-height: 120%;
     --tw-text-opacity: 1;
-    color: rgb(6 11 82 / var(--tw-text-opacity, 1));
+    color: rgb(0 30 96 / var(--tw-text-opacity, 1));
     outline-width: 0px;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -2841,9 +2851,9 @@ section {
 
 .input:focus{
   --tw-border-opacity: 1;
-  border-color: rgb(6 11 82 / var(--tw-border-opacity, 1));
-  --tw-shadow: 0px 0px 16px 0px rgba(37, 51, 126, 0.05);
-  --tw-shadow-colored: 0px 0px 16px 0px var(--tw-shadow-color);
+  border-color: rgb(0 78 213 / var(--tw-border-opacity, 1));
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   outline-width: 0px;
   outline-color: inherit;
@@ -2854,7 +2864,7 @@ section {
 
 @media (max-width: 767px){
   .input{
-    height: 50px;
+    height: 52px;
     font-size: 14px;
     line-height: 120%;
   }
@@ -2864,7 +2874,7 @@ section {
   border-color: rgb(0 78 213 / var(--tw-border-opacity, 1));
 }
 .input.input-icon{
-  padding-left: 44px;
+  padding-left: 40px;
 }
 .input--radio{
   color: #1B3C7480;
@@ -2909,11 +2919,8 @@ section {
 }
 
 textarea.input{
-  height: 161px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  height: 100px;
+  padding: 0.75rem;
 }
 
 select.select {
@@ -3089,6 +3096,21 @@ p{
   background-repeat: no-repeat;
 }
 
+.User-input {
+  background: url("../img/User-input.svg") 12px center no-repeat;
+  background-size: 20px 20px;
+}
+
+.Phone-input {
+  background: url("../img/Phone-input.svg") 12px center no-repeat;
+  background-size: 20px 20px;
+}
+
+.Mail-input {
+  background: url("../img/Mail-input.svg") 12px center no-repeat;
+  background-size: 20px 20px;
+}
+
 .button{
   display: flex;
   height: 52px;
@@ -3188,14 +3210,14 @@ p{
 }
 
 .section{
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 @media (max-width: 1023px){
   .section{
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 }
 
@@ -3639,6 +3661,11 @@ p{
   font-weight: 600;
 }
 
+.hover\:text-blue101:hover{
+  --tw-text-opacity: 1;
+  color: rgb(0 83 226 / var(--tw-text-opacity, 1));
+}
+
 .hover\:text-gray-700:hover{
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
@@ -3647,10 +3674,6 @@ p{
 .hover\:text-white:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.hover\:underline:hover{
-  text-decoration-line: underline;
 }
 
 .focus\:border-0:focus{
@@ -3779,11 +3802,11 @@ p{
   .lg\:gap-3{
     gap: 0.75rem;
   }
-  .lg\:gap-y-6{
-    row-gap: 1.5rem;
-  }
   .lg\:gap-y-10{
     row-gap: 2.5rem;
+  }
+  .lg\:gap-y-6{
+    row-gap: 1.5rem;
   }
   .lg\:border-y{
     border-top-width: 1px;
@@ -3797,20 +3820,20 @@ p{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }
+  .lg\:pb-4{
+    padding-bottom: 1rem;
+  }
   .lg\:pb-5{
     padding-bottom: 1.25rem;
   }
   .lg\:pb-\[100px\]{
     padding-bottom: 100px;
   }
-  .lg\:pb-4{
-    padding-bottom: 1rem;
+  .lg\:pt-4{
+    padding-top: 1rem;
   }
   .lg\:pt-8{
     padding-top: 2rem;
-  }
-  .lg\:pt-4{
-    padding-top: 1rem;
   }
 }
 

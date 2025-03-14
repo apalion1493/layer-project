@@ -61,7 +61,7 @@ section {
 	}
 
     &.input-icon {
-      @apply pl-[44px]
+      @apply pl-[40px]
     }
 
   &--radio {
@@ -72,9 +72,9 @@ section {
     @apply text-DarkBlue50
   }
 
-  @apply px-4 py-[10px] bg-white flex items-center rounded-2xl text-body font-medium h-14 md:h-[50px] md:text-body2
-  w-full text-DarkBlue100 border border-DarkBlue100 transition-all focus:shadow-v1
-  focus:ring-0 outline-0 focus:outline-0 focus:outline-inherit focus:border-DarkBlue100
+  @apply p-3 bg-white flex items-center rounded-lg text-body2 h-[52px] md:h-[52px] md:text-body2
+  w-full text-Text border border-LightGrey transition-all focus:shadow-none
+  focus:ring-0 outline-0 focus:outline-0 focus:outline-inherit focus:border-blue100
 }
 
 .input-radio-block {
@@ -94,7 +94,7 @@ section {
 }
 
 textarea.input {
-  @apply h-[161px] px-4 py-6
+  @apply h-[100px] p-3
 }
 
 select.select {
