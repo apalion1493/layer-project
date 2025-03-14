@@ -16,7 +16,8 @@ const includePartials = require('gulp-file-include') //For supporting partials i
 const replace = require('gulp-replace');
 
 
-const imagePath = '../img/';
+const imagePathHTML = 'img/';
+const imagePathCSS = '../img/';
 
 //Load Previews on Browser on dev
 function livePreview(done) {
@@ -45,6 +46,7 @@ function devHTML() {
 				basepath: '@file',
 			})
 		)
+		.pipe(replace('__IMAGE_PATH__', imagePathHTML))
 		.pipe(dest(options.paths.dist.base))
 }
 
@@ -54,7 +56,7 @@ function devStyles() {
 	return src(`${options.paths.src.css}/**/*.scss`)
 		.pipe(sass().on('error', sass.logError))
 		.pipe(postcss([tailwindcss(options.config.tailwindjs), autoprefixer()]))
-		.pipe(replace('__IMAGE_PATH__', imagePath))
+		.pipe(replace('__IMAGE_PATH__', imagePathCSS))
 		.pipe(concat({ path: 'style.css' }))
 		.pipe(dest(options.paths.dist.css))
 }

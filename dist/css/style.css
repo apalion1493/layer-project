@@ -3741,8 +3741,17 @@ p{
   .lg\:static{
     position: static;
   }
+  .lg\:col-span-12{
+    grid-column: span 12 / span 12;
+  }
+  .lg\:col-span-6{
+    grid-column: span 6 / span 6;
+  }
   .lg\:mt-3{
     margin-top: 0.75rem;
+  }
+  .lg\:mt-6{
+    margin-top: 1.5rem;
   }
   .lg\:hidden{
     display: none;
@@ -3773,6 +3782,9 @@ p{
   .lg\:gap-y-6{
     row-gap: 1.5rem;
   }
+  .lg\:gap-y-10{
+    row-gap: 2.5rem;
+  }
   .lg\:border-y{
     border-top-width: 1px;
     border-bottom-width: 1px;
@@ -3791,9 +3803,30 @@ p{
   .lg\:pb-\[100px\]{
     padding-bottom: 100px;
   }
+  .lg\:pb-4{
+    padding-bottom: 1rem;
+  }
+  .lg\:pt-8{
+    padding-top: 2rem;
+  }
+  .lg\:pt-4{
+    padding-top: 1rem;
+  }
 }
 
 @media (max-width: 767px){
+  .md\:col-span-12{
+    grid-column: span 12 / span 12;
+  }
+  .md\:max-w-full{
+    max-width: 100%;
+  }
+  .md\:flex-1{
+    flex: 1 1 0%;
+  }
+  .md\:flex-\[0\.5\]{
+    flex: 0.5;
+  }
   .md\:overflow-y-scroll{
     overflow-y: scroll;
   }
@@ -3813,6 +3846,12 @@ p{
   }
   .sm\:flex-col{
     flex-direction: column;
+  }
+}
+
+@media (min-width: 768px){
+  .minmd\:justify-around{
+    justify-content: space-around;
   }
 }
 
