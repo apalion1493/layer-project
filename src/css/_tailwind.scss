@@ -72,7 +72,7 @@ section {
     @apply text-DarkBlue50
   }
 
-  @apply p-3 bg-white flex items-center rounded-lg text-body2 h-[52px] md:h-[52px] md:text-body2
+  @apply p-3 bg-white flex items-center rounded-lg text-body2 h-[52px] md:h-[48px]
   w-full text-Text border border-LightGrey transition-all focus:shadow-none
   focus:ring-0 outline-0 focus:outline-0 focus:outline-inherit focus:border-blue100
 }

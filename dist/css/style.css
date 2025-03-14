@@ -2219,6 +2219,9 @@ html {
 .mt-3{
   margin-top: 0.75rem;
 }
+.mt-4{
+  margin-top: 1rem;
+}
 .mt-5{
   margin-top: 1.25rem;
 }
@@ -2230,9 +2233,6 @@ html {
 }
 .mt-auto{
   margin-top: auto;
-}
-.mt-4{
-  margin-top: 1rem;
 }
 .block{
   display: block;
@@ -2360,6 +2360,9 @@ html {
 .max-w-\[440px\]{
   max-width: 440px;
 }
+.max-w-\[578px\]{
+  max-width: 578px;
+}
 .max-w-\[672px\]{
   max-width: 672px;
 }
@@ -2429,6 +2432,10 @@ html {
 .gap-6{
   gap: 1.5rem;
 }
+.gap-x-10{
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+}
 .gap-x-2{
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -2476,6 +2483,9 @@ html {
 .rounded{
   border-radius: 0.25rem;
 }
+.rounded-2xl{
+  border-radius: 1rem;
+}
 .rounded-5xl{
   border-radius: 40px;
 }
@@ -2502,6 +2512,9 @@ html {
 }
 .border-t{
   border-top-width: 1px;
+}
+.border-dashed{
+  border-style: dashed;
 }
 .border-none{
   border-style: none;
@@ -2557,6 +2570,9 @@ html {
 }
 .p-1{
   padding: 0.25rem;
+}
+.p-10{
+  padding: 2.5rem;
 }
 .p-5{
   padding: 1.25rem;
@@ -2864,9 +2880,7 @@ section {
 
 @media (max-width: 767px){
   .input{
-    height: 52px;
-    font-size: 14px;
-    line-height: 120%;
+    height: 48px;
   }
 }
 .input.active{
@@ -3125,6 +3139,11 @@ p{
   background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.bg-1 {
+  background: url("../img/bg-1.png") no-repeat center;
+  background-size: cover;
 }
 
 .button{
@@ -3776,6 +3795,12 @@ p{
   opacity: 0;
 }
 
+@media (max-width: 1344px){
+  .xl\:max-w-\[400px\]{
+    max-width: 400px;
+  }
+}
+
 @media (max-width: 1023px){
   .lg\:static{
     position: static;
@@ -3785,6 +3810,10 @@ p{
   }
   .lg\:col-span-6{
     grid-column: span 6 / span 6;
+  }
+  .lg\:mx-auto{
+    margin-left: auto;
+    margin-right: auto;
   }
   .lg\:mt-3{
     margin-top: 0.75rem;
@@ -3805,6 +3834,9 @@ p{
   .lg\:min-w-full{
     min-width: 100%;
   }
+  .lg\:max-w-full{
+    max-width: 100%;
+  }
   .lg\:translate-x-0{
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -3818,6 +3850,10 @@ p{
   .lg\:gap-3{
     gap: 0.75rem;
   }
+  .lg\:gap-x-0{
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+  }
   .lg\:gap-y-10{
     row-gap: 2.5rem;
   }
@@ -3827,6 +3863,9 @@ p{
   .lg\:border-y{
     border-top-width: 1px;
     border-bottom-width: 1px;
+  }
+  .lg\:p-5{
+    padding: 1.25rem;
   }
   .lg\:px-0{
     padding-left: 0px;
@@ -3857,6 +3896,15 @@ p{
   .md\:col-span-12{
     grid-column: span 12 / span 12;
   }
+  .md\:mt-0{
+    margin-top: 0px;
+  }
+  .md\:mt-3{
+    margin-top: 0.75rem;
+  }
+  .md\:hidden{
+    display: none;
+  }
   .md\:max-w-full{
     max-width: 100%;
   }
@@ -3866,8 +3914,43 @@ p{
   .md\:flex-\[0\.5\]{
     flex: 0.5;
   }
+  .md\:gap-x-0{
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+  }
+  .md\:gap-y-3{
+    row-gap: 0.75rem;
+  }
   .md\:overflow-y-scroll{
     overflow-y: scroll;
+  }
+  .md\:rounded-xl{
+    border-radius: 0.75rem;
+  }
+  .md\:border{
+    border-width: 1px;
+  }
+  .md\:border-none{
+    border-style: none;
+  }
+  .md\:border-LightGrey{
+    --tw-border-opacity: 1;
+    border-color: rgb(225 233 245 / var(--tw-border-opacity, 1));
+  }
+  .md\:p-0{
+    padding: 0px;
+  }
+  .md\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .md\:py-6{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .md\:text-Top5{
+    font-size: 28px;
+    line-height: 100%;
   }
   .md\:text-body2{
     font-size: 14px;
@@ -3876,6 +3959,11 @@ p{
   .md\:text-body4{
     font-size: 12px;
     line-height: 120%;
+  }
+  .md\:shadow-v1{
+    --tw-shadow: 0px 0px 16px 0px rgba(37, 51, 126, 0.05);
+    --tw-shadow-colored: 0px 0px 16px 0px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
 
@@ -3889,6 +3977,9 @@ p{
 }
 
 @media (min-width: 768px){
+  .minmd\:hidden{
+    display: none;
+  }
   .minmd\:justify-around{
     justify-content: space-around;
   }

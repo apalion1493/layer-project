@@ -1,64 +1,51 @@
-<div class="flex flex-col px-10 py-8 rounded-xl bg-white shadow-v1 border border-LightGrey">
-    <div class="flex flex-col @@Style_common">
-    <h3 class="text-Text font-medium tracking-12 @@Style_title">Talk to us Anytime!</h3>
-    <span class="flex items-center gap-x-2 mt-3">
-        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
-          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round"/>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
-          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
-        </svg>
-    </span>
-</div>
-    <p class="mt-3 text-Text">We are in this together!</p>
-    <form action="" class="mt-8 row gap-4">
-        <div class="col-span-6">
-            <div class="form-group flex flex-col items-start ">
+<form action="" class="mt-8 md:mt-0 row gap-4 md:gap-x-0 md:gap-y-3">
+    <div class="col-span-6 md:col-span-12">
+        <div class="form-group flex flex-col items-start ">
     <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="nameID"></label>
     <input
         class="input input-icon User-input "
         type="text" id="nameID" placeholder="First name" name="first-name" required>
     <small class="self-end text-body2 text-Error mt-1 hidden">Error</small>
 </div>
-        </div>
-        <div class="col-span-6">
-            <div class="form-group flex flex-col items-start ">
+    </div>
+    <div class="col-span-6 md:col-span-12">
+        <div class="form-group flex flex-col items-start ">
     <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="last-nameID"></label>
     <input
         class="input input-icon User-input "
         type="text" id="last-nameID" placeholder="Last name" name="second-name" required>
     <small class="self-end text-body2 text-Error mt-1 hidden">Error</small>
 </div>
-        </div>
-        <div class="col-span-6">
-            <div class="form-group flex flex-col items-start ">
+    </div>
+    <div class="col-span-6 md:col-span-12">
+        <div class="form-group flex flex-col items-start ">
     <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="phoneID"></label>
     <input
         class="input input-icon Phone-input "
         type="text" id="phoneID" placeholder="Phone number" name="phone" required>
     <small class="self-end text-body2 text-Error mt-1 hidden">Error</small>
 </div>
-        </div>
-        <div class="col-span-6">
-            <div class="form-group flex flex-col items-start ">
+    </div>
+    <div class="col-span-6 md:col-span-12">
+        <div class="form-group flex flex-col items-start ">
     <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="mailID"></label>
     <input
         class="input input-icon Mail-input "
         type="email" id="mailID" placeholder="Email" name="Email" required>
     <small class="self-end text-body2 text-Error mt-1 hidden">Error</small>
 </div>
-        </div>
-        <div class="col-span-12">
-            <div class="form-group flex flex-col items-start overflow-hidden ">
+    </div>
+    <div class="col-span-12">
+        <div class="form-group flex flex-col items-start overflow-hidden ">
     <label class="mb-3 font-semibold text-body hidden" for="commentID"></label>
     <textarea
         class="input h-[161px] resize-none "
         id="commentID" placeholder="Tell us what happend..." rows="3" name="comment"></textarea>
 </div>
-        </div>
-        <div class="col-span-12">
-            <div class="mt-4">
-                <div class="flex flex-col">
+    </div>
+    <div class="col-span-12">
+        <div class="mt-4 md:mt-3">
+            <div class="flex flex-col">
     <label class="custom-checkbox">
         <span class="custom-checkbox__block w-[18px] min-w-[18px] h-[18px]">
             <i class="w-[18px] min-w-[18px] h-[18px] rounded bg-white border border-blue100 flex"></i>
@@ -67,19 +54,18 @@
         <span class="checkmark">
              <i class="Checkbox"></i>
         </span>
-        <span class="ml-2 text-body2 text-Grey md:text-body4 ">I consent to be contacted and i have read and agree to the <a href="#">LawyerAI privacy notice</a> and <a href="#">terms of service.*</a> </span>
+        <span class="ml-2 text-body2 text-Grey ">I consent to be contacted and i have read and agree to the <a href="#">LawyerAI privacy notice</a> and <a href="#">terms of service.*</a> </span>
     </label>
     <small class="text-body2 font-medium text-Error md:text-body4 mt-2 hidden">Error</small>
 </div>
-            </div>
         </div>
-        <div class="col-span-12">
-            <button class="button w-full mt-4" type="submit" aria-label="Contact Us">
+    </div>
+    <div class="col-span-12">
+        <button class="button w-full mt-4 md:mt-3" type="submit" aria-label="Contact Us">
     <span class="">Contact Us</span>
     <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
         <path d="M4.88452 0.880859L9.19988 5.00007L4.88452 9.11928" stroke="white" stroke-width="1.28571" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
 </button>
-        </div>
-    </form>
-</div>
+    </div>
+</form>

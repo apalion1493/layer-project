@@ -32,3 +32,8 @@
   background: url("__IMAGE_PATH__Checkbox.svg");
   @apply block h-[18px] w-[18px] bg-100-auto bg-center bg-no-repeat;
 }
+
+.bg-1 {
+  background: url("__IMAGE_PATH__bg-1.png") no-repeat center;
+  background-size: cover;
+}
