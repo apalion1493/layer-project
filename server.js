@@ -13,21 +13,38 @@ app.use(express.json());
 // Настройка Multer для обработки form-data
 const upload = multer();
 
-// Обработка POST-запроса с формы
+// Хранилище данных (имитация базы данных)
+let storedFormData = {};
+
+// Обработка POST-запроса с формы обратной связи
 app.post("/send-form", upload.none(), (req, res) => {
   const { "first-name": firstName, "second-name": lastName, phone, Email, comment, consent } = req.body;
 
-  // Проверка обязательных полей
   if (!firstName || !lastName || !phone || !Email || !consent) {
     return res.status(400).json({ success: false, message: "Заполните все обязательные поля." });
   }
 
-  // Логирование данных (для отладки)
-  console.log("Получены данные:", req.body);
-
-  // Здесь можно добавить логику сохранения в БД или отправки email
-
+  console.log("Получены данные с формы обратной связи:", req.body);
   res.status(200).json({ success: true, message: "Форма успешно отправлена!" });
+});
+
+// Обработка POST-запроса с многошаговой формы
+app.post("/api/submit", (req, res) => {
+  const { name, phone, email, zip, terms } = req.body;
+
+  if (!name || !phone || !email || !zip || !terms) {
+    return res.status(400).json({ success: false, message: "Заполните все обязательные поля." });
+  }
+
+  storedFormData = req.body;
+  console.log("Получены данные с многошаговой формы:", storedFormData);
+
+  res.status(200).json({ success: true, message: "Данные успешно отправлены!" });
+});
+
+// Эндпоинт для просмотра сохранённых данных
+app.get("/api/data", (req, res) => {
+  res.json(storedFormData);
 });
 
 // Запуск сервера

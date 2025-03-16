@@ -14,6 +14,10 @@
 
 .button {
 
+  &.disabled {
+    @apply bg-Grey hover:bg-Text;
+  }
+
   &.width-full {
     @apply w-full;
   }

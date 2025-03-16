@@ -93,7 +93,16 @@ section {
 
 }
 
+.min-w-0 {
+  min-width: 0 !important;
+}
+
 textarea.input {
+
+  &.steps {
+    height: 120px !important;
+    resize: none;
+  }
   @apply h-[100px] p-3
 }
 

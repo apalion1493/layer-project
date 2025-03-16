@@ -57,3 +57,13 @@
   background: url("__IMAGE_PATH__Pensil.svg");
   @apply block h-[20px] w-[20px] bg-100-auto bg-center bg-no-repeat;
 }
+
+.AI-icon-small {
+  background: url("__IMAGE_PATH__AI-icon-small.svg");
+  @apply block h-[35px] w-[38px] bg-100-auto bg-center bg-no-repeat;
+}
+
+.website-input {
+  background: url("__IMAGE_PATH__website-input.svg") 12px center no-repeat;
+  background-size: 20px 20px;
+}
