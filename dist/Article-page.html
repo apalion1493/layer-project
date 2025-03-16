@@ -734,12 +734,12 @@
                     </span>
                 <p class="text-center">Our AI-powered lawyer finder makes it easy to connect with the right attorney for your situation. Simply answer a few questions about your case.</p>
             </div>
-            <div x-data="multiStepForm" class="w-full max-w-[720px] mx-auto bg-white p-6 mt-6 rounded-xl shadow-v1">
+            <div x-data="multiStepForm" class="w-full max-w-[720px] mx-auto bg-white p-6 mt-6 md:px-4 md:py-5 rounded-xl shadow-v1">
                 <!-- Step 1 -->
                 <div x-show="step === 1">
                     <div class="flex flex-col">
                         <div class="flex mb-6">
-                            <i class="AI-icon-small mr-3 mt-1"></i>
+                            <i class="AI-icon-small min-w-[37px] mr-3 mt-1"></i>
                             <div class="flex flex-col">
                                 <p class="text-base font-medium mb-2">Describe your problem.</p>
                                 <p class="text-Grey">Briefly explain the legal situation you're facing!</p>
@@ -762,14 +762,14 @@
                 <div x-show="step === 2">
                     <div class="flex flex-col">
                         <div class="flex mb-6">
-                            <i class="AI-icon-small mr-3 mt-1"></i>
+                            <i class="AI-icon-small min-w-[37px] mr-3 mt-1"></i>
                             <div class="flex flex-col">
                                 <p class="text-base font-medium mb-2">Tell us how to reach you.</p>
                                 <p class="text-Grey">Provide your contact details so we can connect you with the best lawyers.</p>
                             </div>
                         </div>
-                        <div class="row gap-4">
-                            <div class="col-span-6">
+                        <div class="row gap-4 md:gap-x-0">
+                            <div class="col-span-6 md:col-span-12">
                                 <div class="form-group flex flex-col items-start">
                                     <label class="w-full">
                                         <input x-model="formData.name" class="input input-icon User-input" type="text" id="nameStepId" placeholder="Full Name" name="name" required>
@@ -777,7 +777,7 @@
                                     <small class="self-end text-body2 text-Error mt-1 hidden">Error</small>
                                 </div>
                             </div>
-                            <div class="col-span-6">
+                            <div class="col-span-6 md:col-span-12">
                                 <div class="form-group flex flex-col items-start">
                                     <label class="w-full">
                                         <input x-model="formData.phone" class="input input-icon Phone-input" type="tel" id="phoneStepId" placeholder="Phone" name="phone" required>
@@ -785,7 +785,7 @@
                                     <small class="self-end text-body2 text-Error mt-1 hidden">Error</small>
                                 </div>
                             </div>
-                            <div class="col-span-6">
+                            <div class="col-span-6 md:col-span-12">
                                 <div class="form-group flex flex-col items-start">
                                     <label class="w-full">
                                         <input x-model="formData.email" class="input input-icon Mail-input" type="email" id="emailStepId" placeholder="Email" name="email" required>
@@ -793,7 +793,7 @@
                                     <small class="self-end text-body2 text-Error mt-1 hidden">Error</small>
                                 </div>
                             </div>
-                            <div class="col-span-6">
+                            <div class="col-span-6 md:col-span-12">
                                 <div class="form-group flex flex-col items-start">
                                     <label class="w-full">
                                         <input x-model="formData.zip" class="input input-icon website-input" type="text" id="zipStepId" placeholder="ZIP Code" name="zip" required>
@@ -832,7 +832,7 @@
                 <div x-show="step === 3" class="">
                     <div class="flex flex-col">
                         <div class="flex mb-6">
-                            <i class="AI-icon-small mr-3 mt-1"></i>
+                            <i class="AI-icon-small min-w-[37px] mr-3 mt-1"></i>
                             <div class="flex flex-col">
                                 <p class="text-base font-medium mb-2 text-left">Describe a legal project or role and we’ll match you with exceptional legal talent.</p>
                             </div>
@@ -848,7 +848,7 @@
                 <div x-show="step === 4 && !error" class="">
                     <div class="flex flex-col">
                         <div class="flex items-center mb-6">
-                            <i class="AI-icon-small mr-3"></i>
+                            <i class="AI-icon-small min-w-[37px] mr-3"></i>
                             <div class="flex flex-col">
                                 <p class="text-base font-medium">Are you agree to make your question public?</p>
                             </div>
@@ -870,7 +870,7 @@
 <!--                            <button @click="step = 5" class="bg-gray-500 text-white p-2 rounded">Нет</button>-->
                         </div>
                         <div class="flex items-center mb-6">
-                            <i class="AI-icon-small mr-3"></i>
+                            <i class="AI-icon-small min-w-[37px] mr-3"></i>
                             <div class="flex flex-col">
                                 <p class="text-base font-medium">Or connect with your local attorney</p>
                             </div>
@@ -901,7 +901,7 @@
 <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data('multiStepForm', () => ({
-            step: 4,
+            step: 1,
             textInput: '',
             formData: {
                 text: '',

@@ -2403,6 +2403,9 @@ html {
 .min-w-\[72px\]{
   min-width: 72px;
 }
+.min-w-\[37px\]{
+  min-width: 37px;
+}
 .max-w-\[269px\]{
   max-width: 269px;
 }
@@ -4164,6 +4167,10 @@ p{
   .md\:py-6{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+  }
+  .md\:py-5{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
   .md\:text-Top5{
     font-size: 28px;
