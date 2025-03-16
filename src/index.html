@@ -10,21 +10,72 @@
     @@include('components/Header.html', {
     'commonStyle': ' ',
     })
+    @@include('components/AI-section.html')
+    <section class="section border-t border-LightGrey border-dashed">
+        <div class="container">
+            <div class="swiper mySwiper swiper-custom">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        @@include('components/Benefits-card.html', {
+                        'Style': 'lg:max-w-[305px]',
+                        'Icon': 'Fast-icon',
+                        'Title': 'Fast & Efficient',
+                        'Text': 'Get matched with lawyers in seconds, saving your time and effort.',
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('components/Benefits-card.html', {
+                        'Style': 'lg:max-w-[305px]',
+                        'Icon': 'Accurate-Results',
+                        'Title': 'Accurate Results',
+                        'Text': 'Our AI uses advanced algorithms to analyze your information and find relevant lawyers.',
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('components/Benefits-card.html', {
+                        'Style': 'lg:max-w-[305px]',
+                        'Icon': 'Free-icon',
+                        'Title': 'Free to Use',
+                        'Text': 'This service is completely free, you can find the legal help you need for free',
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('components/Benefits-card.html', {
+                        'Style': 'lg:max-w-[305px]',
+                        'Icon': 'Expert-icon',
+                        'Title': 'Expert Guidance',
+                        'Text': 'AI is trained on a vast database of legal info, you connect with experienced attorney. ',
+                        })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section bg-bgLight border-t border-LightGrey border-dashed">
+        <div class="container">
 
+        </div>
+    </section>
+    <section class="section border-t border-LightGrey border-dashed">
+        <div class="container">
+
+        </div>
+    </section>
+    <section class="section border-t border-LightGrey border-dashed">
+        <div class="container">
+            <div class="row gap-x-5">
+                <div class="col-span-4">
+
+                </div>
+                <div class="col-span-8"></div>
+            </div>
+        </div>
+    </section>
 
     <section class="section">
         <div class="container">
             <div class="row">
                 <div class="col-span-12">
-                    <br>
-                    <br>
-                    <br>
-
-                    @@include('components/Benefits-card.html', {
-                    'Style': 'max-w-[305px]',
-                    'Icon': 'Fast-icon',
-                    '': '',
-                    })
 
                     <br>
                     <br>

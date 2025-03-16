@@ -213,6 +213,13 @@
 // swiper Start
 
 .swiper-custom {
+  overflow: inherit;
+
+  .swiper-slide {
+    height: auto;
+    @apply lg:w-auto
+  }
+
   .swiper-pagination-bullet {
     @apply w-6 h-6 lg:w-[18px] lg:h-[18px] opacity-100 bg-DarkBlue100
   }

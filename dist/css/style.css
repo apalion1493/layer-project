@@ -2400,11 +2400,11 @@ html {
 .min-w-\[18px\]{
   min-width: 18px;
 }
-.min-w-\[72px\]{
-  min-width: 72px;
-}
 .min-w-\[37px\]{
   min-width: 37px;
+}
+.min-w-\[72px\]{
+  min-width: 72px;
 }
 .max-w-\[269px\]{
   max-width: 269px;
@@ -3342,6 +3342,36 @@ p{
   background-size: 20px 20px;
 }
 
+.Accurate-Results {
+  background: url("../img/Accurate-Results.svg");
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Free-icon {
+  background: url("../img/Free-icon.svg");
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Expert-icon {
+  background: url("../img/Expert-icon.svg");
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .button{
   display: flex;
   height: 52px;
@@ -3630,6 +3660,17 @@ p{
   color: #1B3C7480;
 }
 
+.swiper-custom {
+  overflow: inherit;
+}
+.swiper-custom .swiper-slide {
+  height: auto;
+}
+@media (max-width: 1023px){
+  .swiper-custom .swiper-slide{
+    width: auto;
+  }
+}
 .swiper-custom .swiper-pagination-bullet{
   height: 1.5rem;
   width: 1.5rem;
@@ -3637,7 +3678,6 @@ p{
   background-color: rgb(6 11 82 / var(--tw-bg-opacity, 1));
   opacity: 1;
 }
-
 @media (max-width: 1023px){
   .swiper-custom .swiper-pagination-bullet{
     height: 18px;
@@ -4032,6 +4072,9 @@ p{
   .lg\:min-w-full{
     min-width: 100%;
   }
+  .lg\:max-w-\[305px\]{
+    max-width: 305px;
+  }
   .lg\:translate-x-0{
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -4164,13 +4207,13 @@ p{
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  .md\:py-6{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
   .md\:py-5{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+  .md\:py-6{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
   .md\:text-Top5{
     font-size: 28px;
@@ -4193,6 +4236,9 @@ p{
 @media (max-width: 639px){
   .sm\:hidden{
     display: none;
+  }
+  .sm\:max-w-\[305px\]{
+    max-width: 305px;
   }
   .sm\:flex-col{
     flex-direction: column;

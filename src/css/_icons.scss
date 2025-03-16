@@ -67,3 +67,18 @@
   background: url("__IMAGE_PATH__website-input.svg") 12px center no-repeat;
   background-size: 20px 20px;
 }
+
+.Accurate-Results {
+  background: url("__IMAGE_PATH__Accurate-Results.svg");
+  @apply block h-[40px] w-[40px] bg-100-auto bg-center bg-no-repeat;
+}
+
+.Free-icon {
+  background: url("__IMAGE_PATH__Free-icon.svg");
+  @apply block h-[40px] w-[40px] bg-100-auto bg-center bg-no-repeat;
+}
+
+.Expert-icon {
+  background: url("__IMAGE_PATH__Expert-icon.svg");
+  @apply block h-[40px] w-[40px] bg-100-auto bg-center bg-no-repeat;
+}
