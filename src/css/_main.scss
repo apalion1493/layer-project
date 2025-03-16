@@ -215,13 +215,19 @@
 .swiper-custom {
   overflow: inherit;
 
+  .swiper-button-prev, .swiper-button-next {
+    bottom: 0;
+    top: auto;
+
+  }
+
   .swiper-slide {
     height: auto;
     @apply lg:w-auto
   }
 
   .swiper-pagination-bullet {
-    @apply w-6 h-6 lg:w-[18px] lg:h-[18px] opacity-100 bg-DarkBlue100
+    @apply w-[10px] h-[10px] opacity-100 bg-LightGrey
   }
 
   .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next,
@@ -232,7 +238,7 @@
   }
 
   .swiper-pagination-bullet-active {
-    @apply bg-blue100
+    @apply bg-blue100 w-[28px] rounded-xl
   }
 
   .swiper-button-prev:after, .swiper-button-next:after {

@@ -19,6 +19,32 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    const swiper2 = new Swiper(".mySwiper2", {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 'auto',
+            },
+            769: {
+                slidesPerView: 'auto',
+            },
+            1025: {
+                slidesPerView: 3,
+            },
+            1346: {
+                slidesPerView: 4,
+            }
+        }
+    });
 })
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -63,7 +63,7 @@
     </section>
     <section class="section border-t border-LightGrey border-dashed">
         <div class="container">
-            <div class="row gap-x-5 lg:gap-x-0">
+            <div class="row gap-x-5 lg:gap-x-0 mb-[67px] lg:mb-0">
                 <div class="col-span-4 lg:col-span-12">
                     <div class="flex flex-col">
                         @@include('components/Title-component.html', {
@@ -149,20 +149,53 @@
             </div>
         </div>
     </section>
+    <section class="section bg-bgLight border-t border-LightGrey border-dashed">
+        <div class="container">
+            @@include('components/Title-component.html', {
+            'Style_common': '',
+            'Style_title': 'text-h3 lg:text-Top5',
+            'Title_tag': 'h3',
+            'Title': 'Our Testimonials.',
+            'Style_line': 'mt-5',
+            })
+            <div class="swiper mySwiper2 swiper-custom mt-8 xl:pb-[72px]">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        @@include('components/Testimonial-cards.html', {
+                        'Style': 'lg:max-w-[305px]',
+                        '': '',
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('components/Testimonial-cards.html', {
+                        'Style': 'lg:max-w-[305px]',
+                        '': '',
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('components/Testimonial-cards.html', {
+                        'Style': 'lg:max-w-[305px]',
+                        '': '',
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('components/Testimonial-cards.html', {
+                        'Style': 'lg:max-w-[305px]',
+                        '': '',
+                        })
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next minxl:hidden"></div>
+                <div class="swiper-button-prev minxl:hidden"></div>
+            </div>
+        </div>
+    </section>
 
     <section class="section">
         <div class="container">
             <div class="row">
                 <div class="col-span-12">
-
-                    <br>
-                    <br>
-                    <br>
-
-                    @@include('components/Testimonial-cards.html', {
-                    'Style': 'max-w-[305px]',
-                    '': '',
-                    })
 
                     <br>
                     <br>
