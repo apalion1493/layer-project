@@ -7,7 +7,111 @@
 
 <body class="">
 <main id="content" class="flex flex-col items-center min-h-screen overflow-hidden">
+    @@include('components/Header.html', {
+    'commonStyle': ' ',
+    })
+    @@include('components/AI-section.html')
 
+    <section class="section">
+        <div class="container">
+            <div class="row gap-y-8">
+                <div class="col-span-12">
+                    <h2 class="text-h3 lg:text-Top5 font-medium tracking-12 mb-4"><span class="text-blue100">“Alabama”</span>  lawyers and law firms by practice areas or cities:</h2>
+                    <p class="text-base lg:text-body">Select a city or practice area to find lawyers and law firms in “Alabama”.</p>
+                </div>
+                <div class="col-span-12">
+                    @@include('components/List-block-2.html', {
+                    'Style': 'bg-4',
+                    'Title': 'List of Cities:',
+                    })
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section bg-bgLight border-t border-LightGrey border-dashed">
+        <div class="container">
+            @@include('components/Title-component.html', {
+            'Style_common': '',
+            'Style_title': 'text-h3 lg:text-Top5',
+            'Title_tag': 'h3',
+            'Title': 'Bankruptcy Law',
+            'Style_line': 'mt-5',
+            })
+            <p class="minlg:hidden mt-4">Select a city or state to find “Bancruptcy & Debt” lawyers and law firm near you.</p>
+            <div class="swiper mySwiper3 swiper-custom mt-8 lg:pb-[72px]">
+                <div class="swiper-wrapper minlg:flex minlg:flex-wrap minlg:gap-x-5 minlg:gap-y-8">
+                    <div class="swiper-slide minlg:flex-1 minlg:basis-[calc(33.33%-14px)] minxl:basis-[calc(25%-15px)] minlg:max-w-[calc(33.33%-14px)] minxl:max-w-[calc(25%-15px)]">
+                        @@include('components/Info-links-card.html', {
+                        'Style': 'max-w-full',
+                        '': '',
+                        })
+                    </div>
+                    <div class="swiper-slide minlg:flex-1 minlg:basis-[calc(33.33%-14px)] minxl:basis-[calc(25%-15px)] minlg:max-w-[calc(33.33%-14px)] minxl:max-w-[calc(25%-15px)]">
+                        @@include('components/Info-links-card.html', {
+                        'Style': 'max-w-full',
+                        '': '',
+                        })
+                    </div>
+                    <div class="swiper-slide minlg:flex-1 minlg:basis-[calc(33.33%-14px)] minxl:basis-[calc(25%-15px)] minlg:max-w-[calc(33.33%-14px)] minxl:max-w-[calc(25%-15px)]">
+                        @@include('components/Info-links-card.html', {
+                        'Style': 'max-w-full',
+                        '': '',
+                        })
+                    </div>
+                    <div class="swiper-slide minlg:flex-1 minlg:basis-[calc(33.33%-14px)] minxl:basis-[calc(25%-15px)] minlg:max-w-[calc(33.33%-14px)] minxl:max-w-[calc(25%-15px)]">
+                        @@include('components/Info-links-card.html', {
+                        'Style': 'max-w-full',
+                        '': '',
+                        })
+                    </div>
+                    <div class="swiper-slide minlg:flex-1 minlg:basis-[calc(33.33%-14px)] minxl:basis-[calc(25%-15px)] minlg:max-w-[calc(33.33%-14px)] minxl:max-w-[calc(25%-15px)]">
+                        @@include('components/Info-links-card.html', {
+                        'Style': 'max-w-full',
+                        '': '',
+                        })
+                    </div>
+                </div>
+                <div class="minlg:hidden">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next group">
+                        <svg class="slider-arrow slider-arrow--active" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                            <path d="M1 1.5L7 7L1 12.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg class="slider-arrow slider-arrow--noActive" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                            <path d="M1 1.5L7 7L1 12.5" stroke="#004ED5" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-prev group">
+                        <svg class="slider-arrow slider-arrow--active" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                            <path d="M8 1.5L2 7L8 12.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg class="slider-arrow slider-arrow--noActive" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                            <path d="M8 1.5L2 7L8 12.5" stroke="#004ED5" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section border-t border-LightGrey border-dashed">
+        <div class="container">
+            <div class="row gap-y-8">
+                <div class="col-span-12">
+                    <h2 class="text-Top5 font-medium tracking-12 mb-4">Find Lawyers in <span class="text-blue100">“Alabama”</span> in another practice areas</h2>
+                    <p class="text-base lg:text-body">Select a practice area to find lawyers and law firms in “Alabama”.</p>
+                </div>
+                <div class="col-span-12">
+                    @@include('components/List-block-2.html', {
+                    'Style': 'bg-4',
+                    'Title': 'List of Practice areas:',
+                    })
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('components/Contact-section.html')
+    @@include('components/Footer.html')
 </main>
 
 @@include('components/script.html')

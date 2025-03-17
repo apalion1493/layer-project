@@ -4098,6 +4098,11 @@ p{
   background-size: cover;
 }
 
+.bg-4 {
+  background: url("../img/bg-4.png") no-repeat center bottom;
+  background-size: cover;
+}
+
 .hover\:cursor-default:hover{
   cursor: default;
 }
