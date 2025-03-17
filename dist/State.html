@@ -1569,7 +1569,7 @@
                     <form id="contactForm" action="" class="mt-8 md:mt-0 row gap-4 md:gap-x-0 md:gap-y-3">
     <div class="col-span-6 md:col-span-12">
         <div class="form-group flex flex-col items-start ">
-    <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="nameID"></label>
+    <label class="mb-2 text-body md:text-body2 text-Text hidden" for="nameID"></label>
     <input
         class="input input-icon User-input "
         type="text" id="nameID" placeholder="First name" name="first-name" required>
@@ -1578,7 +1578,7 @@
     </div>
     <div class="col-span-6 md:col-span-12">
         <div class="form-group flex flex-col items-start ">
-    <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="last-nameID"></label>
+    <label class="mb-2 text-body md:text-body2 text-Text hidden" for="last-nameID"></label>
     <input
         class="input input-icon User-input "
         type="text" id="last-nameID" placeholder="Last name" name="second-name" required>
@@ -1587,7 +1587,7 @@
     </div>
     <div class="col-span-6 md:col-span-12">
         <div class="form-group flex flex-col items-start ">
-    <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="phoneID"></label>
+    <label class="mb-2 text-body md:text-body2 text-Text hidden" for="phoneID"></label>
     <input
         class="input input-icon Phone-input "
         type="text" id="phoneID" placeholder="Phone number" name="phone" required>
@@ -1596,7 +1596,7 @@
     </div>
     <div class="col-span-6 md:col-span-12">
         <div class="form-group flex flex-col items-start ">
-    <label class="mb-3 font-semibold text-body md:text-body2 hidden" for="mailID"></label>
+    <label class="mb-2 text-body md:text-body2 text-Text hidden" for="mailID"></label>
     <input
         class="input input-icon Mail-input "
         type="email" id="mailID" placeholder="Email" name="Email" required>
@@ -1741,6 +1741,10 @@
         Alpine.data('data', () => ({
         }))
     })
+
+    function clearInput() {
+        document.getElementById('inputField').value = '';
+    }
 </script>
 </body>
 

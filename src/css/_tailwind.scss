@@ -51,11 +51,19 @@ section {
   @apply w-full
 }
 
+.pr-10 {
+  padding-right: 2.5rem !important; /* 40px */;
+}
+
 .input::placeholder {
 	@apply text-DarkBlue50 md:text-body2
 }
 
 .input {
+    &.bg-input-1 {
+      @apply bg-pageBg
+    }
+
 	&.active {
 		@apply border-blue100
 	}

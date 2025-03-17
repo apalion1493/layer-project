@@ -366,18 +366,46 @@
   }
 }
 
-.swiper-brands {
+.swiper-block-2 {
+  .swiper-block-2__arrow-block {
+    .swiper-button-prev, .swiper-button-next {
+      position: static;
+      margin: 0;
+    }
 
-  @media (max-width: 1023.98px) {
-    overflow: inherit;
+    .swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
+      .slider-arrow--noActive {
+        @apply block
+      }
+      .slider-arrow--active {
+        @apply hidden
+      }
+      @apply opacity-100 bg-white border-LightGrey
+    }
 
-    .swiper-slide {
-      width: auto;
+    .swiper-button-prev svg, .swiper-button-next svg {
+      @apply w-[9px] h-[14px]
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+
+      .slider-arrow--noActive {
+        @apply hidden
+      }
+      .slider-arrow--active {
+        @apply block
+      }
+
+      bottom: 0;
+      top: auto;
+      z-index: 10;
+      @apply w-12 h-12 min-w-12 flex items-center justify-center rounded-lg overflow-hidden bg-blue100 border border-blue100
+    }
+
+    .swiper-button-prev:after, .swiper-button-next:after {
+      display: none;
     }
   }
-
-
-  @apply px-2 -mx-2
 }
 // swiper End
 
@@ -493,5 +521,10 @@
 
 .bg-4 {
   background: url("__IMAGE_PATH__bg-4.png") no-repeat center bottom;
+  background-size: cover;
+}
+
+.bg-5 {
+  background: url("__IMAGE_PATH__bg-5.png") no-repeat center bottom;
   background-size: cover;
 }

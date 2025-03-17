@@ -117,13 +117,313 @@
                         <span :class="step3 ? 'border-Yellow' : 'border-Grey opacity-40'" class="ml-2 block w-full border-t-[3px] lg:hidden rounded"></span>
                     </div>
                 </div>
+                <div class="p-10 lg:p-5 mt-8 rounded-2xl overflow-hidden flex justify-center items-center w-full bg-5">
+                    <form class="w-full rounded-xl bg-white p-6 lg:px-5 flex items-end lg:flex-col lg:gap-x-0 lg:gap-y-4 lg:items-start gap-x-3">
+                        <div class="relative flex-1 lg:w-full">
+                            <label for="inputField2" class="block mb-2 text-body md:text-body2 text-Text2">My Legal Issue</label>
+                            <div class="relative">
+                                <input
+                                        id="inputField2"
+                                        type="text"
+                                        class="input pr-10 bg-input-1"
+                                        placeholder="Real Estate"
+                                />
+                                <button
+                                        type="button"
+                                        id="clearButton2"
+                                        class="absolute inset-y-0 right-3 flex items-center"
+                                        onclick="clearInput()"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                        <path d="M11.475 1.575C11.7649 1.28505 11.7649 0.814949 11.475 0.525C11.1851 0.23505 10.715 0.235051 10.425 0.525L6 4.95L1.575 0.525C1.28505 0.235051 0.814949 0.23505 0.525 0.525C0.23505 0.814949 0.235051 1.28505 0.525 1.575L4.95 6L0.525 10.425C0.235051 10.7149 0.23505 11.1851 0.525 11.475C0.814949 11.7649 1.28505 11.7649 1.575 11.475L6 7.05L10.425 11.475C10.7149 11.7649 11.1851 11.7649 11.475 11.475C11.7649 11.1851 11.7649 10.715 11.475 10.425L7.05 6L11.475 1.575Z" fill="#004ED5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="relative flex-1 lg:w-full">
+                            <label for="inputField" class="block mb-2 text-body md:text-body2 text-Text2">I need help near <span class="font-light">(City, ZIP code or county)</span></label>
+                            <div class="relative">
+                                <input
+                                        id="inputField"
+                                        type="text"
+                                        class="input pr-10 bg-input-1"
+                                        placeholder="Real Estate"
+                                />
+                                <button
+                                        type="button"
+                                        id="clearButton"
+                                        class="absolute inset-y-0 right-3 flex items-center"
+                                        onclick="clearInput()"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                        <path d="M11.475 1.575C11.7649 1.28505 11.7649 0.814949 11.475 0.525C11.1851 0.23505 10.715 0.235051 10.425 0.525L6 4.95L1.575 0.525C1.28505 0.235051 0.814949 0.23505 0.525 0.525C0.23505 0.814949 0.235051 1.28505 0.525 1.575L4.95 6L0.525 10.425C0.235051 10.7149 0.23505 11.1851 0.525 11.475C0.814949 11.7649 1.28505 11.7649 1.575 11.475L6 7.05L10.425 11.475C10.7149 11.7649 11.1851 11.7649 11.475 11.475C11.7649 11.1851 11.7649 10.715 11.475 10.425L7.05 6L11.475 1.575Z" fill="#004ED5"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        @@include('components/button-icon.html', {
+                        'style': 'lg:mt-1',
+                        'type': 'submit',
+                        'ariaLabel': 'button',
+                        'title': 'Find My Lawyer',
+                        })
+                    </form>
+                </div>
             </div>
 
         </div>
     </section>
     <section class="section border-t border-LightGrey border-dashed">
         <div class="container">
-
+            @@include('components/Title-component.html', {
+            'Style_common': '',
+            'Style_title': 'text-h3 lg:text-Top5',
+            'Title_tag': 'h3',
+            'Title': 'Attorneys who help you!',
+            'Style_line': 'my-5',
+            })
+            <p class="text-body">Lawyers across the country can help you anytime!</p>
+            <div class="swiper mySwiper5 swiper-block-2 mt-10">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="bg-bgLight rounded-6xl border border-LightGrey p-10 lg:p-4 shadow-v1 flex">
+                            <div>
+                                <img src="" alt="">
+                            </div>
+                            <div class="flex flex-col w-full">
+                                <div class="flex gap-x-2 justify-between w-full items-start mb-6">
+                                    @@include('components/Title-component.html', {
+                                    'Style_common': '',
+                                    'Style_title': 'text-h4 lg:text-Top5',
+                                    'Title_tag': 'span',
+                                    'Title': 'Daniel Cohen',
+                                    'Style_line': 'mt-5',
+                                    })
+                                    <span class="flex items-center gap-x-2">
+                                <img width="44" height="44" src="__IMAGE_PATH__Logo-icon.png" alt="Logo Lawyers">
+                                <span class="text-Top3 font-semibold text-Text">LawyersAI</span>
+                            </span>
+                                </div>
+                                <p>Daniel has a proven record of effectively representing consumers across the United States in class action lawsuits, securing both monetary awards and non-monetary relief on their behalf in numerous cases. </p>
+                                <br>
+                                <p>Daniel has a proven record of effectively representing consumers across the United States in class action lawsuits, securing both monetary awards and non-monetary relief on their behalf in numerous cases. </p>
+                                <ul class="flex flex-wrap gap-3 my-5">
+                                    <li class="flex justify-center items-center">
+                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
+                                            <span class="text-blue100 font-medium">Bankruptcy & Debt</span>
+                                        </div>
+                                    </li>
+                                    <li class="flex justify-center items-center">
+                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
+                                            <span class="text-blue100 font-medium">Consumer & Protection</span>
+                                        </div>
+                                    </li>
+                                    <li class="flex justify-center items-center">
+                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
+                                            <span class="text-blue100 font-medium">Credits</span>
+                                        </div>
+                                    </li>
+                                    <li class="flex justify-center items-center">
+                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
+                                            <span class="text-blue100 font-medium">Criminal Defense</span>
+                                        </div>
+                                    </li>
+                                    <li class="flex justify-center items-center">
+                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
+                                            <span class="text-blue100 font-medium">Employment & Labor</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="flex items-center">
+                                    <a class="text-blue100 text-body2 uppercase flex items-center font-semibold" href="#">
+                                        MORE LAWYERS
+                                        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="61" height="12" viewBox="0 0 61 12" fill="none">
+                                            <path d="M1 5C0.447715 5 0 5.44772 0 6C0 6.55228 0.447715 7 1 7V5ZM61 6L51 0.226497V11.7735L61 6ZM1 7H52V5H1V7Z" fill="#004ED5"/>
+                                        </svg>
+                                    </a>
+                                    <span class="border-t-[2px] border-LightGrey border-dashed w-full flex-1 ml-1 mr-4"></span>
+                                    <div class="flex relative items-center gap-x-2 swiper-block-2__arrow-block">
+                                        <div class="swiper-button-prev group">
+                                            <svg class="slider-arrow slider-arrow--active" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                                                <path d="M8 1.5L2 7L8 12.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                            <svg class="slider-arrow slider-arrow--noActive" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                                                <path d="M8 1.5L2 7L8 12.5" stroke="#004ED5" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="swiper-button-next group">
+                                            <svg class="slider-arrow slider-arrow--active" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                                                <path d="M1 1.5L7 7L1 12.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                            <svg class="slider-arrow slider-arrow--noActive" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                                                <path d="M1 1.5L7 7L1 12.5" stroke="#004ED5" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-bgLight rounded-6xl border border-LightGrey p-10 lg:p-4 shadow-v1 flex">
+                            <div>
+                                <img src="" alt="">
+                            </div>
+                            <div class="flex flex-col w-full">
+                                <div class="flex gap-x-2 justify-between w-full items-start mb-6">
+                                    @@include('components/Title-component.html', {
+                                    'Style_common': '',
+                                    'Style_title': 'text-h4 lg:text-Top5',
+                                    'Title_tag': 'span',
+                                    'Title': 'Daniel Cohen',
+                                    'Style_line': 'mt-5',
+                                    })
+                                    <span class="flex items-center gap-x-2">
+                                <img width="44" height="44" src="__IMAGE_PATH__Logo-icon.png" alt="Logo Lawyers">
+                                <span class="text-Top3 font-semibold text-Text">LawyersAI</span>
+                            </span>
+                                </div>
+                                <p>Daniel has a proven record of effectively representing consumers across the United States in class action lawsuits, securing both monetary awards and non-monetary relief on their behalf in numerous cases. </p>
+                                <br>
+                                <p>Daniel has a proven record of effectively representing consumers across the United States in class action lawsuits, securing both monetary awards and non-monetary relief on their behalf in numerous cases. </p>
+                                <ul class="flex flex-wrap gap-3 my-5">
+                                    <li class="flex justify-center items-center">
+                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
+                                            <span class="text-blue100 font-medium">Bankruptcy & Debt</span>
+                                        </div>
+                                    </li>
+                                    <li class="flex justify-center items-center">
+                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
+                                            <span class="text-blue100 font-medium">Consumer & Protection</span>
+                                        </div>
+                                    </li>
+                                    <li class="flex justify-center items-center">
+                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
+                                            <span class="text-blue100 font-medium">Credits</span>
+                                        </div>
+                                    </li>
+                                    <li class="flex justify-center items-center">
+                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
+                                            <span class="text-blue100 font-medium">Criminal Defense</span>
+                                        </div>
+                                    </li>
+                                    <li class="flex justify-center items-center">
+                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
+                                            <span class="text-blue100 font-medium">Employment & Labor</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="flex items-center">
+                                    <a class="text-blue100 text-body2 uppercase flex items-center font-semibold" href="#">
+                                        MORE LAWYERS
+                                        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="61" height="12" viewBox="0 0 61 12" fill="none">
+                                            <path d="M1 5C0.447715 5 0 5.44772 0 6C0 6.55228 0.447715 7 1 7V5ZM61 6L51 0.226497V11.7735L61 6ZM1 7H52V5H1V7Z" fill="#004ED5"/>
+                                        </svg>
+                                    </a>
+                                    <span class="border-t-[2px] border-LightGrey border-dashed w-full flex-1 ml-1 mr-4"></span>
+                                    <div class="flex relative items-center gap-x-2 swiper-block-2__arrow-block">
+                                        <div class="swiper-button-prev group">
+                                            <svg class="slider-arrow slider-arrow--active" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                                                <path d="M8 1.5L2 7L8 12.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                            <svg class="slider-arrow slider-arrow--noActive" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                                                <path d="M8 1.5L2 7L8 12.5" stroke="#004ED5" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="swiper-button-next group">
+                                            <svg class="slider-arrow slider-arrow--active" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                                                <path d="M1 1.5L7 7L1 12.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                            <svg class="slider-arrow slider-arrow--noActive" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                                                <path d="M1 1.5L7 7L1 12.5" stroke="#004ED5" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-bgLight rounded-6xl border border-LightGrey p-10 lg:p-4 shadow-v1 flex">
+                            <div>
+                                <img src="" alt="">
+                            </div>
+                            <div class="flex flex-col w-full">
+                                <div class="flex gap-x-2 justify-between w-full items-start mb-6">
+                                    @@include('components/Title-component.html', {
+                                    'Style_common': '',
+                                    'Style_title': 'text-h4 lg:text-Top5',
+                                    'Title_tag': 'span',
+                                    'Title': 'Daniel Cohen',
+                                    'Style_line': 'mt-5',
+                                    })
+                                    <span class="flex items-center gap-x-2">
+                                <img width="44" height="44" src="__IMAGE_PATH__Logo-icon.png" alt="Logo Lawyers">
+                                <span class="text-Top3 font-semibold text-Text">LawyersAI</span>
+                            </span>
+                                </div>
+                                <p>Daniel has a proven record of effectively representing consumers across the United States in class action lawsuits, securing both monetary awards and non-monetary relief on their behalf in numerous cases. </p>
+                                <br>
+                                <p>Daniel has a proven record of effectively representing consumers across the United States in class action lawsuits, securing both monetary awards and non-monetary relief on their behalf in numerous cases. </p>
+                                <ul class="flex flex-wrap gap-3 my-5">
+                                    <li class="flex justify-center items-center">
+                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
+                                            <span class="text-blue100 font-medium">Bankruptcy & Debt</span>
+                                        </div>
+                                    </li>
+                                    <li class="flex justify-center items-center">
+                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
+                                            <span class="text-blue100 font-medium">Consumer & Protection</span>
+                                        </div>
+                                    </li>
+                                    <li class="flex justify-center items-center">
+                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
+                                            <span class="text-blue100 font-medium">Credits</span>
+                                        </div>
+                                    </li>
+                                    <li class="flex justify-center items-center">
+                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
+                                            <span class="text-blue100 font-medium">Criminal Defense</span>
+                                        </div>
+                                    </li>
+                                    <li class="flex justify-center items-center">
+                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
+                                            <span class="text-blue100 font-medium">Employment & Labor</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="flex items-center">
+                                    <a class="text-blue100 text-body2 uppercase flex items-center font-semibold" href="#">
+                                        MORE LAWYERS
+                                        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="61" height="12" viewBox="0 0 61 12" fill="none">
+                                            <path d="M1 5C0.447715 5 0 5.44772 0 6C0 6.55228 0.447715 7 1 7V5ZM61 6L51 0.226497V11.7735L61 6ZM1 7H52V5H1V7Z" fill="#004ED5"/>
+                                        </svg>
+                                    </a>
+                                    <span class="border-t-[2px] border-LightGrey border-dashed w-full flex-1 ml-1 mr-4"></span>
+                                    <div class="flex relative items-center gap-x-2 swiper-block-2__arrow-block">
+                                        <div class="swiper-button-prev group">
+                                            <svg class="slider-arrow slider-arrow--active" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                                                <path d="M8 1.5L2 7L8 12.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                            <svg class="slider-arrow slider-arrow--noActive" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                                                <path d="M8 1.5L2 7L8 12.5" stroke="#004ED5" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="swiper-button-next group">
+                                            <svg class="slider-arrow slider-arrow--active" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                                                <path d="M1 1.5L7 7L1 12.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                            <svg class="slider-arrow slider-arrow--noActive" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                                                <path d="M1 1.5L7 7L1 12.5" stroke="#004ED5" stroke-width="2" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="section border-t border-LightGrey border-dashed">

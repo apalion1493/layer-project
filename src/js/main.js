@@ -64,6 +64,16 @@ window.addEventListener('DOMContentLoaded', () => {
                 slidesPerView: 3,
             }
         }
+    });
+
+    const swiper5 = new Swiper(".mySwiper5", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: false,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     })
 })
 
