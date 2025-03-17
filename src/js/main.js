@@ -45,6 +45,26 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    const swiper4 = new Swiper(".mySwiper4", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: false,
+        breakpoints: {
+            0: {
+                slidesPerView: 'auto',
+            },
+            769: {
+                slidesPerView: 'auto',
+            },
+            1025: {
+                slidesPerView: 3,
+            },
+            1346: {
+                slidesPerView: 3,
+            }
+        }
+    })
 })
 
 window.addEventListener('DOMContentLoaded', () => {
