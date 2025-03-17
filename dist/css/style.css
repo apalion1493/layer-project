@@ -2421,9 +2421,6 @@ html {
 .min-h-screen{
   min-height: 100vh;
 }
-.min-h-\[238px\]{
-  min-height: 238px;
-}
 .w-10{
   width: 2.5rem;
 }
@@ -3333,6 +3330,24 @@ p{
   list-style-type: disc;
   padding-left: 1.5rem;
   font-weight: 500;
+}
+
+.text-block2 h1, .text-block2 h2, .text-block2 h3, .text-block2 h4, .text-block2 h5, .text-block2 h6, .text-block2 .h1, .text-block2 .h2, .text-block2 .h3, .text-block2 .h4, .text-block2 .h5, .text-block2 .h6{
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.text-block2 a{
+  --tw-text-opacity: 1;
+  color: rgb(0 78 213 / var(--tw-text-opacity, 1));
+}
+.text-block2 ul {
+  color: #004ED5;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+.text-block2 ul p{
+  --tw-text-opacity: 1;
+  color: rgb(0 30 96 / var(--tw-text-opacity, 1));
 }
 
 .Fast-icon {
@@ -4247,8 +4262,8 @@ p{
   .lg\:gap-y-6{
     row-gap: 1.5rem;
   }
-  .lg\:gap-y-3{
-    row-gap: 0.75rem;
+  .lg\:gap-y-5{
+    row-gap: 1.25rem;
   }
   .lg\:border-y{
     border-top-width: 1px;
@@ -4265,13 +4280,21 @@ p{
     padding-left: 0px;
     padding-right: 0px;
   }
+  .lg\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
   .lg\:py-5{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }
-  .lg\:px-5{
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+  .lg\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .lg\:py-6{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
   .lg\:pb-0{
     padding-bottom: 0px;
