@@ -187,8 +187,11 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="bg-bgLight rounded-6xl border border-LightGrey p-10 lg:p-4 shadow-v1 flex gap-x-6 lg:flex-col lg:gap-x-0 lg:gap-y-6">
-                            <div class="w-[304px] lg:w-full lg:min-w-full lg:h-auto min-w-[304px] h-[308px] flex justify-center items-center rounded-7xl overflow-hidden bg-LightGrey">
-                                <img class="object-cover w-full h-full" src="__IMAGE_PATH__Daniel-Cohen.png" alt="Daniel Cohen avatar">
+                            <div class="w-[304px] lg:min-w-0 lg:h-auto min-w-[304px] h-[308px] md:max-w-[400px] lg:w-full lg:mx-auto flex justify-center items-center rounded-7xl overflow-hidden bg-LightGrey">
+                                <picture class="w-full">
+                                    <source srcset="__IMAGE_PATH__Daniel-Cohen-mob.png" media="(max-width: 1024px)">
+                                    <img class="object-cover w-full h-full" src="__IMAGE_PATH__Daniel-Cohen.png" alt="Daniel Cohen avatar">
+                                </picture>
                             </div>
                             <div class="flex flex-col w-full">
                                 <div class="flex gap-x-2 justify-between w-full items-start mb-6 lg:mb-4">
@@ -234,7 +237,7 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <div class="flex items-center">
+                                <div class="flex items-center mt-auto">
                                     <a class="text-blue100 text-body2 uppercase flex items-center font-semibold" href="#">
                                         MORE LAWYERS
                                         <svg class="ml-2 lg:hidden" xmlns="http://www.w3.org/2000/svg" width="61" height="12" viewBox="0 0 61 12" fill="none">
@@ -268,26 +271,27 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="bg-bgLight rounded-6xl border border-LightGrey p-10 lg:p-4 shadow-v1 flex">
-                            <div>
-                                <img src="" alt="">
+                        <div class="bg-bgLight rounded-6xl border border-LightGrey p-10 lg:p-4 shadow-v1 flex gap-x-6 lg:flex-col lg:gap-x-0 lg:gap-y-6">
+                            <div class="w-[304px] lg:min-w-0 lg:h-auto min-w-[304px] h-[308px] md:max-w-[400px] lg:w-full lg:mx-auto flex justify-center items-center rounded-7xl overflow-hidden bg-LightGrey">
+                                <picture class="w-full">
+                                    <source srcset="__IMAGE_PATH__Daniel-Cohen-mob.png" media="(max-width: 1024px)">
+                                    <img class="object-cover w-full h-full" src="__IMAGE_PATH__Daniel-Cohen.png" alt="Daniel Cohen avatar">
+                                </picture>
                             </div>
                             <div class="flex flex-col w-full">
-                                <div class="flex gap-x-2 justify-between w-full items-start mb-6">
+                                <div class="flex gap-x-2 justify-between w-full items-start mb-6 lg:mb-4">
                                     @@include('components/Title-component.html', {
                                     'Style_common': '',
-                                    'Style_title': 'text-h4 lg:text-Top5',
+                                    'Style_title': 'text-h4 lg:text-Top3',
                                     'Title_tag': 'span',
                                     'Title': 'Daniel Cohen',
-                                    'Style_line': 'mt-5',
+                                    'Style_line': 'mt-5 lg:mt-4',
                                     })
                                     <span class="flex items-center gap-x-2">
-                                <img width="44" height="44" src="__IMAGE_PATH__Logo-icon.png" alt="Logo Lawyers">
-                                <span class="text-Top3 font-semibold text-Text">LawyersAI</span>
-                            </span>
+                                        <img class="lg:w-8 lg:h-8" width="44" height="44" src="__IMAGE_PATH__Logo-icon.png" alt="Logo Lawyers">
+                                        <span class="text-Top3 lg:text-body2 font-semibold text-Text">LawyersAI</span>
+                                    </span>
                                 </div>
-                                <p>Daniel has a proven record of effectively representing consumers across the United States in class action lawsuits, securing both monetary awards and non-monetary relief on their behalf in numerous cases. </p>
-                                <br>
                                 <p>Daniel has a proven record of effectively representing consumers across the United States in class action lawsuits, securing both monetary awards and non-monetary relief on their behalf in numerous cases. </p>
                                 <ul class="flex flex-wrap gap-3 my-5">
                                     <li class="flex justify-center items-center">
@@ -305,22 +309,15 @@
                                             <span class="text-blue100 font-medium">Credits</span>
                                         </div>
                                     </li>
-                                    <li class="flex justify-center items-center">
-                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
-                                            <span class="text-blue100 font-medium">Criminal Defense</span>
-                                        </div>
-                                    </li>
-                                    <li class="flex justify-center items-center">
-                                        <div class="flex items-center justify-center w-fit px-3 py-2 border border-blue100 rounded bg-white overflow-hidden">
-                                            <span class="text-blue100 font-medium">Employment & Labor</span>
-                                        </div>
-                                    </li>
                                 </ul>
-                                <div class="flex items-center">
+                                <div class="flex items-center mt-auto">
                                     <a class="text-blue100 text-body2 uppercase flex items-center font-semibold" href="#">
                                         MORE LAWYERS
-                                        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="61" height="12" viewBox="0 0 61 12" fill="none">
+                                        <svg class="ml-2 lg:hidden" xmlns="http://www.w3.org/2000/svg" width="61" height="12" viewBox="0 0 61 12" fill="none">
                                             <path d="M1 5C0.447715 5 0 5.44772 0 6C0 6.55228 0.447715 7 1 7V5ZM61 6L51 0.226497V11.7735L61 6ZM1 7H52V5H1V7Z" fill="#004ED5"/>
+                                        </svg>
+                                        <svg class="ml-2 minlg:hidden" xmlns="http://www.w3.org/2000/svg" width="33" height="12" viewBox="0 0 33 12" fill="none">
+                                            <path d="M1 5C0.447715 5 0 5.44772 0 6C0 6.55228 0.447715 7 1 7V5ZM33 6L23 0.226497V11.7735L33 6ZM1 7H24V5H1V7Z" fill="#004ED5"/>
                                         </svg>
                                     </a>
                                     <span class="border-t-[2px] border-LightGrey border-dashed w-full flex-1 ml-1 mr-4"></span>
@@ -347,23 +344,26 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="bg-bgLight rounded-6xl border border-LightGrey p-10 lg:p-4 shadow-v1 flex">
-                            <div>
-                                <img src="" alt="">
+                        <div class="bg-bgLight rounded-6xl border border-LightGrey p-10 lg:p-4 shadow-v1 flex gap-x-6 lg:flex-col lg:gap-x-0 lg:gap-y-6">
+                            <div class="w-[304px] lg:min-w-0 lg:h-auto min-w-[304px] h-[308px] md:max-w-[400px] lg:w-full lg:mx-auto flex justify-center items-center rounded-7xl overflow-hidden bg-LightGrey">
+                                <picture class="w-full">
+                                    <source srcset="__IMAGE_PATH__Daniel-Cohen-mob.png" media="(max-width: 1024px)">
+                                    <img class="object-cover w-full h-full" src="__IMAGE_PATH__Daniel-Cohen.png" alt="Daniel Cohen avatar">
+                                </picture>
                             </div>
                             <div class="flex flex-col w-full">
-                                <div class="flex gap-x-2 justify-between w-full items-start mb-6">
+                                <div class="flex gap-x-2 justify-between w-full items-start mb-6 lg:mb-4">
                                     @@include('components/Title-component.html', {
                                     'Style_common': '',
-                                    'Style_title': 'text-h4 lg:text-Top5',
+                                    'Style_title': 'text-h4 lg:text-Top3',
                                     'Title_tag': 'span',
                                     'Title': 'Daniel Cohen',
-                                    'Style_line': 'mt-5',
+                                    'Style_line': 'mt-5 lg:mt-4',
                                     })
                                     <span class="flex items-center gap-x-2">
-                                <img width="44" height="44" src="__IMAGE_PATH__Logo-icon.png" alt="Logo Lawyers">
-                                <span class="text-Top3 font-semibold text-Text">LawyersAI</span>
-                            </span>
+                                        <img class="lg:w-8 lg:h-8" width="44" height="44" src="__IMAGE_PATH__Logo-icon.png" alt="Logo Lawyers">
+                                        <span class="text-Top3 lg:text-body2 font-semibold text-Text">LawyersAI</span>
+                                    </span>
                                 </div>
                                 <p>Daniel has a proven record of effectively representing consumers across the United States in class action lawsuits, securing both monetary awards and non-monetary relief on their behalf in numerous cases. </p>
                                 <br>
@@ -395,11 +395,14 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <div class="flex items-center">
+                                <div class="flex items-center mt-auto">
                                     <a class="text-blue100 text-body2 uppercase flex items-center font-semibold" href="#">
                                         MORE LAWYERS
-                                        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="61" height="12" viewBox="0 0 61 12" fill="none">
+                                        <svg class="ml-2 lg:hidden" xmlns="http://www.w3.org/2000/svg" width="61" height="12" viewBox="0 0 61 12" fill="none">
                                             <path d="M1 5C0.447715 5 0 5.44772 0 6C0 6.55228 0.447715 7 1 7V5ZM61 6L51 0.226497V11.7735L61 6ZM1 7H52V5H1V7Z" fill="#004ED5"/>
+                                        </svg>
+                                        <svg class="ml-2 minlg:hidden" xmlns="http://www.w3.org/2000/svg" width="33" height="12" viewBox="0 0 33 12" fill="none">
+                                            <path d="M1 5C0.447715 5 0 5.44772 0 6C0 6.55228 0.447715 7 1 7V5ZM33 6L23 0.226497V11.7735L33 6ZM1 7H24V5H1V7Z" fill="#004ED5"/>
                                         </svg>
                                     </a>
                                     <span class="border-t-[2px] border-LightGrey border-dashed w-full flex-1 ml-1 mr-4"></span>
