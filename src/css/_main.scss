@@ -378,6 +378,12 @@
 // swiper End
 
 //Other
+.info-card-block {
+  &.active {
+    @apply bg-blue100 text-white
+  }
+}
+
 .hero-bg:before {
   content: '';
   position: absolute;

@@ -185,9 +185,65 @@
                         })
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next minxl:hidden"></div>
-                <div class="swiper-button-prev minxl:hidden"></div>
+                <div class="minxl:hidden">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next group">
+                        <svg class="slider-arrow slider-arrow--active" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                            <path d="M1 1.5L7 7L1 12.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg class="slider-arrow slider-arrow--noActive" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                            <path d="M1 1.5L7 7L1 12.5" stroke="#004ED5" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-prev group">
+                        <svg class="slider-arrow slider-arrow--active" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                            <path d="M8 1.5L2 7L8 12.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg class="slider-arrow slider-arrow--noActive" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                            <path d="M8 1.5L2 7L8 12.5" stroke="#004ED5" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section border-t border-LightGrey border-dashed">
+        <div class="container">
+            <div class="row gap-x-5 lg:gap-x-0 lg:gap-y-6">
+                <div class="col-span-4 lg:col-span-12">
+                    <div class="flex flex-col max-w-[333px] lg:max-w-full">
+                        @@include('components/Title-component.html', {
+                        'Style_common': '',
+                        'Style_title': 'text-h3 lg:text-Top5',
+                        'Title_tag': 'h3',
+                        'Title': 'See our progress!',
+                        'Style_line': 'my-5',
+                        })
+                        <p class="text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent luctus lacinia massa. </p>
+                    </div>
+                </div>
+                <div class="col-span-8 lg:col-span-12">
+                    <div class="flex w-full gap-x-5 md:flex-col md:gap-x-0 md:gap-y-4">
+                        @@include('components/Info-cards.html', {
+                        'Style': 'active',
+                        'Title': '12 Years',
+                        'Text': 'Of helping people to fing the right lawyer.',
+                        '': '',
+                        })
+                        @@include('components/Info-cards.html', {
+                        'Style': '',
+                        'Title': '98%',
+                        'Text': 'Our average customer satisfaction rating.',
+                        '': '',
+                        })
+                        @@include('components/Info-cards.html', {
+                        'Style': '',
+                        'Title': '3 Million',
+                        'Text': 'Cases have been posted on our legal platform.',
+                        '': '',
+                        })
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -196,19 +252,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-span-12">
-
-                    <br>
-                    <br>
-                    <br>
-
-                    @@include('components/Info-cards.html', {
-                    'Style': 'max-w-[269px]',
-                    '': '',
-                    })
-
-                    <br>
-                    <br>
-                    <br>
 
                     @@include('components/Info-links-card.html', {
                     'Style': 'max-w-[305px]',
