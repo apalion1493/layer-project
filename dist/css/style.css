@@ -2557,6 +2557,9 @@ html {
 .resize{
   resize: both;
 }
+.list-disc{
+  list-style-type: disc;
+}
 .flex-row{
   flex-direction: row;
 }
@@ -2829,6 +2832,9 @@ html {
 }
 .pb-6{
   padding-bottom: 1.5rem;
+}
+.pl-6{
+  padding-left: 1.5rem;
 }
 .pr-6{
   padding-right: 1.5rem;
@@ -3786,9 +3792,33 @@ p{
 .swiper-custom {
   overflow: inherit;
 }
+.swiper-custom .swiper-button-prev svg, .swiper-custom .swiper-button-next svg{
+  height: 14px;
+  width: 9px;
+}
 .swiper-custom .swiper-button-prev, .swiper-custom .swiper-button-next {
   bottom: 0;
   top: auto;
+  z-index: 10;
+  display: flex;
+  height: 3rem;
+  width: 3rem;
+  min-width: 3rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 78 213 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 78 213 / var(--tw-bg-opacity, 1));
+}
+.swiper-custom .swiper-button-prev .slider-arrow--noActive, .swiper-custom .swiper-button-next .slider-arrow--noActive{
+  display: none;
+}
+.swiper-custom .swiper-button-prev .slider-arrow--active, .swiper-custom .swiper-button-next .slider-arrow--active{
+  display: block;
 }
 .swiper-custom .swiper-slide {
   height: auto;
@@ -3810,6 +3840,19 @@ p{
 .swiper-custom .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next,
 .swiper-custom .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
   transform: scale(0.6);
+}
+.swiper-custom .swiper-button-prev.swiper-button-disabled, .swiper-custom .swiper-button-next.swiper-button-disabled{
+  --tw-border-opacity: 1;
+  border-color: rgb(225 233 245 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  opacity: 1;
+}
+.swiper-custom .swiper-button-prev.swiper-button-disabled .slider-arrow--noActive, .swiper-custom .swiper-button-next.swiper-button-disabled .slider-arrow--noActive{
+  display: block;
+}
+.swiper-custom .swiper-button-prev.swiper-button-disabled .slider-arrow--active, .swiper-custom .swiper-button-next.swiper-button-disabled .slider-arrow--active{
+  display: none;
 }
 .swiper-custom .swiper-pagination-bullet-active{
   width: 28px;
@@ -4214,6 +4257,9 @@ p{
   .lg\:mb-0{
     margin-bottom: 0px;
   }
+  .lg\:mb-5{
+    margin-bottom: 1.25rem;
+  }
   .lg\:mt-3{
     margin-top: 0.75rem;
   }
@@ -4259,11 +4305,14 @@ p{
   .lg\:gap-y-10{
     row-gap: 2.5rem;
   }
-  .lg\:gap-y-6{
-    row-gap: 1.5rem;
+  .lg\:gap-y-3{
+    row-gap: 0.75rem;
   }
   .lg\:gap-y-5{
     row-gap: 1.25rem;
+  }
+  .lg\:gap-y-6{
+    row-gap: 1.5rem;
   }
   .lg\:border-y{
     border-top-width: 1px;
@@ -4273,12 +4322,19 @@ p{
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   }
+  .lg\:p-4{
+    padding: 1rem;
+  }
   .lg\:p-5{
     padding: 1.25rem;
   }
   .lg\:px-0{
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .lg\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .lg\:px-5{
     padding-left: 1.25rem;
@@ -4287,10 +4343,6 @@ p{
   .lg\:py-5{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
-  }
-  .lg\:px-4{
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
   .lg\:py-6{
     padding-top: 1.5rem;
@@ -4307,6 +4359,9 @@ p{
   }
   .lg\:pb-\[100px\]{
     padding-bottom: 100px;
+  }
+  .lg\:pb-\[72px\]{
+    padding-bottom: 72px;
   }
   .lg\:pt-4{
     padding-top: 1rem;
@@ -4440,6 +4495,9 @@ p{
 }
 
 @media (min-width: 1024px){
+  .minlg\:flex{
+    display: flex;
+  }
   .minlg\:hidden{
     display: none;
   }
@@ -4455,6 +4513,9 @@ p{
   .minlg\:max-w-\[calc\(33\%-15px\)\]{
     max-width: calc(33% - 15px);
   }
+  .minlg\:max-w-\[calc\(33\.33\%-14px\)\]{
+    max-width: calc(33.33% - 14px);
+  }
   .minlg\:flex-1{
     flex: 1 1 0%;
   }
@@ -4466,6 +4527,19 @@ p{
   }
   .minlg\:basis-\[calc\(33\%-15px\)\]{
     flex-basis: calc(33% - 15px);
+  }
+  .minlg\:basis-\[calc\(33\.33\%-14px\)\]{
+    flex-basis: calc(33.33% - 14px);
+  }
+  .minlg\:flex-wrap{
+    flex-wrap: wrap;
+  }
+  .minlg\:gap-x-5{
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
+  }
+  .minlg\:gap-y-8{
+    row-gap: 2rem;
   }
   .minlg\:rounded-lg{
     border-radius: 0.5rem;
@@ -4486,5 +4560,11 @@ p{
   }
   .minxl\:min-w-\[578px\]{
     min-width: 578px;
+  }
+  .minxl\:max-w-\[calc\(25\%-15px\)\]{
+    max-width: calc(25% - 15px);
+  }
+  .minxl\:basis-\[calc\(25\%-15px\)\]{
+    flex-basis: calc(25% - 15px);
   }
 }

@@ -215,10 +215,23 @@
 .swiper-custom {
   overflow: inherit;
 
+  .swiper-button-prev svg, .swiper-button-next svg {
+    @apply w-[9px] h-[14px]
+  }
+
   .swiper-button-prev, .swiper-button-next {
+
+    .slider-arrow--noActive {
+      @apply hidden
+    }
+    .slider-arrow--active {
+      @apply block
+    }
+
     bottom: 0;
     top: auto;
-
+    z-index: 10;
+    @apply w-12 h-12 min-w-12 flex items-center justify-center rounded-lg overflow-hidden bg-blue100 border border-blue100
   }
 
   .swiper-slide {
@@ -235,6 +248,16 @@
   .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next,
   .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
     transform: scale(0.6);
+  }
+
+  .swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
+    .slider-arrow--noActive {
+      @apply block
+    }
+    .slider-arrow--active {
+      @apply hidden
+    }
+    @apply opacity-100 bg-white border-LightGrey
   }
 
   .swiper-pagination-bullet-active {
