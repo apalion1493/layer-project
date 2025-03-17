@@ -2397,6 +2397,9 @@ html {
 .h-\[9px\]{
   height: 9px;
 }
+.h-auto{
+  height: auto;
+}
 .h-full{
   height: 100%;
 }
@@ -2417,6 +2420,9 @@ html {
 }
 .min-h-screen{
   min-height: 100vh;
+}
+.min-h-\[238px\]{
+  min-height: 238px;
 }
 .w-10{
   width: 2.5rem;
@@ -2631,6 +2637,12 @@ html {
 .gap-y-5{
   row-gap: 1.25rem;
 }
+.gap-y-6{
+  row-gap: 1.5rem;
+}
+.gap-y-8{
+  row-gap: 2rem;
+}
 .gap-y-\[6px\]{
   row-gap: 6px;
 }
@@ -2832,6 +2844,10 @@ html {
 }
 .text-center{
   text-align: center;
+}
+.text-Top2{
+  font-size: 22px;
+  line-height: 130%;
 }
 .text-Top3{
   font-size: 20px;
@@ -3980,6 +3996,10 @@ p{
   }
 }
 
+.display-flex {
+  display: flex !important;
+}
+
 .menu-item-active {
   position: relative;
 }
@@ -4014,102 +4034,135 @@ p{
     background: url("../img/bg-2-mob.png") no-repeat center bottom;
   }
 }
+
+.bg-3 {
+  background: url("../img/bg-3.png") no-repeat center bottom;
+  background-size: cover;
+}
+
 .hover\:cursor-default:hover{
   cursor: default;
 }
+
 .hover\:border-blue100:hover{
   --tw-border-opacity: 1;
   border-color: rgb(0 78 213 / var(--tw-border-opacity, 1));
 }
+
 .hover\:bg-bgLight:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(246 249 255 / var(--tw-bg-opacity, 1));
 }
+
 .hover\:bg-blue100:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(0 78 213 / var(--tw-bg-opacity, 1));
 }
+
 .hover\:bg-transparent:hover{
   background-color: transparent;
 }
+
 .hover\:bg-white:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
+
 .hover\:font-semibold:hover{
   font-weight: 600;
 }
+
 .hover\:text-blue101:hover{
   --tw-text-opacity: 1;
   color: rgb(0 83 226 / var(--tw-text-opacity, 1));
 }
+
 .hover\:text-gray-700:hover{
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
 }
+
 .hover\:text-white:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
+
 .focus\:border-0:focus{
   border-width: 0px;
 }
+
 .focus\:outline-none:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
 .focus-visible\:z-10:focus-visible{
   z-index: 10;
 }
+
 .focus-visible\:bg-slate-800\/5:focus-visible{
   background-color: rgb(30 41 59 / 0.05);
 }
+
 .focus-visible\:text-black:focus-visible{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
+
 .focus-visible\:outline-none:focus-visible{
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
 .focus-visible\:outline-0:focus-visible{
   outline-width: 0px;
 }
+
 .focus-visible\:outline-offset-0:focus-visible{
   outline-offset: 0px;
 }
+
 .focus-visible\:outline-blue-700:focus-visible{
   outline-color: #1d4ed8;
 }
+
 .disabled\:opacity-50:disabled{
   opacity: 0.5;
 }
+
 .group:hover .group-hover\:bg-Text{
   --tw-bg-opacity: 1;
   background-color: rgb(0 30 96 / var(--tw-bg-opacity, 1));
 }
+
 .group:hover .group-hover\:stroke-Yellow{
   stroke: #FFBF16;
 }
+
 .group.open .group-\[\.open\]\:-translate-y-2{
   --tw-translate-y: -0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
 .group.open .group-\[\.open\]\:translate-y-2{
   --tw-translate-y: 0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
 .group.open .group-\[\.open\]\:-rotate-45{
   --tw-rotate: -45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
 .group.open .group-\[\.open\]\:rotate-45{
   --tw-rotate: 45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+
 .group.open .group-\[\.open\]\:opacity-0{
   opacity: 0;
 }
+
 @media (max-width: 1312px){
   .xl\:ml-5{
     margin-left: 1.25rem;
@@ -4124,6 +4177,7 @@ p{
     padding-bottom: 72px;
   }
 }
+
 @media (max-width: 1023px){
   .lg\:static{
     position: static;
@@ -4193,6 +4247,9 @@ p{
   .lg\:gap-y-6{
     row-gap: 1.5rem;
   }
+  .lg\:gap-y-3{
+    row-gap: 0.75rem;
+  }
   .lg\:border-y{
     border-top-width: 1px;
     border-bottom-width: 1px;
@@ -4211,6 +4268,10 @@ p{
   .lg\:py-5{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+  .lg\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
   .lg\:pb-0{
     padding-bottom: 0px;
@@ -4254,6 +4315,7 @@ p{
     line-height: 120%;
   }
 }
+
 @media (max-width: 767px){
   .md\:col-span-12{
     grid-column: span 12 / span 12;
@@ -4266,6 +4328,9 @@ p{
   }
   .md\:hidden{
     display: none;
+  }
+  .md\:min-h-\[238px\]{
+    min-height: 238px;
   }
   .md\:max-w-full{
     max-width: 100%;
@@ -4332,6 +4397,7 @@ p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
+
 @media (max-width: 639px){
   .sm\:hidden{
     display: none;
@@ -4340,6 +4406,7 @@ p{
     flex-direction: column;
   }
 }
+
 @media (min-width: 768px){
   .minmd\:hidden{
     display: none;
@@ -4348,12 +4415,16 @@ p{
     justify-content: space-around;
   }
 }
+
 @media (min-width: 1024px){
   .minlg\:hidden{
     display: none;
   }
   .minlg\:min-w-\[500px\]{
     min-width: 500px;
+  }
+  .minlg\:max-w-\[calc\(16\.666\%-17px\)\]{
+    max-width: calc(16.666% - 17px);
   }
   .minlg\:max-w-\[calc\(25\%-15px\)\]{
     max-width: calc(25% - 15px);
@@ -4363,6 +4434,9 @@ p{
   }
   .minlg\:flex-1{
     flex: 1 1 0%;
+  }
+  .minlg\:basis-\[calc\(16\.666\%-17px\)\]{
+    flex-basis: calc(16.666% - 17px);
   }
   .minlg\:basis-\[calc\(25\%-15px\)\]{
     flex-basis: calc(25% - 15px);
@@ -4382,6 +4456,7 @@ p{
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
+
 @media (min-width: 1345px){
   .minxl\:hidden{
     display: none;

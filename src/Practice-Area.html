@@ -7,7 +7,29 @@
 
 <body class="">
 <main id="content" class="flex flex-col items-center min-h-screen overflow-hidden">
+    @@include('components/Header.html', {
+    'commonStyle': ' ',
+    })
+    @@include('components/AI-section.html')
 
+    <section class="section">
+        <div class="container">
+            <div class="row gap-y-8">
+                <div class="col-span-12">
+                    <h2 class="text-h3 lg:text-Top5 font-medium tracking-12 mb-4"><span class="text-blue100">“Bankruptcy & Debt”</span> area lawyers and law firms by state or city:</h2>
+                    <p class="text-base lg:text-body">Select a city or state to find “Bancruptcy & Debt” lawyers and law firm near you.</p>
+                </div>
+                <div class="col-span-12">
+                    @@include('components/List-block.html', {
+                    'Style': 'bg-3',
+                    })
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('components/Contact-section.html')
+    @@include('components/Footer.html')
 </main>
 
 @@include('components/script.html')
