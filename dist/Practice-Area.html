@@ -836,9 +836,20 @@
                                 <p class="text-base font-medium mb-2 text-left">Describe a legal project or role and we’ll match you with exceptional legal talent.</p>
                             </div>
                         </div>
-                        <div x-data="{ currentVal: 90 ,minVal: 0 ,maxVal: 100, calcPercentage(min, max, val){return ((val-min)/(max-min))*100} }" class="flex h-[9px] w-full overflow-hidden rounded-6xl bg-LightGrey" role="progressbar" aria-label="default progress bar" x-bind:aria-valuenow="currentVal" x-bind:aria-valuemin="minVal" x-bind:aria-valuemax="maxVal">
-                            <div class="h-full rounded-xl bg-blue100" x-bind:style="`width: ${calcPercentage(minVal, maxVal, currentVal)}%`"></div>
-                        </div>
+                        <svg class="w-12 h-12 animate-spin mx-auto mb-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 2.5C24.8284 2.5 25.5 3.17157 25.5 4V8C25.5 8.82843 24.8284 9.5 24 9.5C23.1716 9.5 22.5 8.82843 22.5 8V4C22.5 3.17157 23.1716 2.5 24 2.5Z" fill="#004ED5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M34.7498 5.38042C35.4672 5.79463 35.713 6.71202 35.2988 7.42946L33.2988 10.8935C32.8846 11.611 31.9672 11.8568 31.2498 11.4425C30.5323 11.0283 30.2865 10.1109 30.7007 9.3935L32.7007 5.92944C33.1149 5.21201 34.0323 4.9662 34.7498 5.38042Z" fill="#004ED5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M42.6198 13.25C43.034 13.9674 42.7882 14.8848 42.0708 15.299L38.6067 17.299C37.8893 17.7133 36.9719 17.4674 36.5577 16.75C36.1434 16.0326 36.3893 15.1152 37.1067 14.701L40.5708 12.701C41.2882 12.2868 42.2056 12.5326 42.6198 13.25Z" fill="#004ED5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M38.5 24C38.5 23.1716 39.1716 22.5 40 22.5H44C44.8284 22.5 45.5 23.1716 45.5 24C45.5 24.8284 44.8284 25.5 44 25.5H40C39.1716 25.5 38.5 24.8284 38.5 24Z" fill="#004ED5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M36.5577 31.25C36.9719 30.5326 37.8893 30.2868 38.6067 30.701L42.0708 32.701C42.7882 33.1152 43.034 34.0326 42.6198 34.75C42.2056 35.4674 41.2882 35.7133 40.5708 35.299L37.1067 33.299C36.3893 32.8848 36.1434 31.9674 36.5577 31.25Z" fill="#004ED5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M31.2498 36.5574C31.9672 36.1432 32.8846 36.389 33.2988 37.1065L35.2988 40.5706C35.713 41.288 35.4672 42.2054 34.7498 42.6196C34.0323 43.0338 33.1149 42.788 32.7007 42.0706L30.7007 38.6065C30.2865 37.889 30.5323 36.9716 31.2498 36.5574Z" fill="#D1D1D1"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 38.5C24.8284 38.5 25.5 39.1716 25.5 40V44C25.5 44.8284 24.8284 45.5 24 45.5C23.1716 45.5 22.5 44.8284 22.5 44V40C22.5 39.1716 23.1716 38.5 24 38.5Z" fill="#D1D1D1"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7498 36.5574C17.4672 36.9716 17.713 37.889 17.2988 38.6065L15.2988 42.0706C14.8846 42.788 13.9672 43.0338 13.2498 42.6196C12.5323 42.2054 12.2865 41.288 12.7007 40.5706L14.7007 37.1065C15.1149 36.389 16.0323 36.1432 16.7498 36.5574Z" fill="#D1D1D1"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4425 31.25C11.8568 31.9674 11.611 32.8848 10.8935 33.299L7.42946 35.299C6.71202 35.7133 5.79463 35.4674 5.38042 34.75C4.9662 34.0326 5.21201 33.1152 5.92944 32.701L9.3935 30.701C10.1109 30.2868 11.0283 30.5326 11.4425 31.25Z" fill="#004ED5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 24C2.5 23.1716 3.17157 22.5 4 22.5H8C8.82843 22.5 9.5 23.1716 9.5 24C9.5 24.8284 8.82843 25.5 8 25.5H4C3.17157 25.5 2.5 24.8284 2.5 24Z" fill="#004ED5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.38042 13.25C5.79463 12.5326 6.71202 12.2868 7.42946 12.701L10.8935 14.701C11.611 15.1152 11.8568 16.0326 11.4425 16.75C11.0283 17.4675 10.1109 17.7133 9.3935 17.299L5.92944 15.299C5.21201 14.8848 4.9662 13.9674 5.38042 13.25Z" fill="#004ED5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2498 5.38042C13.9672 4.9662 14.8846 5.21201 15.2988 5.92944L17.2988 9.3935C17.713 10.1109 17.4672 11.0283 16.7498 11.4425C16.0323 11.8568 15.1149 11.611 14.7007 10.8935L12.7007 7.42946C12.2865 6.71202 12.5323 5.79463 13.2498 5.38042Z" fill="#004ED5"/>
+                        </svg>
                         <p class="mt-3 text-center text-body2 text-Grey">Searching Axiom’s bench of legal professionals.</p>
                     </div>
                 </div>
@@ -898,7 +909,7 @@
 <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data('multiStepForm', () => ({
-            step: 1,
+            step: 3,
             textInput: '',
             formData: {
                 text: '',
