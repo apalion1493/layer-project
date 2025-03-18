@@ -158,6 +158,152 @@
             </div>
         </div>
     </section>
+    <section class="section bg-bgLight border-t border-LightGrey border-dashed">
+        <div class="container">
+            @@include('components/Title-component--blue.html', {
+            'Style_common': '',
+            'Style_title': 'text-h3 lg:text-Top5',
+            'Title_tag': 'h3',
+            'Title': 'Frequently Asked Questions',
+            'Style_line': 'my-5',
+            })
+            <p>Here you will find the most popular questions and answers!</p>
+            <div class="row mt-10 gap-x-6 gap-y-3">
+                <div class="col-span-6 lg:col-span-12">
+                    <div x-data="{ isExpanded: false }" class="overflow-hidden rounded-xl border border-LightGrey shadow-v1 w-full bg-white">
+                        <button id="controlsAccordionItemOne" type="button" class="flex w-full text-base lg:text-body text-Text font-medium items-center justify-between gap-x-2 px-5 py-4 text-left underline-offset-2 hover:bg-surface-alt/75 focus-visible:bg-surface-alt/75 focus-visible:underline focus-visible:outline-hidden" aria-controls="accordionItemOne" x-on:click="isExpanded = ! isExpanded" x-bind:class="isExpanded ? ''  : ''" x-bind:aria-expanded="isExpanded ? 'true' : 'false'">
+                            <span class="text-blue100">01.</span>
+                            Lorem ipsum dolor sit amet concectetur?
+                            <span class="flex items-center justify-center ml-auto">
+                                <svg x-show="!isExpanded" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                    <rect x="13" y="4" width="2" height="20" rx="1" fill="#004ED5"/>
+                                    <rect x="4" y="13" width="20" height="2" rx="1" fill="#004ED5"/>
+                                </svg>
+                                <svg x-show="isExpanded" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                  <rect x="4" y="13" width="20" height="2" rx="1" fill="#7B8BB3"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-cloak x-show="isExpanded" id="accordionItemOne" role="region" aria-labelledby="controlsAccordionItemOne"  x-collapse>
+                            <div class="px-5 pb-4 pt-0 text-body lg:text-body2 text-pretty">
+                                Sed ultricies sapien at ante dapibus, et euismod ex sodales. Curabitur ac luctus mauris. Ut vel sem sit amet leo molestie fringilla. Nunc nec rhoncus ipsum. Phasellus et placerat nibh. Sed non lectus porta, cursus ante.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-6 lg:col-span-12">
+                    <div x-data="{ isExpanded: false }" class="overflow-hidden rounded-xl border border-LightGrey shadow-v1 w-full bg-white">
+                        <button id="controlsAccordionItem2" type="button" class="flex w-full text-base lg:text-body text-Text font-medium items-center justify-between gap-x-2 px-5 py-4 text-left underline-offset-2 hover:bg-surface-alt/75 focus-visible:bg-surface-alt/75 focus-visible:underline focus-visible:outline-hidden" aria-controls="accordionItemOne" x-on:click="isExpanded = ! isExpanded" x-bind:class="isExpanded ? ''  : ''" x-bind:aria-expanded="isExpanded ? 'true' : 'false'">
+                            <span class="text-blue100">02.</span>
+                            Lorem ipsum dolor sit amet concectetur?
+                            <span class="flex items-center justify-center ml-auto">
+                                <svg x-show="!isExpanded" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                    <rect x="13" y="4" width="2" height="20" rx="1" fill="#004ED5"/>
+                                    <rect x="4" y="13" width="20" height="2" rx="1" fill="#004ED5"/>
+                                </svg>
+                                <svg x-show="isExpanded" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                  <rect x="4" y="13" width="20" height="2" rx="1" fill="#7B8BB3"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-cloak x-show="isExpanded" id="accordionItem2" role="region" aria-labelledby="controlsAccordionItem2"  x-collapse>
+                            <div class="px-5 pb-4 pt-0 text-body lg:text-body2 text-pretty">
+                                Sed ultricies sapien at ante dapibus, et euismod ex sodales. Curabitur ac luctus mauris. Ut vel sem sit amet leo molestie fringilla. Nunc nec rhoncus ipsum. Phasellus et placerat nibh. Sed non lectus porta, cursus ante.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-6 lg:col-span-12">
+                    <div x-data="{ isExpanded: false }" class="overflow-hidden rounded-xl border border-LightGrey shadow-v1 w-full bg-white">
+                        <button id="controlsAccordionItem3" type="button" class="flex w-full text-base lg:text-body text-Text font-medium items-center justify-between gap-x-2 px-5 py-4 text-left underline-offset-2 hover:bg-surface-alt/75 focus-visible:bg-surface-alt/75 focus-visible:underline focus-visible:outline-hidden" aria-controls="accordionItemOne" x-on:click="isExpanded = ! isExpanded" x-bind:class="isExpanded ? ''  : ''" x-bind:aria-expanded="isExpanded ? 'true' : 'false'">
+                            <span class="text-blue100">03.</span>
+                            Lorem ipsum dolor sit amet concectetur?
+                            <span class="flex items-center justify-center ml-auto">
+                                <svg x-show="!isExpanded" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                    <rect x="13" y="4" width="2" height="20" rx="1" fill="#004ED5"/>
+                                    <rect x="4" y="13" width="20" height="2" rx="1" fill="#004ED5"/>
+                                </svg>
+                                <svg x-show="isExpanded" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                  <rect x="4" y="13" width="20" height="2" rx="1" fill="#7B8BB3"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-cloak x-show="isExpanded" id="accordionItem3" role="region" aria-labelledby="controlsAccordionItem3"  x-collapse>
+                            <div class="px-5 pb-4 pt-0 text-body lg:text-body2 text-pretty">
+                                Sed ultricies sapien at ante dapibus, et euismod ex sodales. Curabitur ac luctus mauris. Ut vel sem sit amet leo molestie fringilla. Nunc nec rhoncus ipsum. Phasellus et placerat nibh. Sed non lectus porta, cursus ante.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-6 lg:col-span-12">
+                    <div x-data="{ isExpanded: false }" class="overflow-hidden rounded-xl border border-LightGrey shadow-v1 w-full bg-white">
+                        <button id="controlsAccordionItem4" type="button" class="flex w-full text-base lg:text-body text-Text font-medium items-center justify-between gap-x-2 px-5 py-4 text-left underline-offset-2 hover:bg-surface-alt/75 focus-visible:bg-surface-alt/75 focus-visible:underline focus-visible:outline-hidden" aria-controls="accordionItemOne" x-on:click="isExpanded = ! isExpanded" x-bind:class="isExpanded ? ''  : ''" x-bind:aria-expanded="isExpanded ? 'true' : 'false'">
+                            <span class="text-blue100">04.</span>
+                            Lorem ipsum dolor sit amet concectetur?
+                            <span class="flex items-center justify-center ml-auto">
+                                <svg x-show="!isExpanded" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                    <rect x="13" y="4" width="2" height="20" rx="1" fill="#004ED5"/>
+                                    <rect x="4" y="13" width="20" height="2" rx="1" fill="#004ED5"/>
+                                </svg>
+                                <svg x-show="isExpanded" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                  <rect x="4" y="13" width="20" height="2" rx="1" fill="#7B8BB3"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-cloak x-show="isExpanded" id="accordionItem4" role="region" aria-labelledby="controlsAccordionItem4"  x-collapse>
+                            <div class="px-5 pb-4 pt-0 text-body lg:text-body2 text-pretty">
+                                Sed ultricies sapien at ante dapibus, et euismod ex sodales. Curabitur ac luctus mauris. Ut vel sem sit amet leo molestie fringilla. Nunc nec rhoncus ipsum. Phasellus et placerat nibh. Sed non lectus porta, cursus ante.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-6 lg:col-span-12">
+                    <div x-data="{ isExpanded: false }" class="overflow-hidden rounded-xl border border-LightGrey shadow-v1 w-full bg-white">
+                        <button id="controlsAccordionItem5" type="button" class="flex w-full text-base lg:text-body text-Text font-medium items-center justify-between gap-x-2 px-5 py-4 text-left underline-offset-2 hover:bg-surface-alt/75 focus-visible:bg-surface-alt/75 focus-visible:underline focus-visible:outline-hidden" aria-controls="accordionItemOne" x-on:click="isExpanded = ! isExpanded" x-bind:class="isExpanded ? ''  : ''" x-bind:aria-expanded="isExpanded ? 'true' : 'false'">
+                            <span class="text-blue100">05.</span>
+                            Lorem ipsum dolor sit amet concectetur?
+                            <span class="flex items-center justify-center ml-auto">
+                                <svg x-show="!isExpanded" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                    <rect x="13" y="4" width="2" height="20" rx="1" fill="#004ED5"/>
+                                    <rect x="4" y="13" width="20" height="2" rx="1" fill="#004ED5"/>
+                                </svg>
+                                <svg x-show="isExpanded" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                  <rect x="4" y="13" width="20" height="2" rx="1" fill="#7B8BB3"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-cloak x-show="isExpanded" id="accordionItem5" role="region" aria-labelledby="controlsAccordionItem5"  x-collapse>
+                            <div class="px-5 pb-4 pt-0 text-body lg:text-body2 text-pretty">
+                                Sed ultricies sapien at ante dapibus, et euismod ex sodales. Curabitur ac luctus mauris. Ut vel sem sit amet leo molestie fringilla. Nunc nec rhoncus ipsum. Phasellus et placerat nibh. Sed non lectus porta, cursus ante.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-6 lg:col-span-12">
+                    <div x-data="{ isExpanded: false }" class="overflow-hidden rounded-xl border border-LightGrey shadow-v1 w-full bg-white">
+                        <button id="controlsAccordionItem6" type="button" class="flex w-full text-base lg:text-body text-Text font-medium items-center justify-between gap-x-2 px-5 py-4 text-left underline-offset-2 hover:bg-surface-alt/75 focus-visible:bg-surface-alt/75 focus-visible:underline focus-visible:outline-hidden" aria-controls="accordionItemOne" x-on:click="isExpanded = ! isExpanded" x-bind:class="isExpanded ? ''  : ''" x-bind:aria-expanded="isExpanded ? 'true' : 'false'">
+                            <span class="text-blue100">06.</span>
+                            Lorem ipsum dolor sit amet concectetur?
+                            <span class="flex items-center justify-center ml-auto">
+                                <svg x-show="!isExpanded" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                    <rect x="13" y="4" width="2" height="20" rx="1" fill="#004ED5"/>
+                                    <rect x="4" y="13" width="20" height="2" rx="1" fill="#004ED5"/>
+                                </svg>
+                                <svg x-show="isExpanded" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                  <rect x="4" y="13" width="20" height="2" rx="1" fill="#7B8BB3"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div x-cloak x-show="isExpanded" id="accordionItem6" role="region" aria-labelledby="controlsAccordionItem6"  x-collapse>
+                            <div class="px-5 pb-4 pt-0 text-body lg:text-body2 text-pretty">
+                                Sed ultricies sapien at ante dapibus, et euismod ex sodales. Curabitur ac luctus mauris. Ut vel sem sit amet leo molestie fringilla. Nunc nec rhoncus ipsum. Phasellus et placerat nibh. Sed non lectus porta, cursus ante.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     @@include('components/Contact-section.html')
     @@include('components/Footer.html')
