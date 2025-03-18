@@ -2252,6 +2252,10 @@ html {
   margin-top: auto;
   margin-bottom: auto;
 }
+.my-6{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
 .mb-0{
   margin-bottom: 0px;
 }
@@ -2506,9 +2510,6 @@ html {
 }
 .min-w-\[72px\]{
   min-width: 72px;
-}
-.max-w-\[305px\]{
-  max-width: 305px;
 }
 .max-w-\[333px\]{
   max-width: 333px;
@@ -2775,17 +2776,9 @@ html {
   --tw-bg-opacity: 1;
   background-color: rgb(246 249 255 / var(--tw-bg-opacity, 1));
 }
-.bg-blue-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
-}
 .bg-blue100{
   --tw-bg-opacity: 1;
   background-color: rgb(0 78 213 / var(--tw-bg-opacity, 1));
-}
-.bg-gray-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity, 1));
 }
 .bg-gray-800{
   --tw-bg-opacity: 1;
@@ -2924,7 +2917,7 @@ html {
 }
 .text-body{
   font-size: 16px;
-  line-height: 130%;
+  line-height: 120%;
 }
 .text-body2{
   font-size: 14px;
@@ -3366,7 +3359,7 @@ h4, .h4{
 @media (max-width: 767px){
   h4, .h4{
     font-size: 16px;
-    line-height: 130%;
+    line-height: 120%;
   }
 }
 
@@ -3382,13 +3375,13 @@ h6, .h6{
 
 p{
   font-size: 16px;
-  line-height: 130%;
+  line-height: 120%;
 }
 
 @media (max-width: 767px){
   p{
     font-size: 16px;
-    line-height: 130%;
+    line-height: 120%;
   }
 }
 
@@ -3423,17 +3416,13 @@ p{
   font-weight: 500;
 }
 .text-block2 a{
-  --tw-text-opacity: 1;
-  color: rgb(0 78 213 / var(--tw-text-opacity, 1));
+  text-decoration-line: underline;
 }
-.text-block2 ul {
-  color: #004ED5;
+.text-block2 ul{
   list-style-type: disc;
   padding-left: 1.5rem;
-}
-.text-block2 ul p{
-  --tw-text-opacity: 1;
-  color: rgb(0 30 96 / var(--tw-text-opacity, 1));
+  font-size: 16px;
+  line-height: 120%;
 }
 
 .Fast-icon {
@@ -3598,7 +3587,7 @@ p{
   padding-right: 1.25rem;
   text-align: center;
   font-size: 16px;
-  line-height: 130%;
+  line-height: 120%;
   font-weight: 500;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -3717,7 +3706,7 @@ p{
 @media (max-width: 767px){
   .text-content p{
     font-size: 16px;
-    line-height: 130%;
+    line-height: 120%;
   }
 }
 .text-content ol{
@@ -4561,7 +4550,7 @@ p{
   }
   .lg\:text-body{
     font-size: 16px;
-    line-height: 130%;
+    line-height: 120%;
   }
   .lg\:text-body2{
     font-size: 14px;

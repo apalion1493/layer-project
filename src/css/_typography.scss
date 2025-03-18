@@ -51,15 +51,10 @@ p {
   }
 
   a {
-    @apply text-blue100
+    @apply underline
   }
 
   ul {
-    p {
-      @apply text-Text
-    }
-
-    color: #004ED5;
-    @apply list-disc pl-6
+    @apply list-disc pl-6 text-body
   }
 }
