@@ -3577,36 +3577,86 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
     const thankYouMessage = document.getElementById("thankYouMessage");
     const resetButton = document.getElementById("resetFormButton");
+    const form_img = document.getElementById("form-img");
+
+    function showError(input, message) {
+        let errorText;
+
+        if (input.type === "checkbox") {
+            errorText = input.closest("label").nextElementSibling; // <small> после label
+        } else {
+            errorText = input.nextElementSibling; // <small> после input
+        }
+
+        errorText.textContent = message;
+        errorText.classList.remove("hidden");
+    }
+
+    function clearError(input) {
+        let errorText;
+
+        if (input.type === "checkbox") {
+            errorText = input.closest("label").nextElementSibling;
+        } else {
+            errorText = input.nextElementSibling;
+        }
+
+        errorText.classList.add("hidden");
+    }
+
+    function validateForm() {
+        let isValid = true;
+
+        const firstName = document.getElementById("nameID");
+        const lastName = document.getElementById("last-nameID");
+        const phone = document.getElementById("phoneID");
+        const email = document.getElementById("mailID");
+        const consent = form.querySelector("input[name='consent']");
+
+        if (firstName.value.trim() === "") {
+            showError(firstName, "First name is required");
+            isValid = false;
+        } else {
+            clearError(firstName);
+        }
+
+        if (lastName.value.trim() === "") {
+            showError(lastName, "Last name is required");
+            isValid = false;
+        } else {
+            clearError(lastName);
+        }
+
+        const phonePattern = /^\d{10,}$/;
+        if (!phonePattern.test(phone.value.trim())) {
+            showError(phone, "Enter a valid phone number (10+ digits)");
+            isValid = false;
+        } else {
+            clearError(phone);
+        }
+
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailPattern.test(email.value.trim())) {
+            showError(email, "Enter a valid email");
+            isValid = false;
+        } else {
+            clearError(email);
+        }
+
+        if (!consent.checked) {
+            showError(consent, "You must accept the terms");
+            isValid = false;
+        } else {
+            clearError(consent);
+        }
+
+        return isValid;
+    }
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
-        const formData = new FormData(form);
-        axios.post("http://localhost:3000/send-form", formData)
-            .then(response => {
-                console.log("Success:", response.data);
-                form.reset();
-                wrapperForm.classList.add("hidden");
-                thankYouMessage.classList.remove("hidden");
-            })
-            .catch(error => {
-                console.error("Ошибка:", error);
-            });
-    });
-    resetButton.addEventListener("click", function () {
-        thankYouMessage.classList.add("hidden");
-        wrapperForm.classList.remove("hidden");
-    });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-    const wrapperForm = document.getElementById("wrapperForm");
-    const form = document.getElementById("contactForm");
-    const thankYouMessage = document.getElementById("thankYouMessage");
-    const resetButton = document.getElementById("resetFormButton");
-    const form_img = document.getElementById("form-img");
-
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Отключаем стандартную отправку формы
+        if (!validateForm()) return;
 
         const formData = new FormData(form);
 
@@ -3616,14 +3666,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 form.reset();
                 wrapperForm.classList.add("hidden");
                 form_img.classList.add("lg:hidden");
-                thankYouMessage.classList.remove("hidden"); // Показываем блок благодарности
+                thankYouMessage.classList.remove("hidden");
             })
             .catch(error => {
                 console.error("Ошибка:", error.response?.data || error.message);
             });
     });
 
-    // Кнопка "Заполнить ещё раз"
     resetButton.addEventListener("click", function () {
         thankYouMessage.classList.add("hidden");
         wrapperForm.classList.remove("hidden");
