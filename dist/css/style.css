@@ -2677,6 +2677,9 @@ html {
 .gap-y-\[6px\]{
   row-gap: 6px;
 }
+.self-start{
+  align-self: flex-start;
+}
 .self-end{
   align-self: flex-end;
 }
@@ -4395,6 +4398,9 @@ p{
   .lg\:mb-0{
     margin-bottom: 0px;
   }
+  .lg\:mb-4{
+    margin-bottom: 1rem;
+  }
   .lg\:mb-5{
     margin-bottom: 1.25rem;
   }
@@ -4410,11 +4416,11 @@ p{
   .lg\:mt-6{
     margin-top: 1.5rem;
   }
-  .lg\:mb-4{
-    margin-bottom: 1rem;
-  }
   .lg\:hidden{
     display: none;
+  }
+  .lg\:h-8{
+    height: 2rem;
   }
   .lg\:h-\[36px\]{
     height: 36px;
@@ -4422,8 +4428,8 @@ p{
   .lg\:h-auto{
     height: auto;
   }
-  .lg\:h-8{
-    height: 2rem;
+  .lg\:w-8{
+    width: 2rem;
   }
   .lg\:w-fit{
     width: -moz-fit-content;
@@ -4432,14 +4438,11 @@ p{
   .lg\:w-full{
     width: 100%;
   }
-  .lg\:w-8{
-    width: 2rem;
+  .lg\:min-w-0{
+    min-width: 0px;
   }
   .lg\:min-w-full{
     min-width: 100%;
-  }
-  .lg\:min-w-0{
-    min-width: 0px;
   }
   .lg\:max-w-\[305px\]{
     max-width: 305px;
@@ -4560,12 +4563,12 @@ p{
     font-size: 16px;
     line-height: 130%;
   }
-  .lg\:text-h2Mob{
-    font-size: 30px;
-    line-height: 120%;
-  }
   .lg\:text-body2{
     font-size: 14px;
+    line-height: 120%;
+  }
+  .lg\:text-h2Mob{
+    font-size: 30px;
     line-height: 120%;
   }
 }
@@ -4573,10 +4576,6 @@ p{
 @media (max-width: 767px){
   .md\:col-span-12{
     grid-column: span 12 / span 12;
-  }
-  .md\:mx-auto{
-    margin-left: auto;
-    margin-right: auto;
   }
   .md\:mt-0{
     margin-top: 0px;
@@ -4587,20 +4586,14 @@ p{
   .md\:hidden{
     display: none;
   }
-  .md\:h-\[200px\]{
-    height: 200px;
-  }
   .md\:min-h-\[238px\]{
     min-height: 238px;
   }
-  .md\:w-\[311px\]{
-    width: 311px;
+  .md\:max-w-\[400px\]{
+    max-width: 400px;
   }
   .md\:max-w-full{
     max-width: 100%;
-  }
-  .md\:max-w-\[400px\]{
-    max-width: 400px;
   }
   .md\:flex-1{
     flex: 1 1 0%;
