@@ -99,7 +99,7 @@ module.exports = {
                 Grey: '#7B8BB3',
                 Error: '#F25F5F',
                 Error2: '#FFE1E1',
-                Error3: '##DD00001A',
+                Error3: '#DD00001A',
                 Text: '#001E60',
                 Text2: '#7B8BB3CC',
                 Text3: '#A6AFBF',
