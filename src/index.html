@@ -120,25 +120,12 @@
                 <div class="p-10 lg:p-5 mt-8 rounded-2xl overflow-hidden flex justify-center items-center w-full bg-5">
                     <form class="w-full rounded-xl bg-white p-6 lg:px-5 flex items-end lg:flex-col lg:gap-x-0 lg:gap-y-4 lg:items-start gap-x-3">
                         <div class="relative flex-1 lg:w-full">
-                            <label for="inputField2" class="block mb-2 text-body md:text-body2 text-Text2">My Legal Issue</label>
-                            <div class="relative">
-                                <input
-                                        id="inputField2"
-                                        type="text"
-                                        class="input pr-10 bg-input-1"
-                                        placeholder="Real Estate"
-                                />
-                                <button
-                                        type="button"
-                                        id="clearButton2"
-                                        class="absolute inset-y-0 right-3 flex items-center"
-                                        onclick="clearInput()"
-                                >
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                        <path d="M11.475 1.575C11.7649 1.28505 11.7649 0.814949 11.475 0.525C11.1851 0.23505 10.715 0.235051 10.425 0.525L6 4.95L1.575 0.525C1.28505 0.235051 0.814949 0.23505 0.525 0.525C0.23505 0.814949 0.235051 1.28505 0.525 1.575L4.95 6L0.525 10.425C0.235051 10.7149 0.23505 11.1851 0.525 11.475C0.814949 11.7649 1.28505 11.7649 1.575 11.475L6 7.05L10.425 11.475C10.7149 11.7649 11.1851 11.7649 11.475 11.475C11.7649 11.1851 11.7649 10.715 11.475 10.425L7.05 6L11.475 1.575Z" fill="#004ED5"/>
-                                    </svg>
-                                </button>
-                            </div>
+                            @@include('components/Select.html', {
+                            'commonStyle': 'lg:mt-1',
+                            'idSelect': 'idSelect',
+                            'label': 'My Legal Issue',
+                            'NameSelect': 'legalIssue',
+                            })
                         </div>
                         <div class="relative flex-1 lg:w-full">
                             <label for="inputField" class="block mb-2 text-body md:text-body2 text-Text2">I need help near <span class="font-light">(City, ZIP code or county)</span></label>

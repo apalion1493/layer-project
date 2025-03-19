@@ -3297,7 +3297,6 @@ select.select {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
   appearance: none !important;
-  background-image: url("../img/Dropdown-icon.svg");
   color: #1B3C7480;
 }
 
@@ -3574,6 +3573,11 @@ p{
 .website-input {
   background: url("../img/website-input.svg") 12px center no-repeat;
   background-size: 20px 20px;
+}
+
+.select-check {
+  background: url("../img/select-check.svg") calc(100% - 12px) center no-repeat;
+  background-size: 13px 13px;
 }
 
 .Accurate-Results {
@@ -4255,6 +4259,11 @@ p{
 
 .bg-5 {
   background: url("../img/bg-5.png") no-repeat center bottom;
+  background-size: cover;
+}
+
+.bg-6 {
+  background: url("../img/bg-6.png") no-repeat center bottom;
   background-size: cover;
 }
 
