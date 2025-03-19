@@ -1,5 +1,12 @@
 <div class="p-5 flex justify-center items-center rounded-2xl overflow-hidden bg-6">
     <div class="flex flex-col w-full bg-white rounded-xl p-5">
-
+        @@include('Title-component.html', {
+        'Style_common': '',
+        'Style_title': 'text-Top3 lg:text-Top5 mb-0',
+        'Title_tag': 'h3',
+        'Title': '@@Title_block',
+        'Style_line': 'mt-4 mb-5',
+        })
+        <p>@@Text</p>
     </div>
 </div>
