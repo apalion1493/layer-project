@@ -50,6 +50,96 @@
                 <div class="col-span-4 lg:col-span-12">
                     <div class="minlg:sticky minlg:top-10">
                         <div class="max-w-[373px] ml-auto flex flex-col">
+                            <div class="flex w-full flex-col p-6 border border-Brown rounded-xl bg-white relative mb-5">
+                                <div class="flex w-full flex-col">
+                                    <div class="flex w-full flex-col gap-y-3 mb-6">
+                                        <span class="text-Top1 font-medium -tracking-[0.72px]">Do you need an Attorney?</span>
+                                        <p>We can help to find best for you!</p>
+                                        <div class="flex gap-x-2 items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+                                                <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+                                                <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <form action="" class="flex w-full flex-col gap-y-6">
+                                        <div class="flex w-full flex-col gap-y-3">
+                                            @@include('components/input.html', {
+                                            'common-style': '',
+                                            'StyleLabel': 'hidden',
+                                            'idInput': 'nameID2',
+                                            'label': '',
+                                            'styleInput': 'input-icon User-input',
+                                            'type': 'text',
+                                            'placeholder': 'Full name',
+                                            'errorStyle': 'hidden',
+                                            'Name': 'first-name',
+                                            })
+
+                                            @@include('components/input.html', {
+                                            'common-style': '',
+                                            'StyleLabel': 'hidden',
+                                            'idInput': 'mailID2',
+                                            'label': '',
+                                            'styleInput': 'input-icon Mail-input',
+                                            'type': 'email',
+                                            'placeholder': 'Email',
+                                            'errorStyle': 'hidden',
+                                            'Name': 'Email',
+                                            })
+
+                                            @@include('components/textarea.html', {
+                                            'commonStyle': '',
+                                            'Style_label': 'hidden',
+                                            'idTextarea': 'commentID2',
+                                            'label': '',
+                                            'styleTextarea': '',
+                                            'placeholder': 'Tell us what happened...',
+                                            'rows': '3',
+                                            'Name': 'comment',
+                                            })
+                                        </div>
+
+                                        @@include('components/checkbox.html', {
+                                        'styleText': 'blue-text',
+                                        'ID_Check': 'checkboxID2',
+                                        'text': 'I consent to be contacted and i have read and agree to the <a href="#">LawyerAI privacy notice</a> and <a href="#">terms of service.*</a> ',
+                                        'errorStyle': 'hidden',
+                                        'errorText': 'Error',
+                                        })
+
+                                        @@include('components/button-icon.html', {
+                                        'style': '',
+                                        'type': 'submit',
+                                        'ariaLabel': 'Contact Us',
+                                        'title': 'Contact Us',
+                                        })
+                                    </form>
+                                </div>
+                                <div id="thankYouMessage2" class="">
+                                    <div class="flex w-full flex-col gap-y-3 mb-6">
+                                        <span class="text-Top1 font-medium -tracking-[0.72px]">Thank you for request!</span>
+                                        <p>We will contact you with a few minutes for answering questions you need.</p>
+                                        <div class="flex gap-x-2 items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+                                                <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+                                                <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <img class="max-w-full" src="__IMAGE_PATH__ty-img.svg" alt="Thank you for Contacting!">
+                                    <button id="resetFormButton" class="button mt-8 md:mt-3" type="submit" aria-label="Return to the Form">
+                                        <span class="">Return to the Form</span>
+                                        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                            <path d="M4.88452 0.880859L9.19988 5.00007L4.88452 9.11928" stroke="white" stroke-width="1.28571" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
                             @@include('components/right-side-text-block.html', {
                             'Title_block': 'Find a Top-Rated [practice area] lawyer Near You',
                             'Text': 'Struggling with [practice area]? We’ll help you find the right [practice area] attorney to handle your case. Get a free consultation—just fill out the form to get started!',

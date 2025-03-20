@@ -105,6 +105,7 @@ module.exports = {
                 Text3: '#A6AFBF',
                 Title: '#14142B',
                 Yellow: '#FFBF16',
+                Brown: 'rgba(221, 0, 0, 0.20)',
             },
             letterSpacing: {
                 '04': '-0.4px', //tracking

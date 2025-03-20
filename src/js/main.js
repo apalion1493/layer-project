@@ -132,9 +132,9 @@ document.addEventListener("DOMContentLoaded", function () {
         let errorText;
 
         if (input.type === "checkbox") {
-            errorText = input.closest("label").nextElementSibling; // <small> после label
+            errorText = input.closest("label").nextElementSibling;
         } else {
-            errorText = input.nextElementSibling; // <small> после input
+            errorText = input.nextElementSibling;
         }
 
         errorText.textContent = message;
