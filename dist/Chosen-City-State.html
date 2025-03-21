@@ -1001,7 +1001,7 @@
 
     <section class="section border-t border-LightGrey border-dashed">
         <div class="container">
-            <div class="row gap-x-5 lg:gap-x-0">
+            <div class="row gap-x-5 lg:gap-x-0 lg:gap-y-8">
                 <div class="col-span-8 lg:col-span-12">
                     <div class="flex flex-col">
                         <div class="flex flex-col ">
@@ -1017,31 +1017,203 @@
 </div>
                         <p class="text-body">Browse law firms in Denver city:</p>
                         <div class="flex flex-col gap-y-5 mt-5">
-                            <div class="flex gap-x-6 w-full p-5 bg-white shadow-v1 border border-LightGrey rounded-xl">
-                                <div class="w-[120px] min-w-[120px] h-[120px] flex items-center justify-center rounded-xl overflow-hidden border border-LightGrey bg-bgLight">
+                            <a href="#" class="firm-card active">
+                                <div class="md:hidden w-[120px] min-w-[120px] h-[120px] flex items-center justify-center rounded-xl overflow-hidden border border-LightGrey bg-bgLight">
                                     <span class="text-h2 font-semibold text-blue100">RH</span>
                                 </div>
                                 <div class="flex flex-col gap-y-3">
-                                    <p class="text-Top3 font-medium text-Text">Robinson & Henry, P.C</p>
-                                    <p class="text-body text-Grey">Criminal Defence Lawyers Serving, CO</p>
-                                    <p class="text-body text-blue100 font-medium">Free Consultation</p>
-                                    <p class="text-body2 text-Grey">Chicago, 16th St.Suite 750, Denver, CO B26849</p>
+                                    <div class="flex md:mb-2">
+                                        <div class="minmd:hidden mr-4 w-[90px] min-w-[90px] h-[90px] flex items-center justify-center rounded-xl overflow-hidden border border-LightGrey bg-bgLight">
+                                            <span class="text-h4 font-semibold text-blue100">RH</span>
+                                        </div>
+                                        <div class="flex flex-col md:gap-y-2 gap-y-3">
+                                            <p class="text-Top3 md:text-base font-medium text-Text">Robinson & Henry, P.C</p>
+                                            <p class="text-body md:text-body2 text-Grey">Criminal Defence Lawyers Serving, CO</p>
+                                            <div class="flex items-center flex-wrap gap-3 minmd:hidden">
+                                                <div class="flex items-center gap-x-1">
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                </div>
+                                                <span class="firm-card__status">Top Lawyer <i class="arrow-top ml-2"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="inline-flex items-start text-body text-blue100 font-medium"><span class="flex items-center justify-center min-w-5 mr-2"><i class="check "></i></span>Free Consultation</p>
+                                    <p class="inline-flex items-start text-body2 text-Grey"><span class="flex items-center justify-center min-w-5 mr-2"><i class="point-icon"></i></span>Chicago, 16th St.Suite 750, Denver, CO B26849</p>
                                 </div>
-                                <div class="ml-auto">
-                                    star
-                                    star
-                                    star
-                                    star
-                                    star
+                                <div class="ml-auto flex flex-col md:hidden">
+                                    <div class="flex items-center gap-x-[6px]">
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                    </div>
+                                    <span class="firm-card__status mt-4">Top Lawyer <i class="arrow-top ml-2"></i></span>
                                 </div>
-                            </div>
+                            </a>
+                            <a href="#" class="firm-card">
+                                <div class="md:hidden w-[120px] min-w-[120px] h-[120px] flex items-center justify-center rounded-xl overflow-hidden border border-LightGrey bg-bgLight">
+                                    <span class="text-h2 font-semibold text-blue100">RH</span>
+                                </div>
+                                <div class="flex flex-col gap-y-3">
+                                    <div class="flex md:mb-2">
+                                        <div class="minmd:hidden mr-4 w-[90px] min-w-[90px] h-[90px] flex items-center justify-center rounded-xl overflow-hidden border border-LightGrey bg-bgLight">
+                                            <span class="text-h4 font-semibold text-blue100">RH</span>
+                                        </div>
+                                        <div class="flex flex-col md:gap-y-2 gap-y-3">
+                                            <p class="text-Top3 md:text-base font-medium text-Text">Robinson & Henry, P.C</p>
+                                            <p class="text-body md:text-body2 text-Grey">Criminal Defence Lawyers Serving, CO</p>
+                                            <div class="flex items-center flex-wrap gap-3 minmd:hidden">
+                                                <div class="flex items-center gap-x-1">
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                </div>
+                                                <span class="firm-card__status">Top Lawyer <i class="arrow-top ml-2"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="inline-flex items-start text-body text-blue100 font-medium"><span class="flex items-center justify-center min-w-5 mr-2"><i class="check "></i></span>Free Consultation</p>
+                                    <p class="inline-flex items-start text-body2 text-Grey"><span class="flex items-center justify-center min-w-5 mr-2"><i class="point-icon"></i></span>Chicago, 16th St.Suite 750, Denver, CO B26849</p>
+                                </div>
+                                <div class="ml-auto flex flex-col md:hidden">
+                                    <div class="flex items-center gap-x-[6px]">
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                    </div>
+                                    <span class="firm-card__status mt-4">Top Lawyer <i class="arrow-top ml-2"></i></span>
+                                </div>
+                            </a>
+                            <a href="#" class="firm-card">
+                                <div class="md:hidden w-[120px] min-w-[120px] h-[120px] flex items-center justify-center rounded-xl overflow-hidden border border-LightGrey bg-bgLight">
+                                    <span class="text-h2 font-semibold text-blue100">RH</span>
+                                </div>
+                                <div class="flex flex-col gap-y-3">
+                                    <div class="flex md:mb-2">
+                                        <div class="minmd:hidden mr-4 w-[90px] min-w-[90px] h-[90px] flex items-center justify-center rounded-xl overflow-hidden border border-LightGrey bg-bgLight">
+                                            <span class="text-h4 font-semibold text-blue100">RH</span>
+                                        </div>
+                                        <div class="flex flex-col md:gap-y-2 gap-y-3">
+                                            <p class="text-Top3 md:text-base font-medium text-Text">Robinson & Henry, P.C</p>
+                                            <p class="text-body md:text-body2 text-Grey">Criminal Defence Lawyers Serving, CO</p>
+                                            <div class="flex items-center flex-wrap gap-3 minmd:hidden">
+                                                <div class="flex items-center gap-x-1">
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                </div>
+                                                <span class="firm-card__status">Top Lawyer <i class="arrow-top ml-2"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="inline-flex items-start text-body text-blue100 font-medium"><span class="flex items-center justify-center min-w-5 mr-2"><i class="check "></i></span>Free Consultation</p>
+                                    <p class="inline-flex items-start text-body2 text-Grey"><span class="flex items-center justify-center min-w-5 mr-2"><i class="point-icon"></i></span>Chicago, 16th St.Suite 750, Denver, CO B26849</p>
+                                </div>
+                                <div class="ml-auto flex flex-col md:hidden">
+                                    <div class="flex items-center gap-x-[6px]">
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                    </div>
+                                    <span class="firm-card__status mt-4">Top Lawyer <i class="arrow-top ml-2"></i></span>
+                                </div>
+                            </a>
+                            <a href="#" class="firm-card">
+                                <div class="md:hidden w-[120px] min-w-[120px] h-[120px] flex items-center justify-center rounded-xl overflow-hidden border border-LightGrey bg-bgLight">
+                                    <span class="text-h2 font-semibold text-blue100">RH</span>
+                                </div>
+                                <div class="flex flex-col gap-y-3">
+                                    <div class="flex md:mb-2">
+                                        <div class="minmd:hidden mr-4 w-[90px] min-w-[90px] h-[90px] flex items-center justify-center rounded-xl overflow-hidden border border-LightGrey bg-bgLight">
+                                            <span class="text-h4 font-semibold text-blue100">RH</span>
+                                        </div>
+                                        <div class="flex flex-col md:gap-y-2 gap-y-3">
+                                            <p class="text-Top3 md:text-base font-medium text-Text">Robinson & Henry, P.C</p>
+                                            <p class="text-body md:text-body2 text-Grey">Criminal Defence Lawyers Serving, CO</p>
+                                            <div class="flex items-center flex-wrap gap-3 minmd:hidden">
+                                                <div class="flex items-center gap-x-1">
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                </div>
+                                                <span class="firm-card__status">Top Lawyer <i class="arrow-top ml-2"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="inline-flex items-start text-body text-blue100 font-medium"><span class="flex items-center justify-center min-w-5 mr-2"><i class="check "></i></span>Free Consultation</p>
+                                    <p class="inline-flex items-start text-body2 text-Grey"><span class="flex items-center justify-center min-w-5 mr-2"><i class="point-icon"></i></span>Chicago, 16th St.Suite 750, Denver, CO B26849</p>
+                                </div>
+                                <div class="ml-auto flex flex-col md:hidden">
+                                    <div class="flex items-center gap-x-[6px]">
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                    </div>
+                                    <span class="firm-card__status mt-4">Top Lawyer <i class="arrow-top ml-2"></i></span>
+                                </div>
+                            </a>
+                            <a href="#" class="firm-card">
+                                <div class="md:hidden w-[120px] min-w-[120px] h-[120px] flex items-center justify-center rounded-xl overflow-hidden border border-LightGrey bg-bgLight">
+                                    <span class="text-h2 font-semibold text-blue100">RH</span>
+                                </div>
+                                <div class="flex flex-col gap-y-3">
+                                    <div class="flex md:mb-2">
+                                        <div class="minmd:hidden mr-4 w-[90px] min-w-[90px] h-[90px] flex items-center justify-center rounded-xl overflow-hidden border border-LightGrey bg-bgLight">
+                                            <span class="text-h4 font-semibold text-blue100">RH</span>
+                                        </div>
+                                        <div class="flex flex-col md:gap-y-2 gap-y-3">
+                                            <p class="text-Top3 md:text-base font-medium text-Text">Robinson & Henry, P.C</p>
+                                            <p class="text-body md:text-body2 text-Grey">Criminal Defence Lawyers Serving, CO</p>
+                                            <div class="flex items-center flex-wrap gap-3 minmd:hidden">
+                                                <div class="flex items-center gap-x-1">
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                    <i class="Star w-4 h-4"></i>
+                                                </div>
+                                                <span class="firm-card__status">Top Lawyer <i class="arrow-top ml-2"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="inline-flex items-start text-body text-blue100 font-medium"><span class="flex items-center justify-center min-w-5 mr-2"><i class="check "></i></span>Free Consultation</p>
+                                    <p class="inline-flex items-start text-body2 text-Grey"><span class="flex items-center justify-center min-w-5 mr-2"><i class="point-icon"></i></span>Chicago, 16th St.Suite 750, Denver, CO B26849</p>
+                                </div>
+                                <div class="ml-auto flex flex-col md:hidden">
+                                    <div class="flex items-center gap-x-[6px]">
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                        <i class="Star w-[18px] h-[18px]"></i>
+                                    </div>
+                                    <span class="firm-card__status mt-4">Top Lawyer <i class="arrow-top ml-2"></i></span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-span-4 lg:col-span-12">
                     <div class="minlg:sticky minlg:top-10">
-                        <div class="max-w-[373px] ml-auto flex flex-col">
-                            <div class="flex w-full flex-col p-6 border border-Brown rounded-xl bg-white relative mb-5">
+                        <div class="max-w-[373px] lg:max-w-full ml-auto flex flex-col">
+                            <div class="flex w-full flex-col p-6 border border-Brown rounded-xl bg-white relative mb-5 lg:mb-0 lg:order-2">
                                 <div class="flex w-full flex-col">
                                     <div class="flex w-full flex-col gap-y-3 mb-6">
                                         <span class="text-Top1 font-medium -tracking-[0.72px]">Do you need an Attorney?</span>
@@ -1125,7 +1297,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="p-5 flex justify-center items-center rounded-2xl overflow-hidden bg-6">
+                            <div class="p-5 flex justify-center items-center rounded-2xl overflow-hidden bg-6 lg:order-1 lg:mb-5">
     <div class="flex flex-col w-full bg-white rounded-xl p-5">
         <div class="flex flex-col ">
     <h3 class="text-Text font-medium tracking-12 text-Top3 lg:text-Top5 mb-0">Find a Top-Rated [practice area] lawyer Near You</h3>

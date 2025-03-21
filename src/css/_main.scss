@@ -102,6 +102,26 @@
   color: #004ED5 !important;
 }
 
+// Firm card Start
+
+.firm-card {
+  &.active {
+    .firm-card__status {
+      @apply inline-flex
+    }
+
+    @apply bg-bgLight border-blue100
+  }
+
+  &__status {
+    @apply hidden items-center text-blue100 font-medium text-body2 self-end
+  }
+
+  @apply flex items-start gap-x-6 w-full p-5 md:p-4 bg-white shadow-v1 border border-LightGrey rounded-xl
+}
+
+// Firm card End
+
 // Text Content Start
 .text-content {
 
