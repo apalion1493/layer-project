@@ -1015,11 +1015,13 @@
         </svg>
     </span>
 </div>
-                        <div class="w-full mt-1">
-                            <div class="columns-1 minsm:columns-2 minlg:columns-3 gap-4">
+                        <div x-data="{  showAll: false, isMobile: 0}"
+                             x-resize.document="isMobile = $width"
+                             class="w-full mt-1">
+                            <div class="minlg:columns-2 minxl:columns-3 gap-4">
                                 <div class="break-inside-avoid pt-8">
                                     <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Bankruptcy & Debt</span>
-                                    <ul class="flex flex-col gap-y-3 w-full">
+                                    <ul class="flex flex-col gap-y-3 w-full lg:flex-row lg:flex-wrap lg:gap-x-3">
                                         <li>
                                             <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
                                                href="#">
@@ -1060,7 +1062,7 @@
                                 </div>
                                 <div class="break-inside-avoid pt-8">
                                     <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Business</span>
-                                    <ul class="flex flex-col gap-y-3 w-full">
+                                    <ul class="flex flex-col gap-y-3 w-full lg:flex-row lg:flex-wrap lg:gap-x-3">
                                         <li>
                                             <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
                                                href="#">
@@ -1125,7 +1127,7 @@
                                 </div>
                                 <div class="break-inside-avoid pt-8">
                                     <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Bankruptcy & Debt</span>
-                                    <ul class="flex flex-col gap-y-3 w-full">
+                                    <ul class="flex flex-col gap-y-3 w-full lg:flex-row lg:flex-wrap lg:gap-x-3">
                                         <li>
                                             <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
                                                href="#">
@@ -1164,560 +1166,574 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="break-inside-avoid pt-8">
-                                    <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Consumer Protection</span>
-                                    <ul class="flex flex-col gap-y-3 w-full">
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Lemon Law</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Tax Fraud & Tax Evasion</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Computer Fraud</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Insurance Fraud</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Credit Card Fraud</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Identity Theft</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Securities & Investment Fraud</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="break-inside-avoid pt-8">
-                                    <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Criminal Defense</span>
-                                    <ul class="flex flex-col gap-y-3 w-full">
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">DUI & DWI</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Federal Crime</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Speeding & Traffic Ticket</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Juvenile</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">White Collar Crime</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Violent Crime</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="break-inside-avoid pt-8">
-                                    <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Consumer Protection</span>
-                                    <ul class="flex flex-col gap-y-3 w-full">
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Lemon Law</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Tax Fraud & Tax Evasion</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Computer Fraud</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Insurance Fraud</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Credit Card Fraud</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Identity Theft</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Securities & Investment Fraud</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="break-inside-avoid pt-8">
-                                    <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Employment & Labor</span>
-                                    <ul class="flex flex-col gap-y-3 w-full">
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Discrimination</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Sexual Harassment</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Social Security</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Workers Compensation</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Wrongful Termination</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Discrimination</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Sexual Harassment</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Social Security</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Workers Compensation</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Wrongful Termination</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="break-inside-avoid pt-8">
-                                    <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Bankruptcy & Debt</span>
-                                    <ul class="flex flex-col gap-y-3 w-full">
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Chapter 7 Bankruptcy</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Chapter 11 Bankruptcy</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Chapter 13 Bankruptcy</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Debt Collection</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Credit Repair</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Debt Settlements</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="break-inside-avoid pt-8">
-                                    <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Business</span>
-                                    <ul class="flex flex-col gap-y-3 w-full">
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Admiralty & Maritime</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Agriculture</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Antitrust & Trade Law</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Aviation</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Banking</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Communications & Media</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Contracts & Agreements</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Corporate & Incorporate</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Employee Benefits</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Debt & Landing Agreements</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="break-inside-avoid pt-8">
-                                    <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Bankruptcy & Debt</span>
-                                    <ul class="flex flex-col gap-y-3 w-full">
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Chapter 7 Bankruptcy</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Chapter 11 Bankruptcy</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Chapter 13 Bankruptcy</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Debt Collection</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Credit Repair</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Debt Settlements</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="break-inside-avoid pt-8">
-                                    <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Consumer Protection</span>
-                                    <ul class="flex flex-col gap-y-3 w-full">
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Lemon Law</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Tax Fraud & Tax Evasion</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Computer Fraud</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Insurance Fraud</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Credit Card Fraud</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Identity Theft</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Securities & Investment Fraud</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="break-inside-avoid pt-8">
-                                    <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Criminal Defense</span>
-                                    <ul class="flex flex-col gap-y-3 w-full">
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">DUI & DWI</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Federal Crime</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Speeding & Traffic Ticket</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Juvenile</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">White Collar Crime</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Violent Crime</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="break-inside-avoid pt-8">
-                                    <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Consumer Protection</span>
-                                    <ul class="flex flex-col gap-y-3 w-full">
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Lemon Law</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Tax Fraud & Tax Evasion</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Computer Fraud</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Insurance Fraud</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Credit Card Fraud</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Identity Theft</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Securities & Investment Fraud</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="break-inside-avoid pt-8">
-                                    <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Employment & Labor</span>
-                                    <ul class="flex flex-col gap-y-3 w-full">
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Discrimination</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Sexual Harassment</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Social Security</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Workers Compensation</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Wrongful Termination</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Discrimination</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Sexual Harassment</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Social Security</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Workers Compensation</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
-                                               href="#">
-                                                <span class="">Wrongful Termination</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <template x-if="showAll || isMobile >= 1024">
+                                    <div x-transition:enter="transition ease-out duration-300"
+                                         x-transition:enter-start="opacity-0 translate-y-2"
+                                         x-transition:enter-end="opacity-100 translate-y-0"
+                                         x-transition:leave="transition ease-in duration-300"
+                                         x-transition:leave-start="opacity-100 translate-y-0"
+                                         x-transition:leave-end="opacity-0 translate-y-2">
+                                        <div class="break-inside-avoid pt-8">
+                                            <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Consumer Protection</span>
+                                            <ul class="flex flex-col gap-y-3 w-full lg:flex-row lg:flex-wrap lg:gap-x-3">
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Lemon Law</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Tax Fraud & Tax Evasion</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Computer Fraud</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Insurance Fraud</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Credit Card Fraud</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Identity Theft</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Securities & Investment Fraud</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid pt-8">
+                                            <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Criminal Defense</span>
+                                            <ul class="flex flex-col gap-y-3 w-full lg:flex-row lg:flex-wrap lg:gap-x-3">
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">DUI & DWI</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Federal Crime</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Speeding & Traffic Ticket</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Juvenile</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">White Collar Crime</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Violent Crime</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid pt-8">
+                                            <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Consumer Protection</span>
+                                            <ul class="flex flex-col gap-y-3 w-full lg:flex-row lg:flex-wrap lg:gap-x-3">
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Lemon Law</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Tax Fraud & Tax Evasion</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Computer Fraud</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Insurance Fraud</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Credit Card Fraud</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Identity Theft</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Securities & Investment Fraud</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid pt-8">
+                                            <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Employment & Labor</span>
+                                            <ul class="flex flex-col gap-y-3 w-full lg:flex-row lg:flex-wrap lg:gap-x-3">
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Discrimination</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Sexual Harassment</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Social Security</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Workers Compensation</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Wrongful Termination</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Discrimination</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Sexual Harassment</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Social Security</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Workers Compensation</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Wrongful Termination</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid pt-8">
+                                            <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Bankruptcy & Debt</span>
+                                            <ul class="flex flex-col gap-y-3 w-full lg:flex-row lg:flex-wrap lg:gap-x-3">
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Chapter 7 Bankruptcy</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Chapter 11 Bankruptcy</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Chapter 13 Bankruptcy</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Debt Collection</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Credit Repair</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Debt Settlements</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid pt-8">
+                                            <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Business</span>
+                                            <ul class="flex flex-col gap-y-3 w-full lg:flex-row lg:flex-wrap lg:gap-x-3">
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Admiralty & Maritime</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Agriculture</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Antitrust & Trade Law</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Aviation</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Banking</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Communications & Media</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Contracts & Agreements</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Corporate & Incorporate</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Employee Benefits</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Debt & Landing Agreements</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid pt-8">
+                                            <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Bankruptcy & Debt</span>
+                                            <ul class="flex flex-col gap-y-3 w-full lg:flex-row lg:flex-wrap lg:gap-x-3">
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Chapter 7 Bankruptcy</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Chapter 11 Bankruptcy</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Chapter 13 Bankruptcy</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Debt Collection</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Credit Repair</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Debt Settlements</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid pt-8">
+                                            <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Consumer Protection</span>
+                                            <ul class="flex flex-col gap-y-3 w-full lg:flex-row lg:flex-wrap lg:gap-x-3">
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Lemon Law</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Tax Fraud & Tax Evasion</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Computer Fraud</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Insurance Fraud</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Credit Card Fraud</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Identity Theft</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Securities & Investment Fraud</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid pt-8">
+                                            <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Criminal Defense</span>
+                                            <ul class="flex flex-col gap-y-3 w-full lg:flex-row lg:flex-wrap lg:gap-x-3">
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">DUI & DWI</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Federal Crime</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Speeding & Traffic Ticket</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Juvenile</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">White Collar Crime</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Violent Crime</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid pt-8">
+                                            <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Consumer Protection</span>
+                                            <ul class="flex flex-col gap-y-3 w-full lg:flex-row lg:flex-wrap lg:gap-x-3">
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Lemon Law</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Tax Fraud & Tax Evasion</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Computer Fraud</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Insurance Fraud</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Credit Card Fraud</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Identity Theft</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Securities & Investment Fraud</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="break-inside-avoid pt-8">
+                                            <span class="text-blue100 font-medium px-4 py-2 border border-blue100 rounded bg-white flex items-center w-fit mb-6">Employment & Labor</span>
+                                            <ul class="flex flex-col gap-y-3 w-full lg:flex-row lg:flex-wrap lg:gap-x-3">
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Discrimination</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Sexual Harassment</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Social Security</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Workers Compensation</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Wrongful Termination</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Discrimination</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Sexual Harassment</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Social Security</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Workers Compensation</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="flex items-center justify-center w-fit px-4 py-2 border border-LightGrey rounded bg-pageBg"
+                                                       href="#">
+                                                        <span class="">Wrongful Termination</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </template>
                             </div>
+                            <button x-show="!showAll"
+                                    @click="showAll = true"
+                                    class="minlg:hidden button mt-8" type="button">
+                                Show all
+                            </button>
                         </div>
                     </div>
                 </div>
                 <div class="col-span-4 lg:col-span-12">
                     <div class="minlg:sticky minlg:top-10">
-                        <div class="max-w-[373px] lg:max-w-full ml-auto flex flex-col lg:gap-y-8">
+                        <div class="max-w-[373px] lg:max-w-full ml-auto flex flex-col">
                             <div class="p-5 flex justify-center items-center rounded-2xl overflow-hidden bg-6 ">
     <div class="flex flex-col w-full bg-white rounded-xl p-5">
         <div class="flex flex-col ">
@@ -1869,7 +1885,7 @@
     </section>
     <section class="section border-t border-LightGrey border-dashed bg-bgLight">
         <div class="container">
-            <div class="p-10 lg:p-5 mt-8 rounded-2xl overflow-hidden flex justify-center items-center w-full bg-5">
+            <div class="p-10 lg:p-5 rounded-2xl overflow-hidden flex justify-center items-center w-full bg-5">
                 <form class="w-full rounded-xl bg-white p-6 lg:px-5 flex items-end lg:flex-col lg:gap-x-0 lg:gap-y-4 lg:items-start gap-x-3">
                     <div class="relative flex-1 lg:w-full">
                         <div class="form-group flex flex-col items-start relative lg:mt-1">
