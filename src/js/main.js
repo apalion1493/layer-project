@@ -75,6 +75,33 @@ window.addEventListener('DOMContentLoaded', () => {
             prevEl: ".swiper-button-prev",
         },
     })
+
+    const swiper6 = new Swiper(".mySwiper6", {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        loop: false,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            769: {
+                slidesPerView: 1,
+            },
+            1025: {
+                slidesPerView: 2,
+            },
+            1346: {
+                slidesPerView: 2,
+            }
+        }
+    });
 })
 
 window.addEventListener('DOMContentLoaded', () => {
