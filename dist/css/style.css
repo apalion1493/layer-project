@@ -3088,6 +3088,9 @@ html {
 .-tracking-\[0\.72px\]{
   letter-spacing: -0.72px;
 }
+.-tracking-\[0\.78px\]{
+  letter-spacing: -0.78px;
+}
 .tracking-04{
   letter-spacing: -0.4px;
 }
@@ -3768,6 +3771,16 @@ p{
   display: block;
   height: 19px;
   width: 14px;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.eye-icon {
+  background: url("../img/eye.svg");
+  display: block;
+  height: 1.25rem;
+  width: 1.25rem;
   background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -4698,6 +4711,9 @@ p{
   }
   .lg\:mt-6{
     margin-top: 1.5rem;
+  }
+  .lg\:mb-6{
+    margin-bottom: 1.5rem;
   }
   .lg\:hidden{
     display: none;

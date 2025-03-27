@@ -6,8 +6,241 @@
 })
 
 <body class="">
-<main id="content" class="flex flex-col items-center min-h-screen overflow-hidden">
+<main id="content" class="flex flex-col items-center min-h-screen">
+    @@include('components/Header.html', {
+    'commonStyle': ' ',
+    })
+    @@include('components/AI-section.html')
 
+    <section class="section border-t border-LightGrey border-dashed">
+        <div class="container">
+            <div class="row gap-x-5 lg:gap-x-0 lg:gap-y-8">
+                <div class="col-span-8 lg:col-span-12">
+                    <div class="flex flex-col gap-y-5 lg:gap-y-4">
+                        <nav class="lg:mb-6" aria-label="breadcrumb">
+                            <ol class="flex flex-wrap items-center gap-2 capitalize">
+                                <li class="flex items-center gap-2">
+                                    <a href="#" class="text-body2 text-Text3 hover:text-blue101 transition-all">Home</a>
+                                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 0.5L6 5L1 9.5" stroke="#A6AFBF"/>
+                                        <path d="M6 0.5L11 5L6 9.5" stroke="#A6AFBF"/>
+                                    </svg>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="#" class="text-body2 text-Text3 hover:text-blue101 transition-all">Questions</a>
+                                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 0.5L6 5L1 9.5" stroke="#A6AFBF"/>
+                                        <path d="M6 0.5L11 5L6 9.5" stroke="#A6AFBF"/>
+                                    </svg>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <a href="#" class="text-body2 text-Text3 hover:text-blue101 transition-all">Consumer Law</a>
+                                    <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 0.5L6 5L1 9.5" stroke="#A6AFBF"/>
+                                        <path d="M6 0.5L11 5L6 9.5" stroke="#A6AFBF"/>
+                                    </svg>
+                                </li>
+                                <li class="flex items-center text-body2 text-Grey font-medium" aria-current="page">Returning a mattress that was bought online?</li>
+                            </ol>
+                        </nav>
+                        @@include('components/Title-component.html', {
+                        'Style_common': '',
+                        'Style_title': 'text-h3 lg:text-Top5',
+                        'Title_tag': 'h2',
+                        'Title': 'Returning a mattress that was bought online?',
+                        'Style_line': 'mt-5 lg:mt-4',
+                        })
+                        <p>Aliquam sollicitudin in eros a venenatis. Etiam at porttitor lectus. Donec ut ligula purus. Donec porttitor tellus at scelerisque volutpat. Maecenas a arcu nec sem pellentesque tristique vel eu dui. Fusce convallis, libero sed bibendum lacinia, orci enim convallis arcu, non imperdiet urna sem vel augue.</p>
+                        <a class="bg-white px-4 py-2 rounded-5xl w-fit border border-Grey flex items-center justify-center" href="#">
+                            <span class="text-body2">Criminal defence</span>
+                        </a>
+                        <div class="flex items-center gap-x-2 text-body text-Grey font-medium">
+                            <span class="flex items-center">
+                                <i class="eye-icon min-w-5 block mr-1"></i>
+                                3.9K
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+                                <circle cx="1.5" cy="1.50006" r="1.5" fill="#7B8BB3"/>
+                            </svg>
+                            <time class="flex items-center" datetime="2025-01-27">
+                                <i class="calendar min-w-5 block mr-1"></i>
+                                Jan 27, 2025
+                            </time>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+                                <circle cx="1.5" cy="1.50006" r="1.5" fill="#7B8BB3"/>
+                            </svg>
+                            <span>Mike Marvis</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-bgLight rounded-xl border border-LightGrey overflow-hidden shadow-v1 mt-8 flex flex-col w-full">
+                        <span class="block mb-4 text-h5 -tracking-[0.78px] text-Text font-medium">Answer</span>
+                        <p>Sed ultricies sapien at ante dapibus, et euismod ex sodales. Curabitur ac luctus mauris. Ut vel sem sit amet leo molestie fringilla. Nunc nec rhoncus ipsum. Phasellus et placerat nibh. Sed non lectus porta, cursus ante cursus, ultrices felis. Aliquam sollicitudin in eros a venenatis. Etiam at porttitor lectus. Donec ut ligula purus. Donec porttitor tellus at scelerisque volutpat.</p>
+                        <div class="flex items-center gap-x-2 text-body2 md:text-body4 text-Grey font-medium mt-5">
+                            <span>Asked in Harlan, KY</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+                                <circle cx="1.5" cy="1.50006" r="1.5" fill="#7B8BB3"/>
+                            </svg>
+                            <time datetime="2025-01-27">Jan 27, 2025</time>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+                                <circle cx="1.5" cy="1.50006" r="1.5" fill="#7B8BB3"/>
+                            </svg>
+                            <a class="text-blue100 font-medium text-body2" href="#">1 answer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-4 lg:col-span-12">
+                    <div class="minlg:sticky minlg:top-3">
+                        <div class="max-w-[373px] lg:max-w-full ml-auto flex flex-col">
+                            <div class="py-6 px-5 border border-LightGrey rounded-xl bg-white shadow-v1 flex flex-col gap-y-6 mt-5">
+                                @@include('components/Title-component.html', {
+                                'Style_common': '',
+                                'Style_title': 'text-Top3',
+                                'Title_tag': 'span',
+                                'Title': 'Popular Bankruptcy Q&A',
+                                'Style_line': 'mt-4',
+                                })
+                                <div class="flex flex-col gap-y-4">
+                                    <div class="px-3 py-4 flex flex-col gap-y-3 border border-LightGrey rounded-lg bg-bgLight overflow-hidden">
+                                        <div class="flex items-center gap-x-2 text-body2 text-Grey">
+                                            <span>Asked in Harlan, KY</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+                                                <circle cx="1.5" cy="1.50006" r="1.5" fill="#7B8BB3"/>
+                                            </svg>
+                                            <time datetime="2025-01-27">Jan 27, 2025</time>
+                                        </div>
+                                        <span class="block border-b border-LightGrey w-full"></span>
+                                        <div class="flex flex-col">
+                                            <p>What should I legally do if my car
+                                                license is stolen?</p>
+                                            @@include('components/Link-arrow.html', {
+                                            'STYLE_LINK': 'mt-2',
+                                            'URL_LINK': '#',
+                                            'TITLE_LINK': 'Read answer',
+                                            })
+                                        </div>
+                                    </div>
+                                    <div class="px-3 py-4 flex flex-col gap-y-3 border border-LightGrey rounded-lg bg-bgLight overflow-hidden">
+                                        <div class="flex items-center gap-x-2 text-body2 text-Grey">
+                                            <span>Asked in Harlan, KY</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+                                                <circle cx="1.5" cy="1.50006" r="1.5" fill="#7B8BB3"/>
+                                            </svg>
+                                            <time datetime="2025-01-27">Jan 27, 2025</time>
+                                        </div>
+                                        <span class="block border-b border-LightGrey w-full"></span>
+                                        <div class="flex flex-col">
+                                            <p>What should I legally do if my car
+                                                license is stolen?</p>
+                                            @@include('components/Link-arrow.html', {
+                                            'STYLE_LINK': 'mt-2',
+                                            'URL_LINK': '#',
+                                            'TITLE_LINK': 'Read answer',
+                                            })
+                                        </div>
+                                    </div>
+                                    <div class="px-3 py-4 flex flex-col gap-y-3 border border-LightGrey rounded-lg bg-bgLight overflow-hidden">
+                                        <div class="flex items-center gap-x-2 text-body2 text-Grey">
+                                            <span>Asked in Harlan, KY</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3" fill="none">
+                                                <circle cx="1.5" cy="1.50006" r="1.5" fill="#7B8BB3"/>
+                                            </svg>
+                                            <time datetime="2025-01-27">Jan 27, 2025</time>
+                                        </div>
+                                        <span class="block border-b border-LightGrey w-full"></span>
+                                        <div class="flex flex-col">
+                                            <p>What should I legally do if my car
+                                                license is stolen?</p>
+                                            @@include('components/Link-arrow.html', {
+                                            'STYLE_LINK': 'mt-2',
+                                            'URL_LINK': '#',
+                                            'TITLE_LINK': 'Read answer',
+                                            })
+                                        </div>
+                                    </div>
+                                </div>
+                                @@include('components/Link-icon.html', {
+                                'style': '',
+                                'url': '#',
+                                'title': 'More Questions',
+                                })
+                            </div>
+                            <div class="flex flex-col mt-8">
+                                <span class="text-Top3 font-medium -tracking-[0.6px] block mb-5">Related Topics</span>
+                                <ul class="flex flex-wrap gap-x-2 gap-y-3">
+                                    <li class="flex items-center justify-center">
+                                        @@include('components/Topic-link.html', {
+                                        'Style': 'bg-white',
+                                        'Title': 'Lorem',
+                                        'URL': '#',
+                                        })
+                                    </li>
+                                    <li class="flex items-center justify-center">
+                                        @@include('components/Topic-link.html', {
+                                        'Style': 'bg-white',
+                                        'Title': 'Ipsume',
+                                        'URL': '#',
+                                        })
+                                    </li>
+                                    <li class="flex items-center justify-center">
+                                        @@include('components/Topic-link.html', {
+                                        'Style': 'bg-LightGrey',
+                                        'Title': 'Criminal defence',
+                                        'URL': '#',
+                                        })
+                                    </li>
+                                    <li class="flex items-center justify-center">
+                                        @@include('components/Topic-link.html', {
+                                        'Style': 'bg-LightGrey',
+                                        'Title': 'Criminal defence',
+                                        'URL': '#',
+                                        })
+                                    </li>
+                                    <li class="flex items-center justify-center">
+                                        @@include('components/Topic-link.html', {
+                                        'Style': 'bg-LightGrey',
+                                        'Title': 'Lorem',
+                                        'URL': '#',
+                                        })
+                                    </li>
+                                    <li class="flex items-center justify-center">
+                                        @@include('components/Topic-link.html', {
+                                        'Style': 'bg-white',
+                                        'Title': 'Ipsume',
+                                        'URL': '#',
+                                        })
+                                    </li>
+                                    <li class="flex items-center justify-center">
+                                        @@include('components/Topic-link.html', {
+                                        'Style': 'bg-white',
+                                        'Title': 'Lorem',
+                                        'URL': '#',
+                                        })
+                                    </li>
+                                    <li class="flex items-center justify-center">
+                                        @@include('components/Topic-link.html', {
+                                        'Style': 'bg-white',
+                                        'Title': 'Criminal defence',
+                                        'URL': '#',
+                                        })
+                                    </li>
+                                    <li class="flex items-center justify-center">
+                                        @@include('components/Topic-link.html', {
+                                        'Style': 'bg-LightGrey',
+                                        'Title': 'Ipsume',
+                                        'URL': '#',
+                                        })
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('components/Contact-section.html')
+    @@include('components/Footer.html')
 </main>
 
 @@include('components/script.html')

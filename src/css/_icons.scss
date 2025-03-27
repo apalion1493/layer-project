@@ -107,3 +107,8 @@
   background: url("__IMAGE_PATH__point-icon.svg");
   @apply block h-[19px] w-[14px] bg-100-auto bg-center bg-no-repeat;
 }
+
+.eye-icon {
+  background: url("__IMAGE_PATH__eye.svg");
+  @apply block h-5 w-5 bg-100-auto bg-center bg-no-repeat;
+}

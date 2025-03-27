@@ -8,3 +8,5 @@ https://apalion1493.github.io/layer-project/dist/index.html <br>
 https://apalion1493.github.io/layer-project/dist/Chosen-City-State.html <br>
 https://apalion1493.github.io/layer-project/dist/Free-Legal-Advice.html <br>
 https://apalion1493.github.io/layer-project/dist/Class-Actions-posts.html <br>
+https://apalion1493.github.io/layer-project/dist/PA-QA.html <br>
+https://apalion1493.github.io/layer-project/dist/QA.html <br>
