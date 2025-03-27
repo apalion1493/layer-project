@@ -36,11 +36,11 @@ p {
   }
 
   h2, .h2 {
-    @apply text-h2Mob md:text-Top1
+    @apply text-Top5 md:text-Top1
   }
 
   h3, .h3 {
-    @apply text-Top1 md:text-Top3
+    @apply text-Top2 md:text-Top3
   }
 
   h4, .h4 {

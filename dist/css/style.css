@@ -2722,6 +2722,9 @@ html {
 .gap-y-1{
   row-gap: 0.25rem;
 }
+.gap-y-10{
+  row-gap: 2.5rem;
+}
 .gap-y-2{
   row-gap: 0.5rem;
 }
@@ -3511,8 +3514,8 @@ p{
   }
 }
 .text-block h2, .text-block .h2{
-  font-size: 30px;
-  line-height: 120%;
+  font-size: 28px;
+  line-height: 100%;
 }
 @media (max-width: 767px){
   .text-block h2, .text-block .h2{
@@ -3521,7 +3524,7 @@ p{
   }
 }
 .text-block h3, .text-block .h3{
-  font-size: 24px;
+  font-size: 22px;
   line-height: 130%;
 }
 @media (max-width: 767px){
@@ -4589,6 +4592,11 @@ p{
   stroke: #FFBF16;
 }
 
+.group:hover .group-hover\:text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
 .group.open .group-\[\.open\]\:-translate-y-2{
   --tw-translate-y: -0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -4649,6 +4657,9 @@ p{
   }
   .lg\:order-2{
     order: 2;
+  }
+  .lg\:order-3{
+    order: 3;
   }
   .lg\:col-span-12{
     grid-column: span 12 / span 12;
@@ -4997,6 +5008,9 @@ p{
   }
   .minlg\:top-10{
     top: 2.5rem;
+  }
+  .minlg\:top-3{
+    top: 0.75rem;
   }
   .minlg\:flex{
     display: flex;
