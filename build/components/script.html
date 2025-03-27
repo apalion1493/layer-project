@@ -1,0 +1,12 @@
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./js/scripts.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('data', () => ({
+        }))
+    })
+
+    function clearInput() {
+        document.getElementById('inputField').value = '';
+    }
+</script>

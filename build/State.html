@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>State</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+</head>
+
+<body class="">
+<main id="content" class="flex flex-col items-center min-h-screen overflow-hidden">
+    <header class="w-full bg-white border-b border-LightGrey shadow-v2 py-6 lg:py-5 relative">
+    <div class="container">
+        <div class="flex justify-between items-center width-full gap-x-5">
+            <a class="flex items-center gap-x-2" href="index.html">
+                <img width="44" height="44" src="__IMAGE_PATH__Logo-icon.png" alt="Logo Lawyers">
+                <span class="text-Top3 font-semibold text-Text">LawyersAI</span>
+            </a>
+            <div id="mobile-menu" class="show-mobile-menu">
+                <div class="flex gap-x-6 items-center lg:items-start relative w-full lg:flex-col lg:gap-y-6">
+                    <div x-data="{ showDropdown: false }" class="">
+                        <button @click="showDropdown = !showDropdown" :class="showDropdown ? 'lg:pb-5 text-blue101' : ''" class="flex items-center hover:text-blue101 lg:">
+                            <span>Lawyers by Location</span>
+                            <svg :class="showDropdown ? 'rotate-180' : ''" class="ml-2 transition-all" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                <path :class="showDropdown ? 'stroke-blue101' : ''" d="M9.125 0.778823L5 5.22113L0.875 0.778823" stroke="#001E60" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+
+                        <div style="display: none" x-cloak x-transition:enter="transition ease-out duration-300"
+                             x-transition:enter-start="opacity-0 scale-90"
+                             x-transition:enter-end="opacity-100 scale-100"
+                             x-transition:leave="transition ease-in duration-100"
+                             x-transition:leave-start="opacity-100 scale-100"
+                             x-transition:leave-end="opacity-0 scale-90" :class="{ 'disable-transition': window.innerWidth <= 1023 }" @click.outside="showDropdown = false" x-show="showDropdown" class="bg-white min-w-[1014px] lg:min-w-full lg:translate-x-0 w-full lg:static absolute top-20 left-[50%] -translate-x-[50%] p-6 lg:px-0 lg:py-5 minlg:border lg:border-y border-LightGrey minlg:shadow-v1 minlg:rounded-lg">
+                            <div x-data="{showAllList: false}" class="flex flex-col gap-y-2 w-full">
+                                <span class="text-body2 font-medium text-Text block mb-6">Browse by Popular Cities:</span>
+                                <div x-cloak x-collapse.min.188px x-show="showAllList" :class="!showAllList ? '' : ''" class="flex flex-wrap gap-x-5 gap-y-3 lg:gap-3 overflow-hidden">
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Appeals</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Debt Collection</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Foreclosure</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Probate</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Bankruptcy & Debt</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Divorce and Separation</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">General Practice</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Real Estate</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Business</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Domestic Violence</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Immigration</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Residential</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Car Accidents</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">DUI and DWI</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Intellectual Property</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Sex Crime</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Child Custody</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Elder Law</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Landlord or Tenant</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Social Security & Disability</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Child Support</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Employment and Labor</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Lawsuits and Disputes</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Speeding and Traffic Ticket</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Civil Rights</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Estate Planning</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Litigation</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Tax</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Consumer Protection</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Education</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Medical Malpractice</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Violent Crime</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Contracts and Agreements</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Family</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Personal Injury</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Workers Compensation</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Criminal Defense</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Federal Crime</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Privacy</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Wrongful Death</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <button @click="showAllList = !showAllList" class="button mt-6 minlg:hidden" type="button" aria-label="">
+                                    <span x-show="!showAllList">Show more</span>
+                                    <span x-show="showAllList">Hide</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-data="{ showDropdown: false }" class="">
+                        <button @click="showDropdown = !showDropdown" :class="showDropdown ? 'lg:pb-5 text-blue101' : ''" class="flex items-center hover:text-blue101 lg:">
+                            <span>Lawyers by Practice Area</span>
+                            <svg :class="showDropdown ? 'rotate-180' : ''" class="ml-2 transition-all" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                <path :class="showDropdown ? 'stroke-blue101' : ''" d="M9.125 0.778823L5 5.22113L0.875 0.778823" stroke="#001E60" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+
+                        <div style="display: none" x-cloak x-transition:enter="transition ease-out duration-300"
+                             x-transition:enter-start="opacity-0 scale-90"
+                             x-transition:enter-end="opacity-100 scale-100"
+                             x-transition:leave="transition ease-in duration-100"
+                             x-transition:leave-start="opacity-100 scale-100"
+                             x-transition:leave-end="opacity-0 scale-90" :class="{ 'disable-transition': window.innerWidth <= 1023 }" @click.outside="showDropdown = false" x-show="showDropdown" class="bg-white min-w-[1014px] lg:min-w-full lg:translate-x-0 w-full lg:static absolute top-20 left-[50%] -translate-x-[50%] p-6 lg:px-0 lg:py-5 minlg:border lg:border-y border-LightGrey minlg:shadow-v1 minlg:rounded-lg">
+                            <div x-data="{showAllList: false}" class="flex flex-col gap-y-2 w-full">
+                               <span class="text-body2 font-medium text-Text block mb-6">Choose an area of law that your issue relates to:</span>
+                                <div x-cloak x-collapse.min.188px x-show="showAllList" :class="!showAllList ? '' : ''" class="flex flex-wrap gap-x-5 gap-y-3 lg:gap-3 overflow-hidden">
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Appeals</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Debt Collection</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Foreclosure</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Probate</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Bankruptcy & Debt</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Divorce and Separation</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">General Practice</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Real Estate</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Business</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Domestic Violence</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Immigration</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Residential</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Car Accidents</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">DUI and DWI</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Intellectual Property</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Sex Crime</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Child Custody</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Elder Law</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Landlord or Tenant</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Social Security & Disability</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Child Support</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Employment and Labor</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Lawsuits and Disputes</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Speeding and Traffic Ticket</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Civil Rights</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Estate Planning</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Litigation</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Tax</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Consumer Protection</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Education</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Medical Malpractice</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Violent Crime</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Contracts and Agreements</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Family</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Personal Injury</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Workers Compensation</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Criminal Defense</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Federal Crime</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Privacy</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(25%-15px)] minlg:max-w-[calc(25%-15px)] lg:w-fit whitespace-nowrap ">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Wrongful Death</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <button @click="showAllList = !showAllList" class="button mt-6 minlg:hidden" type="button" aria-label="">
+                                    <span x-show="!showAllList">Show more</span>
+                                    <span x-show="showAllList">Hide</span>
+                                </button>
+                                <a class="button mt-6 lg:mt-3" href="#">
+    <span class="">See All Practice Areas</span>
+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div x-data="{ showDropdown: false }" class="">
+                        <button @click="showDropdown = !showDropdown" :class="showDropdown ? 'lg:pb-5 text-blue101' : ''" class="flex items-center hover:text-blue101 lg:">
+                            <span>Legal Topics Q&A</span>
+                            <svg :class="showDropdown ? 'rotate-180' : ''" class="ml-2 transition-all" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                <path :class="showDropdown ? 'stroke-blue101' : ''" d="M9.125 0.778823L5 5.22113L0.875 0.778823" stroke="#001E60" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+
+                        <div style="display: none" x-cloak x-transition:enter="transition ease-out duration-300"
+                             x-transition:enter-start="opacity-0 scale-90"
+                             x-transition:enter-end="opacity-100 scale-100"
+                             x-transition:leave="transition ease-in duration-100"
+                             x-transition:leave-start="opacity-100 scale-100"
+                             x-transition:leave-end="opacity-0 scale-90" :class="{ 'disable-transition': window.innerWidth <= 1023 }" @click.outside="showDropdown = false" x-show="showDropdown" class="bg-white min-w-[1014px] lg:min-w-full lg:translate-x-0 w-full lg:static absolute top-20 left-[50%] -translate-x-[50%] p-6 lg:px-0 lg:py-5 minlg:border lg:border-y border-LightGrey minlg:shadow-v1 minlg:rounded-lg">
+                            <div x-data="{showAllList: false}" class="flex flex-col gap-y-2 w-full">
+                                <span class="text-body2 font-medium text-Text block mb-6">Browse Legal Topics:</span>
+                                <div x-cloak x-collapse.min.188px x-show="showAllList" :class="!showAllList ? '' : ''" class="flex flex-wrap gap-x-5 gap-y-3 lg:gap-3 overflow-hidden">
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Asylum topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Divorce topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Personal injury topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Animal law topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">DUI topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Probate topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Bankruptcy and debt topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Employment topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Professional ethics topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Business contracts topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Family law topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Real estate topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Business topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Felony crime topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Residential property topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Car accidents topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">General Practice topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Sex crimes topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Child abuse topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Immigration topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Speeding tickets topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Child support topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Internet law topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Traffic tickets topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Civil rights topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Landlord or tenant topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Warrants and criminal charges topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Criminal defense topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Lawsuits and disputes topics</span>
+                                        </a>
+                                    </div>
+                                    <div class="minlg:flex-1 minlg:basis-[calc(33%-15px)] minlg:max-w-[calc(33%-15px)] lg:w-fit whitespace-nowrap">
+                                        <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                                            <span class="text-body2 text-Text whitespace-nowrap">Wills and estates topics</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <button @click="showAllList = !showAllList" class="button mt-6 minlg:hidden" type="button" aria-label="">
+                                    <span x-show="!showAllList">Show more</span>
+                                    <span x-show="showAllList">Hide</span>
+                                </button>
+                                <a class="button mt-6 lg:mt-3" href="#">
+    <span class="">Browse All Legal Topics</span>
+</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-mobile-menu__list lg:pb-[100px]">
+                    <ul class="py-10 w-full flex flex-col gap-y-2 border-t border-LightGrey">
+                        <li class="flex items-center">
+                            <a class="flex items-center group" href="#">
+                                <i class="w-10 h-10 min-w-10 group-hover:bg-Text transition-all rounded-lg overflow-hidden flex items-center justify-center bg-blue100 mr-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M9.9828 4.68444V2.01777C9.9828 1.84096 10.053 1.67139 10.1781 1.54637C10.3031 1.42135 10.4727 1.35111 10.6495 1.35111C10.8263 1.35111 10.9958 1.42135 11.1209 1.54637C11.2459 1.67139 11.3161 1.84096 11.3161 2.01777V3.75844C11.7361 3.33577 14.4501 0.607775 14.8448 0.213108C14.9063 0.149435 14.9799 0.0986464 15.0612 0.0637071C15.1425 0.0287677 15.23 0.0103769 15.3185 0.00960769C15.4071 0.00883848 15.4948 0.0257063 15.5768 0.0592269C15.6587 0.0927475 15.7331 0.14225 15.7957 0.204845C15.8583 0.26744 15.9078 0.341874 15.9413 0.423805C15.9749 0.505736 15.9917 0.593523 15.991 0.682042C15.9902 0.770562 15.9718 0.858042 15.9369 0.939378C15.9019 1.02071 15.8511 1.09428 15.7875 1.15577C15.3928 1.55044 12.6928 4.26577 12.2755 4.68444H13.9828C14.1596 4.68444 14.3292 4.75468 14.4542 4.8797C14.5792 5.00473 14.6495 5.1743 14.6495 5.35111C14.6495 5.52792 14.5792 5.69749 14.4542 5.82251C14.3292 5.94754 14.1596 6.01777 13.9828 6.01777H11.3161C10.9625 6.01777 10.6234 5.8773 10.3733 5.62725C10.1233 5.3772 9.9828 5.03806 9.9828 4.68444ZM15.3795 11.1771C15.7658 11.5645 15.9828 12.0893 15.9828 12.6364C15.9828 13.1836 15.7658 13.7084 15.3795 14.0958L14.7715 14.7958C9.3108 20.0211 -3.97453 6.73977 1.17147 1.26244L1.93813 0.595775C2.32589 0.220138 2.84595 0.0122672 3.3858 0.017133C3.92565 0.0219987 4.44188 0.23921 4.8228 0.621775C4.84347 0.641775 6.07813 2.24711 6.07813 2.24711C6.44341 2.6328 6.64666 3.14403 6.64592 3.67524C6.64517 4.20645 6.44049 4.71711 6.07413 5.10178L5.30213 6.07244C5.72946 7.11046 6.35764 8.05383 7.15059 8.84839C7.94354 9.64294 8.88565 10.273 9.9228 10.7024L10.8995 9.92578C11.2834 9.55845 11.794 9.35309 12.3253 9.35234C12.8567 9.3516 13.3679 9.55552 13.7528 9.92177C13.7528 9.92177 15.3588 11.1571 15.3795 11.1771ZM14.4628 12.1464C14.4628 12.1464 12.8675 10.9184 12.8468 10.8984C12.7095 10.7623 12.5239 10.6859 12.3305 10.6859C12.1371 10.6859 11.9515 10.7623 11.8141 10.8984C11.7961 10.9158 10.4515 11.9878 10.4515 11.9878C10.3609 12.0599 10.253 12.1072 10.1386 12.1249C10.0241 12.1427 9.90702 12.1304 9.7988 12.0891C8.45442 11.5889 7.23329 10.8055 6.21819 9.79206C5.2031 8.77858 4.41778 7.5587 3.91547 6.21511C3.87093 6.10541 3.85641 5.98583 3.8734 5.86867C3.89039 5.7515 3.93828 5.64097 4.01213 5.54844C4.01213 5.54844 5.08413 4.20577 5.10213 4.18844C5.23831 4.0511 5.31472 3.86552 5.31472 3.67211C5.31472 3.4787 5.23831 3.29312 5.10213 3.15577C5.08213 3.13577 3.85413 1.53911 3.85413 1.53911C3.71473 1.41411 3.5328 1.34717 3.34563 1.35201C3.15846 1.35684 2.98023 1.43308 2.84747 1.56511L2.0808 2.23177C-1.68053 6.75377 9.83413 17.6298 13.7961 13.8871L14.4041 13.1864C14.5475 13.0549 14.6338 12.8726 14.6448 12.6784C14.6557 12.4841 14.5904 12.2933 14.4628 12.1464Z" fill="white"/>
+                                    </svg>
+                                </i>
+                                <span class="text-body2 text-Text whitespace-nowrap">+1 123 4567 890</span>
+                            </a>
+                        </li>
+                        <li class="flex items-center">
+                            <a class="flex items-center group" href="#">
+                                <i class="w-10 h-10 min-w-10 group-hover:bg-Text transition-all rounded-lg overflow-hidden flex items-center justify-center bg-blue100 mr-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                                        <path d="M14.25 0H3.75C2.7558 0.00115481 1.80267 0.384641 1.09966 1.06634C0.396661 1.74804 0.00119089 2.67229 0 3.63636L0 12.3636C0.00119089 13.3277 0.396661 14.252 1.09966 14.9337C1.80267 15.6154 2.7558 15.9988 3.75 16H14.25C15.2442 15.9988 16.1973 15.6154 16.9003 14.9337C17.6033 14.252 17.9988 13.3277 18 12.3636V3.63636C17.9988 2.67229 17.6033 1.74804 16.9003 1.06634C16.1973 0.384641 15.2442 0.00115481 14.25 0ZM3.75 1.45455H14.25C14.6991 1.4554 15.1376 1.58656 15.5092 1.83113C15.8808 2.0757 16.1684 2.42251 16.335 2.82691L10.5915 8.39709C10.1688 8.80532 9.59656 9.03452 9 9.03452C8.40344 9.03452 7.83118 8.80532 7.4085 8.39709L1.665 2.82691C1.83161 2.42251 2.11921 2.0757 2.49079 1.83113C2.86236 1.58656 3.30091 1.4554 3.75 1.45455ZM14.25 14.5455H3.75C3.15326 14.5455 2.58097 14.3156 2.15901 13.9064C1.73705 13.4972 1.5 12.9423 1.5 12.3636V4.72727L6.348 9.42546C7.05197 10.1064 8.00569 10.4888 9 10.4888C9.99431 10.4888 10.948 10.1064 11.652 9.42546L16.5 4.72727V12.3636C16.5 12.9423 16.2629 13.4972 15.841 13.9064C15.419 14.3156 14.8467 14.5455 14.25 14.5455Z" fill="white"/>
+                                    </svg>
+                                </i>
+                                <span class="text-body2 text-Text whitespace-nowrap">info@lawyersAI.com</span>
+                            </a>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="flex items-center group">
+                                <i class="w-10 h-10 min-w-10 group-hover:bg-Text transition-all rounded-lg overflow-hidden flex items-center justify-center bg-blue100 mr-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
+                                      <path d="M8 20L1.86473 12.8936C1.77948 12.7869 1.69511 12.6795 1.61164 12.5714C0.564156 11.2153 -0.00194504 9.55935 5.02122e-06 7.85714C5.02122e-06 5.7733 0.84286 3.7748 2.34315 2.3013C3.84344 0.827804 5.87827 0 8 0C10.1217 0 12.1566 0.827804 13.6569 2.3013C15.1571 3.7748 16 5.7733 16 7.85714C16.0017 9.55854 15.4359 11.2136 14.3891 12.5693L14.3884 12.5714C14.3884 12.5714 14.1702 12.8529 14.1375 12.8907L8 20ZM2.77309 11.7107C2.77309 11.7107 2.94255 11.9307 2.98109 11.9779L8 17.7914L13.0255 11.97C13.0575 11.9307 13.2284 11.7086 13.2284 11.7086C14.0845 10.6008 14.5472 9.24789 14.5455 7.85714C14.5455 6.15218 13.8558 4.51705 12.6283 3.31146C11.4008 2.10587 9.73596 1.42857 8 1.42857C6.26404 1.42857 4.59918 2.10587 3.37167 3.31146C2.14416 4.51705 1.45455 6.15218 1.45455 7.85714C1.45276 9.24879 1.91596 10.6026 2.77309 11.7107Z" fill="white"/>
+                                      <path d="M8 11.4286C7.28079 11.4286 6.57774 11.2191 5.97974 10.8267C5.38174 10.4342 4.91566 9.87646 4.64043 9.22387C4.36521 8.57128 4.2932 7.85318 4.43351 7.16039C4.57381 6.4676 4.92015 5.83123 5.4287 5.33176C5.93725 4.83229 6.58519 4.49214 7.29058 4.35434C7.99596 4.21653 8.72711 4.28726 9.39157 4.55757C10.056 4.82789 10.624 5.28564 11.0235 5.87296C11.4231 6.46028 11.6364 7.15078 11.6364 7.85714C11.6352 8.804 11.2517 9.71175 10.57 10.3813C9.88832 11.0508 8.96406 11.4274 8 11.4286ZM8 5.71429C7.56847 5.71429 7.14664 5.83996 6.78784 6.07542C6.42904 6.31088 6.1494 6.64555 5.98426 7.03711C5.81912 7.42866 5.77592 7.85952 5.8601 8.27519C5.94429 8.69087 6.15208 9.07269 6.45722 9.37237C6.76235 9.67206 7.15111 9.87614 7.57434 9.95883C7.99758 10.0415 8.43627 9.99907 8.83494 9.83689C9.23362 9.6747 9.57437 9.40004 9.81411 9.04765C10.0539 8.69526 10.1818 8.28096 10.1818 7.85714C10.1812 7.289 9.95118 6.74428 9.54214 6.34254C9.13309 5.9408 8.57847 5.71485 8 5.71429Z" fill="white"/>
+                                    </svg>
+                                </i>
+                                <span class="text-body2 text-Text whitespace-nowrap">str.Lorem Ipsum 19</span>
+                            </span>
+                        </li>
+                    </ul>
+                    <a class="button " href="#">
+    <span class="">Contact Us</span>
+</a>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <a class="button lg:hidden" href="#">
+    <span class="">Contact Us</span>
+</a>
+                <button id="burger-button" class="minlg:hidden ml-5 flex gap-y-[6px] flex-col items-center justify-center group"
+                        aria-label="Mobile Burger Button">
+                    <svg class="transition-transform duration-300 group-[.open]:rotate-45 group-[.open]:translate-y-2" xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                        <path d="M19.1667 0H0.833333C0.373096 0 0 0.447714 0 0.999998C0 1.55228 0.373096 2 0.833333 2H19.1667C19.6269 2 20 1.55228 20 0.999998C20 0.447714 19.6269 0 19.1667 0Z" fill="#051944"/>
+                    </svg>
+                    <svg class="transition-opacity duration-300 group-[.open]:opacity-0" xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                        <path d="M19.1667 0H0.833333C0.373096 0 0 0.447714 0 0.999998C0 1.55228 0.373096 2 0.833333 2H19.1667C19.6269 2 20 1.55228 20 0.999998C20 0.447714 19.6269 0 19.1667 0Z" fill="#051944"/>
+                    </svg>
+                    <svg class="transition-transform duration-300 group-[.open]:-rotate-45 group-[.open]:-translate-y-2" xmlns="http://www.w3.org/2000/svg" width="20" height="2" viewBox="0 0 20 2" fill="none">
+                        <path d="M19.1667 0H0.833333C0.373096 0 0 0.447714 0 0.999998C0 1.55228 0.373096 2 0.833333 2H19.1667C19.6269 2 20 1.55228 20 0.999998C20 0.447714 19.6269 0 19.1667 0Z" fill="#051944"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+    <section class="section bg-ai">
+    <div class="container">
+        <div class="flex flex-col">
+            <div class="flex flex-col max-w-[628px] mx-auto">
+                <div class="flex ">
+                    <i class="AI-icon min-w-10 mr-1"></i>
+                    <h1 class="text-Text font-medium tracking-12 text-h3 lg:text-h2Mob text-center"><span class="text-blue100">AI</span>-Powered Lawyer Matching:
+                        Fast, Accurate, and Free</h1>
+                </div>
+                <span class="flex items-center gap-x-2 mx-auto my-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+                          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+                          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+                        </svg>
+                    </span>
+                <p class="text-center">Our AI-powered lawyer finder makes it easy to connect with the right attorney for your situation. Simply answer a few questions about your case.</p>
+            </div>
+            <div x-data="multiStepForm" class="w-full max-w-[720px] mx-auto bg-white p-6 mt-6 md:px-4 md:py-5 rounded-xl shadow-v1">
+                <!-- Step 1 -->
+                <div x-show="step === 1">
+                    <div class="flex flex-col">
+                        <div class="flex mb-6">
+                            <i class="AI-icon-small min-w-[37px] mr-3 mt-1"></i>
+                            <div class="flex flex-col">
+                                <p class="text-base font-medium mb-2">Describe your problem.</p>
+                                <p class="text-Grey">Briefly explain the legal situation you're facing!</p>
+                            </div>
+                        </div>
+                        <label>
+                            <textarea x-model="textInput" class="input steps mb-5" placeholder="Tell us what happened..."></textarea>
+                        </label>
+                        <p class="text-body2 text-Grey mb-5"><span class="font-bold">For example:</span> Delaware was the first state to officially ratify the United States Constitution in 1787. For this reason, Delaware considers itself "the first state." </p>
+                        <button @click="handleSubmitStep1" class="button" aria-label="Get Started Button">
+                            <span>Get Started</span>
+                            <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                <path d="M4.88452 0.880859L9.19988 5.00007L4.88452 9.11928" stroke="white" stroke-width="1.28571" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div x-show="step === 2">
+                    <div class="flex flex-col">
+                        <div class="flex mb-6">
+                            <i class="AI-icon-small min-w-[37px] mr-3 mt-1"></i>
+                            <div class="flex flex-col">
+                                <p class="text-base font-medium mb-2">Tell us how to reach you.</p>
+                                <p class="text-Grey">Provide your contact details so we can connect you with the best lawyers.</p>
+                            </div>
+                        </div>
+                        <div class="row gap-4 md:gap-x-0">
+                            <div class="col-span-6 md:col-span-12">
+                                <div class="form-group flex flex-col items-start">
+                                    <label class="w-full">
+                                        <input x-model="formData.name" class="input input-icon User-input" type="text" id="nameStepId" placeholder="Full Name" name="name" required>
+                                    </label>
+                                    <small x-show="errors.name" class="self-end text-body2 text-Error mt-1" x-text="errors.name"></small>
+                                </div>
+                            </div>
+                            <div class="col-span-6 md:col-span-12">
+                                <div class="form-group flex flex-col items-start">
+                                    <label class="w-full">
+                                        <input x-model="formData.phone" class="input input-icon Phone-input" type="tel" id="phoneStepId" placeholder="Phone" name="phone" required>
+                                    </label>
+                                    <small x-show="errors.phone" class="self-end text-body2 text-Error mt-1" x-text="errors.phone"></small>
+                                </div>
+                            </div>
+                            <div class="col-span-6 md:col-span-12">
+                                <div class="form-group flex flex-col items-start">
+                                    <label class="w-full">
+                                        <input x-model="formData.email" class="input input-icon Mail-input" type="email" id="emailStepId" placeholder="Email" name="email" required>
+                                    </label>
+                                    <small x-show="errors.email" class="self-end text-body2 text-Error mt-1" x-text="errors.email"></small>
+                                </div>
+                            </div>
+                            <div class="col-span-6 md:col-span-12">
+                                <div class="form-group flex flex-col items-start">
+                                    <label class="w-full">
+                                        <input x-model="formData.zip" class="input input-icon website-input" type="text" id="zipStepId" placeholder="ZIP Code" name="zip" required>
+                                    </label>
+                                    <small x-show="errors.zip" class="self-end text-body2 text-Error mt-1" x-text="errors.zip"></small>
+                                </div>
+                            </div>
+                            <div class="col-span-12">
+                                <div class="flex flex-col mt-2">
+                                    <label class="custom-checkbox">
+                                    <span class="custom-checkbox__block w-[18px] min-w-[18px] h-[18px]">
+                                        <i class="w-[18px] min-w-[18px] h-[18px] rounded bg-white border border-blue100 flex"></i>
+                                    </span>
+                                        <input x-model="formData.terms" type="checkbox" name="terms">
+                                        <span class="checkmark">
+                                         <i class="Checkbox"></i>
+                                    </span>
+                                        <span class="ml-2 text-body2 text-Grey">I consent to be contacted and i have read and agree to the <a class="text-blue100" href="#">LawyerAI privacy notice</a> and <a class="text-blue100" href="#">terms of service.*</a></span>
+                                    </label>
+                                    <small x-show="errors.terms" class="self-start text-body2 text-Error mt-1" x-text="errors.terms"></small>
+                                </div>
+                            </div>
+                            <div class="col-span-12">
+                                <button @click="handleSubmitStep2" class="button mt-2" aria-label="Let’s talk Button">
+                                    <span>Let’s talk</span>
+                                    <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <path d="M4.88452 0.880859L9.19988 5.00007L4.88452 9.11928" stroke="white" stroke-width="1.28571" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 (Loading) -->
+                <div x-show="step === 3" class="">
+                    <div class="flex flex-col">
+                        <div class="flex mb-6">
+                            <i class="AI-icon-small min-w-[37px] mr-3 mt-1"></i>
+                            <div class="flex flex-col">
+                                <p class="text-base font-medium mb-2 text-left">Describe a legal project or role and we’ll match you with exceptional legal talent.</p>
+                            </div>
+                        </div>
+                        <svg class="w-12 h-12 animate-spin mx-auto mb-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 2.5C24.8284 2.5 25.5 3.17157 25.5 4V8C25.5 8.82843 24.8284 9.5 24 9.5C23.1716 9.5 22.5 8.82843 22.5 8V4C22.5 3.17157 23.1716 2.5 24 2.5Z" fill="#004ED5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M34.7498 5.38042C35.4672 5.79463 35.713 6.71202 35.2988 7.42946L33.2988 10.8935C32.8846 11.611 31.9672 11.8568 31.2498 11.4425C30.5323 11.0283 30.2865 10.1109 30.7007 9.3935L32.7007 5.92944C33.1149 5.21201 34.0323 4.9662 34.7498 5.38042Z" fill="#004ED5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M42.6198 13.25C43.034 13.9674 42.7882 14.8848 42.0708 15.299L38.6067 17.299C37.8893 17.7133 36.9719 17.4674 36.5577 16.75C36.1434 16.0326 36.3893 15.1152 37.1067 14.701L40.5708 12.701C41.2882 12.2868 42.2056 12.5326 42.6198 13.25Z" fill="#004ED5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M38.5 24C38.5 23.1716 39.1716 22.5 40 22.5H44C44.8284 22.5 45.5 23.1716 45.5 24C45.5 24.8284 44.8284 25.5 44 25.5H40C39.1716 25.5 38.5 24.8284 38.5 24Z" fill="#004ED5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M36.5577 31.25C36.9719 30.5326 37.8893 30.2868 38.6067 30.701L42.0708 32.701C42.7882 33.1152 43.034 34.0326 42.6198 34.75C42.2056 35.4674 41.2882 35.7133 40.5708 35.299L37.1067 33.299C36.3893 32.8848 36.1434 31.9674 36.5577 31.25Z" fill="#004ED5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M31.2498 36.5574C31.9672 36.1432 32.8846 36.389 33.2988 37.1065L35.2988 40.5706C35.713 41.288 35.4672 42.2054 34.7498 42.6196C34.0323 43.0338 33.1149 42.788 32.7007 42.0706L30.7007 38.6065C30.2865 37.889 30.5323 36.9716 31.2498 36.5574Z" fill="#D1D1D1"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 38.5C24.8284 38.5 25.5 39.1716 25.5 40V44C25.5 44.8284 24.8284 45.5 24 45.5C23.1716 45.5 22.5 44.8284 22.5 44V40C22.5 39.1716 23.1716 38.5 24 38.5Z" fill="#D1D1D1"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7498 36.5574C17.4672 36.9716 17.713 37.889 17.2988 38.6065L15.2988 42.0706C14.8846 42.788 13.9672 43.0338 13.2498 42.6196C12.5323 42.2054 12.2865 41.288 12.7007 40.5706L14.7007 37.1065C15.1149 36.389 16.0323 36.1432 16.7498 36.5574Z" fill="#D1D1D1"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4425 31.25C11.8568 31.9674 11.611 32.8848 10.8935 33.299L7.42946 35.299C6.71202 35.7133 5.79463 35.4674 5.38042 34.75C4.9662 34.0326 5.21201 33.1152 5.92944 32.701L9.3935 30.701C10.1109 30.2868 11.0283 30.5326 11.4425 31.25Z" fill="#004ED5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 24C2.5 23.1716 3.17157 22.5 4 22.5H8C8.82843 22.5 9.5 23.1716 9.5 24C9.5 24.8284 8.82843 25.5 8 25.5H4C3.17157 25.5 2.5 24.8284 2.5 24Z" fill="#004ED5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.38042 13.25C5.79463 12.5326 6.71202 12.2868 7.42946 12.701L10.8935 14.701C11.611 15.1152 11.8568 16.0326 11.4425 16.75C11.0283 17.4675 10.1109 17.7133 9.3935 17.299L5.92944 15.299C5.21201 14.8848 4.9662 13.9674 5.38042 13.25Z" fill="#004ED5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2498 5.38042C13.9672 4.9662 14.8846 5.21201 15.2988 5.92944L17.2988 9.3935C17.713 10.1109 17.4672 11.0283 16.7498 11.4425C16.0323 11.8568 15.1149 11.611 14.7007 10.8935L12.7007 7.42946C12.2865 6.71202 12.5323 5.79463 13.2498 5.38042Z" fill="#004ED5"/>
+                        </svg>
+                        <p class="mt-3 text-center text-body2 text-Grey">Searching Axiom’s bench of legal professionals.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div x-show="step === 4 && !error" class="">
+                    <div class="flex flex-col">
+                        <div class="flex items-center mb-6">
+                            <i class="AI-icon-small min-w-[37px] mr-3"></i>
+                            <div class="flex flex-col">
+                                <p class="text-base font-medium">Are you agree to make your question public?</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col mb-4 bg-pageBg p-3 border border-LightGrey rounded-lg overflow-hidden">
+                            <span class="block mb-2 text-blue100 text-body2 font-medium">Answer:</span>
+                            <p class="text-body2">Sed ultricies sapien at ante dapibus, et euismod ex sodales. Curabitur ac luctus mauris. Ut vel sem sit amet leo molestie fringilla. Nunc nec rhoncus ipsum.Aliquam sollicitudin in eros a venenatis. Etiam at porttitor lectus. Donec ut ligula purus. Donec porttitor tellus at scelerisque volutpat. Maecenas a arcu nec sem pellentesque tristique vel eu dui. </p>
+                        </div>
+                        <div class="flex px-4 py-3 bg-LightGrey rounded-lg overflow-hidden gap-x-2">
+                            <svg class="min-w-[18px]" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+                                <path d="M9 0.54541C4.0374 0.54541 0 4.58281 0 9.54541C0 14.508 4.0374 18.5454 9 18.5454C13.9626 18.5454 18 14.508 18 9.54541C18 4.58281 13.9626 0.54541 9 0.54541ZM7.2009 13.5171L3.8592 10.1826L5.13 8.90821L7.1991 10.9737L11.9637 6.20911L13.2363 7.48171L7.2009 13.5171Z" fill="#004ED5"/>
+                            </svg>
+                            <p class="text-body2 font-medium">If you agree, your question and the Al's answer will be added to our knowledge base to help others facing similar legal issues.If you agree, your question and the Al's answer will be added to our knowledge base to help others facing similar legal issues.If you agree, your question and the Al's answer will be added to our knowledge base to help others facing similar legal issues.</p>
+                        </div>
+                        <div class="mt-6 mb-8 flex gap-x-3">
+                            <a class="button min-w-0" href="#">
+                                <span class="">Yes</span>
+                            </a>
+                            <a class="button disabled min-w-0" href="#">
+                                <span class="">No</span>
+                            </a>
+                        </div>
+                        <div class="flex items-center mb-6">
+                            <i class="AI-icon-small min-w-[37px] mr-3"></i>
+                            <div class="flex flex-col">
+                                <p class="text-base font-medium">Or connect with your local attorney</p>
+                            </div>
+                        </div>
+                        <div class="flex px-4 py-3 bg-LightGrey rounded-lg overflow-hidden gap-x-2">
+                            <svg class="min-w-[18px]" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">
+                                <path d="M9 0.54541C4.0374 0.54541 0 4.58281 0 9.54541C0 14.508 4.0374 18.5454 9 18.5454C13.9626 18.5454 18 14.508 18 9.54541C18 4.58281 13.9626 0.54541 9 0.54541ZM7.2009 13.5171L3.8592 10.1826L5.13 8.90821L7.1991 10.9737L11.9637 6.20911L13.2363 7.48171L7.2009 13.5171Z" fill="#004ED5"/>
+                            </svg>
+                            <p class="text-body2 font-medium">Lorem ipsum dolor sit amet concectetur sit amen.Lorem ipsum dolor sit amet concectetur sit amen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Error Block -->
+                <div x-show="error" class="">
+                    <div class="px-3 py-2 my-4 bg-Error2 flex items-center border border-Error3 rounded-lg w-full">
+                        <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18 9C18 11.3869 17.0518 13.6761 15.364 15.364C13.6761 17.0518 11.3869 18 9 18C6.61305 18 4.32387 17.0518 2.63604 15.364C0.948212 13.6761 0 11.3869 0 9C0 6.61305 0.948212 4.32387 2.63604 2.63604C4.32387 0.948212 6.61305 0 9 0C11.3869 0 13.6761 0.948212 15.364 2.63604C17.0518 4.32387 18 6.61305 18 9ZM9 3.375C9.22378 3.375 9.43839 3.46389 9.59662 3.62213C9.75486 3.78036 9.84375 3.99497 9.84375 4.21875V9.28125C9.84375 9.50503 9.75486 9.71964 9.59662 9.87787C9.43839 10.0361 9.22378 10.125 9 10.125C8.77622 10.125 8.56161 10.0361 8.40338 9.87787C8.24514 9.71964 8.15625 9.50503 8.15625 9.28125V4.21875C8.15625 3.99497 8.24514 3.78036 8.40338 3.62213C8.56161 3.46389 8.77622 3.375 9 3.375ZM9 14.625C9.29837 14.625 9.58452 14.5065 9.7955 14.2955C10.0065 14.0845 10.125 13.7984 10.125 13.5C10.125 13.2016 10.0065 12.9155 9.7955 12.7045C9.58452 12.4935 9.29837 12.375 9 12.375C8.70163 12.375 8.41548 12.4935 8.2045 12.7045C7.99353 12.9155 7.875 13.2016 7.875 13.5C7.875 13.7984 7.99353 14.0845 8.2045 14.2955C8.41548 14.5065 8.70163 14.625 9 14.625Z" fill="#DD0000"/>
+                        </svg>
+                        <p class="text-body2">Error</p>
+                    </div>
+                </div>
+
+                <!-- Thank You -->
+                <div x-show="step === 5" class="text-center">
+                    <p class="text-lg font-semibold ">Спасибо за участие!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('multiStepForm', () => ({
+            step: 1,
+            textInput: '',
+            formData: {
+                text: '',
+                name: '',
+                phone: '',
+                email: '',
+                zip: '',
+                terms: false
+            },
+            errors: {
+                name: '',
+                phone: '',
+                email: '',
+                zip: '',
+                terms: ''
+            },
+            loading: false,
+            error: false,
+            handleSubmitStep1() {
+                this.formData.text = this.textInput;
+                localStorage.setItem('step1', JSON.stringify({ text: this.textInput }));
+                this.step = 2;
+            },
+            validateStep2() {
+                this.errors = { name: '', phone: '', email: '', zip: '', terms: '' };
+                let valid = true;
+
+                if (!this.formData.name.trim()) {
+                    this.errors.name = 'Name is required.';
+                    valid = false;
+                }
+                if (!this.formData.phone.trim()) {
+                    this.errors.phone = 'Phone is required.';
+                    valid = false;
+                }
+                if (!this.formData.email.trim()) {
+                    this.errors.email = 'Email is required.';
+                    valid = false;
+                } else if (!/\S+@\S+\.\S+/.test(this.formData.email)) {
+                    this.errors.email = 'Invalid email format.';
+                    valid = false;
+                }
+                if (!this.formData.zip.trim()) {
+                    this.errors.zip = 'ZIP Code is required.';
+                    valid = false;
+                }
+                if (!this.formData.terms) {
+                    this.errors.terms = 'You must accept the terms.';
+                    valid = false;
+                }
+
+                return valid;
+            },
+            handleSubmitStep2() {
+                if (!this.validateStep2()) {
+                    return;
+                }
+
+                this.loading = true;
+                this.error = false;
+                this.step = 3;
+
+                setTimeout(() => {
+                    axios.post('/api/submit', this.formData)
+                        .then(() => {
+                            this.step = 4;
+                        })
+                        .catch(error => {
+                            console.error('Ошибка:', error);
+                            this.error = true;
+                            this.step = 2;
+                        })
+                        .finally(() => {
+                            this.loading = false;
+                        });
+                }, 1000);
+            },
+            handleRetry() {
+                this.error = false;
+                this.step = 2;
+            }
+        }));
+    });
+</script>
+
+    <section class="section">
+        <div class="container">
+            <div class="row gap-y-8">
+                <div class="col-span-12">
+                    <h2 class="text-h3 lg:text-Top5 font-medium tracking-12 mb-4"><span class="text-blue100">“Alabama”</span>  lawyers and law firms by practice areas or cities:</h2>
+                    <p class="text-base lg:text-body">Select a city or practice area to find lawyers and law firms in “Alabama”.</p>
+                </div>
+                <div class="col-span-12">
+                    <div class="p-10 lg:p-5 rounded-2xl overflow-hidden flex justify-center items-center w-full bg-4">
+    <div class="w-full rounded-xl bg-white p-6 lg:px-5 flex flex-col gap-y-6 lg:gap-y-6">
+        <div class="flex flex-col">
+            <span class="text-Top2 text-Text lg:text-base">List of Cities:</span>
+            <div class="flex gap-x-2 items-center mt-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+                    <path d="M2 1.5H45" stroke="#004ED5" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+                    <path d="M2 1.5H45" stroke="#004ED5" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+                </svg>
+            </div>
+        </div>
+        <div x-data="{showAllList: false, isMobile: window.innerWidth <= 768}"
+             @resize.window="isMobile = window.innerWidth <= 768"
+             class="flex flex-col">
+            <div x-cloak x-collapse
+                 x-show="isMobile ? showAllList : true"
+                 :style="isMobile && !showAllList ? 'min-height: 238px; overflow: hidden;' : ''"
+                    class="display-flex flex flex-wrap w-full md:min-h-[238px] gap-x-5 gap-y-3 lg:gap-3 overflow-hidden">
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Denver</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Lakewood</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Westminster</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Longmont</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Denver</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Broomfield</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Aurora</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Thornton</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Greeley</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Castle Rock</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Aurora</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Grand Junction</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Denver</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Lakewood</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Westminster</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Longmont</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Denver</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Broomfield</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Aurora</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Thornton</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Greeley</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Castle Rock</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Aurora</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Grand Junction</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Denver</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Lakewood</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Westminster</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Longmont</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Denver</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Broomfield</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Aurora</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Thornton</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Greeley</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Castle Rock</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Aurora</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Grand Junction</span>
+                    </a>
+                </div>
+            </div>
+            <button @click="showAllList = !showAllList"
+                    class="button mt-6 minlg:hidden"
+                    type="button"
+                    aria-label="">
+                <span x-show="!showAllList">Show more</span>
+                <span x-show="showAllList">Hide</span>
+
+            </button>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section bg-bgLight border-t border-LightGrey border-dashed">
+        <div class="container">
+            <div class="flex flex-col ">
+    <h3 class="text-Text font-medium tracking-12 text-h3 lg:text-Top5">Bankruptcy Law</h3>
+    <span class="flex items-center gap-x-2 mt-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+        </svg>
+    </span>
+</div>
+            <p class="minlg:hidden mt-4">Select a city or state to find “Bancruptcy & Debt” lawyers and law firm near you.</p>
+            <div class="swiper mySwiper3 swiper-custom mt-8 lg:pb-[72px]">
+                <div class="swiper-wrapper minlg:flex minlg:flex-wrap minlg:gap-x-5 minlg:gap-y-8">
+                    <div class="swiper-slide minlg:flex-1 minlg:basis-[calc(33.33%-14px)] minxl:basis-[calc(25%-15px)] minlg:max-w-[calc(33.33%-14px)] minxl:max-w-[calc(25%-15px)]">
+                        <div class="group p-5 lg:p-4 w-full h-full bg-white rounded-xl border border-LightGrey shadow-v1 transition-all hover:border-blue100 max-w-full">
+    <div class="rounded-lg overflow-hidden mb-5 flex items-center justify-center h-[160px]">
+        <img class="w-full h-full object-cover" src="img/Img-component-1.png" alt="What is Bankruptcy?">
+    </div>
+    <div>
+        <span class="text-base font-medium">What is Bankruptcy?</span>
+         <svg class="my-2 lg:mb-5 block" xmlns="http://www.w3.org/2000/svg" width="47" height="4" viewBox="0 0 47 4" fill="none">
+           <path class="transition-all group-hover:stroke-Yellow" d="M2 2H45" stroke="#004ED5" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+        </svg>
+        <ul class="flex flex-col gap-y-2 lg:gap-y-3 list-disc pl-6 text-body">
+            <li>Benefits of Bankruptcy</li>
+            <li>What is Bankruptcy?</li>
+            <li>Benefits of Bankruptcy</li>
+            <li>Repayments Plan</li>
+        </ul>
+    </div>
+</div>
+                    </div>
+                    <div class="swiper-slide minlg:flex-1 minlg:basis-[calc(33.33%-14px)] minxl:basis-[calc(25%-15px)] minlg:max-w-[calc(33.33%-14px)] minxl:max-w-[calc(25%-15px)]">
+                        <div class="group p-5 lg:p-4 w-full h-full bg-white rounded-xl border border-LightGrey shadow-v1 transition-all hover:border-blue100 max-w-full">
+    <div class="rounded-lg overflow-hidden mb-5 flex items-center justify-center h-[160px]">
+        <img class="w-full h-full object-cover" src="img/Img-component-1.png" alt="What is Bankruptcy?">
+    </div>
+    <div>
+        <span class="text-base font-medium">What is Bankruptcy?</span>
+         <svg class="my-2 lg:mb-5 block" xmlns="http://www.w3.org/2000/svg" width="47" height="4" viewBox="0 0 47 4" fill="none">
+           <path class="transition-all group-hover:stroke-Yellow" d="M2 2H45" stroke="#004ED5" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+        </svg>
+        <ul class="flex flex-col gap-y-2 lg:gap-y-3 list-disc pl-6 text-body">
+            <li>Benefits of Bankruptcy</li>
+            <li>What is Bankruptcy?</li>
+            <li>Benefits of Bankruptcy</li>
+            <li>Repayments Plan</li>
+        </ul>
+    </div>
+</div>
+                    </div>
+                    <div class="swiper-slide minlg:flex-1 minlg:basis-[calc(33.33%-14px)] minxl:basis-[calc(25%-15px)] minlg:max-w-[calc(33.33%-14px)] minxl:max-w-[calc(25%-15px)]">
+                        <div class="group p-5 lg:p-4 w-full h-full bg-white rounded-xl border border-LightGrey shadow-v1 transition-all hover:border-blue100 max-w-full">
+    <div class="rounded-lg overflow-hidden mb-5 flex items-center justify-center h-[160px]">
+        <img class="w-full h-full object-cover" src="img/Img-component-1.png" alt="What is Bankruptcy?">
+    </div>
+    <div>
+        <span class="text-base font-medium">What is Bankruptcy?</span>
+         <svg class="my-2 lg:mb-5 block" xmlns="http://www.w3.org/2000/svg" width="47" height="4" viewBox="0 0 47 4" fill="none">
+           <path class="transition-all group-hover:stroke-Yellow" d="M2 2H45" stroke="#004ED5" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+        </svg>
+        <ul class="flex flex-col gap-y-2 lg:gap-y-3 list-disc pl-6 text-body">
+            <li>Benefits of Bankruptcy</li>
+            <li>What is Bankruptcy?</li>
+            <li>Benefits of Bankruptcy</li>
+            <li>Repayments Plan</li>
+        </ul>
+    </div>
+</div>
+                    </div>
+                    <div class="swiper-slide minlg:flex-1 minlg:basis-[calc(33.33%-14px)] minxl:basis-[calc(25%-15px)] minlg:max-w-[calc(33.33%-14px)] minxl:max-w-[calc(25%-15px)]">
+                        <div class="group p-5 lg:p-4 w-full h-full bg-white rounded-xl border border-LightGrey shadow-v1 transition-all hover:border-blue100 max-w-full">
+    <div class="rounded-lg overflow-hidden mb-5 flex items-center justify-center h-[160px]">
+        <img class="w-full h-full object-cover" src="img/Img-component-1.png" alt="What is Bankruptcy?">
+    </div>
+    <div>
+        <span class="text-base font-medium">What is Bankruptcy?</span>
+         <svg class="my-2 lg:mb-5 block" xmlns="http://www.w3.org/2000/svg" width="47" height="4" viewBox="0 0 47 4" fill="none">
+           <path class="transition-all group-hover:stroke-Yellow" d="M2 2H45" stroke="#004ED5" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+        </svg>
+        <ul class="flex flex-col gap-y-2 lg:gap-y-3 list-disc pl-6 text-body">
+            <li>Benefits of Bankruptcy</li>
+            <li>What is Bankruptcy?</li>
+            <li>Benefits of Bankruptcy</li>
+            <li>Repayments Plan</li>
+        </ul>
+    </div>
+</div>
+                    </div>
+                    <div class="swiper-slide minlg:flex-1 minlg:basis-[calc(33.33%-14px)] minxl:basis-[calc(25%-15px)] minlg:max-w-[calc(33.33%-14px)] minxl:max-w-[calc(25%-15px)]">
+                        <div class="group p-5 lg:p-4 w-full h-full bg-white rounded-xl border border-LightGrey shadow-v1 transition-all hover:border-blue100 max-w-full">
+    <div class="rounded-lg overflow-hidden mb-5 flex items-center justify-center h-[160px]">
+        <img class="w-full h-full object-cover" src="img/Img-component-1.png" alt="What is Bankruptcy?">
+    </div>
+    <div>
+        <span class="text-base font-medium">What is Bankruptcy?</span>
+         <svg class="my-2 lg:mb-5 block" xmlns="http://www.w3.org/2000/svg" width="47" height="4" viewBox="0 0 47 4" fill="none">
+           <path class="transition-all group-hover:stroke-Yellow" d="M2 2H45" stroke="#004ED5" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+        </svg>
+        <ul class="flex flex-col gap-y-2 lg:gap-y-3 list-disc pl-6 text-body">
+            <li>Benefits of Bankruptcy</li>
+            <li>What is Bankruptcy?</li>
+            <li>Benefits of Bankruptcy</li>
+            <li>Repayments Plan</li>
+        </ul>
+    </div>
+</div>
+                    </div>
+                </div>
+                <div class="minlg:hidden">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next group">
+                        <svg class="slider-arrow slider-arrow--active" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                            <path d="M1 1.5L7 7L1 12.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg class="slider-arrow slider-arrow--noActive" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                            <path d="M1 1.5L7 7L1 12.5" stroke="#004ED5" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-prev group">
+                        <svg class="slider-arrow slider-arrow--active" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                            <path d="M8 1.5L2 7L8 12.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg class="slider-arrow slider-arrow--noActive" xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+                            <path d="M8 1.5L2 7L8 12.5" stroke="#004ED5" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section border-t border-LightGrey border-dashed">
+        <div class="container">
+            <div class="row gap-y-8">
+                <div class="col-span-12">
+                    <h2 class="text-Top5 font-medium tracking-12 mb-4">Find Lawyers in <span class="text-blue100">“Alabama”</span> in another practice areas</h2>
+                    <p class="text-base lg:text-body">Select a practice area to find lawyers and law firms in “Alabama”.</p>
+                </div>
+                <div class="col-span-12">
+                    <div class="p-10 lg:p-5 rounded-2xl overflow-hidden flex justify-center items-center w-full bg-4">
+    <div class="w-full rounded-xl bg-white p-6 lg:px-5 flex flex-col gap-y-6 lg:gap-y-6">
+        <div class="flex flex-col">
+            <span class="text-Top2 text-Text lg:text-base">List of Practice areas:</span>
+            <div class="flex gap-x-2 items-center mt-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+                    <path d="M2 1.5H45" stroke="#004ED5" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+                    <path d="M2 1.5H45" stroke="#004ED5" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+                </svg>
+            </div>
+        </div>
+        <div x-data="{showAllList: false, isMobile: window.innerWidth <= 768}"
+             @resize.window="isMobile = window.innerWidth <= 768"
+             class="flex flex-col">
+            <div x-cloak x-collapse
+                 x-show="isMobile ? showAllList : true"
+                 :style="isMobile && !showAllList ? 'min-height: 238px; overflow: hidden;' : ''"
+                    class="display-flex flex flex-wrap w-full md:min-h-[238px] gap-x-5 gap-y-3 lg:gap-3 overflow-hidden">
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Denver</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Lakewood</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Westminster</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Longmont</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Denver</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Broomfield</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Aurora</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Thornton</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Greeley</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Castle Rock</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Aurora</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Grand Junction</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Denver</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Lakewood</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Westminster</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Longmont</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Denver</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Broomfield</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Aurora</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Thornton</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Greeley</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Castle Rock</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Aurora</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Grand Junction</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Denver</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Lakewood</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Westminster</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Longmont</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Denver</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Broomfield</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Aurora</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Thornton</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Greeley</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Castle Rock</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Aurora</span>
+                    </a>
+                </div>
+                <div class="minlg:flex-1 minlg:basis-[calc(16.666%-17px)] minlg:max-w-[calc(16.666%-17px)] lg:w-fit whitespace-nowrap h-auto">
+                    <a href="#" class="h-[38px] w-fit px-3 flex items-center justify-center border border-LightGrey bg-bgLight rounded hover:bg-white hover:border-blue100 transition-all">
+                        <span class="text-body2 text-Text whitespace-nowrap">Grand Junction</span>
+                    </a>
+                </div>
+            </div>
+            <button @click="showAllList = !showAllList"
+                    class="button mt-6 minlg:hidden"
+                    type="button"
+                    aria-label="">
+                <span x-show="!showAllList">Show more</span>
+                <span x-show="showAllList">Hide</span>
+
+            </button>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section border-t border-LightGrey border-dashed">
+    <div class="container">
+        <div class="flex lg:flex-col lg:gap-x-0 gap-x-10 lg:gap-y-6 md:px-4 md:py-6 md:border md:border-LightGrey md:shadow-v1 md:rounded-xl">
+           <div class="flex flex-col">
+               <div class="flex flex-col">
+                   <div class="flex flex-col minmd:hidden">
+    <h3 class="text-Text font-medium tracking-12 md:text-Top5">Talk to us Anytime!</h3>
+    <span class="flex items-center gap-x-2 mt-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+        </svg>
+    </span>
+</div>
+                   <p class="mt-3 text-Text mb-6 minmd:hidden">We are in this together!</p>
+               </div>
+               <div id="form-img" class="xl:max-w-[400px] lg:mx-auto max-w-[578px] minlg:min-w-[500px] minxl:min-w-[578px] w-full h-full max-h-[568px] overflow-hidden rounded-2xl p-10 lg:p-5 bg-1 flex items-center justify-center">
+                   <img class="object-cover w-full h-full" src="__IMAGE_PATH__avatar-2.png" alt="Talk to us Anytime!">
+               </div>
+           </div>
+            <div class="w-full flex flex-col px-10 py-8 rounded-xl bg-white shadow-v1 border border-LightGrey md:border-none md:p-0">
+                <div id="wrapperForm">
+                    <div class="flex flex-col md:hidden">
+    <h3 class="text-Text font-medium tracking-12 @@Style_title">Talk to us Anytime!</h3>
+    <span class="flex items-center gap-x-2 mt-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+        </svg>
+    </span>
+</div>
+                    <p class="mt-3 text-Text md:hidden">We are in this together!</p>
+                    <form id="contactForm" action="" class="mt-8 md:mt-0 row gap-4 md:gap-x-0 md:gap-y-3">
+    <div class="col-span-6 md:col-span-12">
+        <div class="form-group flex flex-col items-start ">
+    <label class="mb-2 text-body md:text-body2 text-Text hidden" for="nameID"></label>
+    <input
+        class="input input-icon User-input "
+        type="text" id="nameID" placeholder="First name" name="first-name" required>
+    <small class="self-end text-body2 text-Error mt-1 hidden">Error</small>
+</div>
+    </div>
+    <div class="col-span-6 md:col-span-12">
+        <div class="form-group flex flex-col items-start ">
+    <label class="mb-2 text-body md:text-body2 text-Text hidden" for="last-nameID"></label>
+    <input
+        class="input input-icon User-input "
+        type="text" id="last-nameID" placeholder="Last name" name="second-name" required>
+    <small class="self-end text-body2 text-Error mt-1 hidden">Error</small>
+</div>
+    </div>
+    <div class="col-span-6 md:col-span-12">
+        <div class="form-group flex flex-col items-start ">
+    <label class="mb-2 text-body md:text-body2 text-Text hidden" for="phoneID"></label>
+    <input
+        class="input input-icon Phone-input "
+        type="text" id="phoneID" placeholder="Phone number" name="phone" required>
+    <small class="self-end text-body2 text-Error mt-1 hidden">Error</small>
+</div>
+    </div>
+    <div class="col-span-6 md:col-span-12">
+        <div class="form-group flex flex-col items-start ">
+    <label class="mb-2 text-body md:text-body2 text-Text hidden" for="mailID"></label>
+    <input
+        class="input input-icon Mail-input "
+        type="email" id="mailID" placeholder="Email" name="Email" required>
+    <small class="self-end text-body2 text-Error mt-1 hidden">Error</small>
+</div>
+    </div>
+    <div class="col-span-12">
+        <div class="form-group flex flex-col items-start overflow-hidden ">
+    <label class="mb-3 font-semibold text-body hidden" for="commentID"></label>
+    <textarea
+        class="input h-[161px] resize-none "
+        id="commentID" placeholder="Tell us what happend..." rows="3" name="comment"></textarea>
+</div>
+    </div>
+    <div class="col-span-12">
+        <div class="mt-4 md:mt-3">
+            <div class="flex flex-col">
+    <label class="custom-checkbox">
+        <span class="custom-checkbox__block w-[18px] min-w-[18px] h-[18px]">
+            <i class="w-[18px] min-w-[18px] h-[18px] rounded bg-white border border-blue100 flex"></i>
+        </span>
+        <input type="checkbox" name="consent">
+        <span class="checkmark">
+             <i class="Checkbox"></i>
+        </span>
+        <span class="ml-2 text-body2 text-Grey ">I consent to be contacted and i have read and agree to the <a href="#">LawyerAI privacy notice</a> and <a href="#">terms of service.*</a> </span>
+    </label>
+    <small class="text-body2 font-medium text-Error md:text-body4 mt-2 hidden">Error</small>
+</div>
+        </div>
+    </div>
+    <div class="col-span-12">
+        <button class="button w-full mt-4 md:mt-3" type="submit" aria-label="Contact Us">
+    <span class="">Contact Us</span>
+    <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+        <path d="M4.88452 0.880859L9.19988 5.00007L4.88452 9.11928" stroke="white" stroke-width="1.28571" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
+    </div>
+</form>
+
+                </div>
+                <div id="thankYouMessage" class="hidden lg:pt-5 lg:pb-0 lg:px-0 lg:bg-white rounded-2xl">
+                    <div class="flex flex-col md:hidden">
+    <h3 class="text-Text font-medium tracking-12 @@Style_title">Thank you for Contacting Us!</h3>
+    <span class="flex items-center gap-x-2 mt-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="3" viewBox="0 0 47 3" fill="none">
+          <path d="M2 1.5H45" stroke="#FFBF16" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7"/>
+        </svg>
+    </span>
+</div>
+                    <p class="mt-3 text-Text md:hidden">We will contact you with a few minutes for answering questions you need.</p>
+                    <img class="max-w-full" src="__IMAGE_PATH__ty-img.svg" alt="Thank you for Contacting!">
+                    <button id="resetFormButton" class="button w-full mt-8 md:mt-3" type="submit" aria-label="Return to the Form">
+                        <span class="">Return to the Form</span>
+                        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                            <path d="M4.88452 0.880859L9.19988 5.00007L4.88452 9.11928" stroke="white" stroke-width="1.28571" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer class="w-full mt-auto overflow-hidden py-10 lg:pb-4 lg:pt-8 bg-bgLight border-t border-LightGrey">
+    <div class="container">
+        <div class="row gap-x-5 lg:gap-y-10">
+            <div class="col-span-2 lg:col-span-12">
+                <div class="flex items-center justify-between gap-x-2">
+                    <a class="flex items-center gap-x-2" href="#">
+                        <img width="44" height="44" src="img/Logo-icon.png" alt="Logo Lawyers">
+                        <span class="text-Top3 font-semibold text-Text">Lawyers</span>
+                    </a>
+                    <a class="button minlg:hidden" href="#">
+    <span class="">Contact Us</span>
+</a>
+                </div>
+            </div>
+            <div class="col-span-4 lg:col-span-6 md:col-span-12">
+                <div class="flex minmd:justify-around gap-x-5">
+                    <ul class="flex flex-col gap-y-3 md:flex-1">
+                        <li class="flex items-center">
+                            <a class="text-body text-Text hover:text-blue101 transition-all" href="#">Class Actions</a>
+                        </li>
+                        <li class="flex items-center">
+                            <a class="text-body text-Text hover:text-blue101 transition-all" href="#">Lawyers by
+                                Location</a>
+                        </li>
+                        <li class="flex items-center">
+                            <a class="text-body text-Text hover:text-blue101 transition-all" href="#">Lawyers by Practice
+                                Area</a>
+                        </li>
+                        <li class="flex items-center">
+                            <a class="text-body text-Text hover:text-blue101 transition-all" href="#">Legal Topics Q&A</a>
+                        </li>
+                    </ul>
+                    <ul class="flex flex-col gap-y-3 md:flex-[0.5]">
+                        <li class="flex items-center">
+                            <a class="text-body text-Text hover:text-blue101 transition-all" href="#">Terms</a>
+                        </li>
+                        <li class="flex items-center">
+                            <a class="text-body text-Text hover:text-blue101 transition-all" href="#">Privacy</a>
+                        </li>
+                        <li class="flex items-center">
+                            <a class="text-body text-Text hover:text-blue101 transition-all" href="#">Disclaimer</a>
+                        </li>
+                        <li class="flex items-center">
+                            <a class="text-body text-Text hover:text-blue101 transition-all" href="#">Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-span-6 lg:col-span-6 md:col-span-12">
+                <div class="flex justify-between">
+                    <p class="text-body2 italic text-Text max-w-[440px] md:max-w-full leading-[22px]">Attorney Advertising, Prior Results Do Not Guarantee A Similar Outcome. This website is for
+                        informational purposes only and does not contain legal advice. Results may vary depending on
+                        your particular facts and legal circumstances.</p>
+                    <a class="button ml-16 lg:hidden" href="#">
+    <span class="">Contact Us</span>
+</a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-10 lg:mt-6">
+            <div class="col-span-12">
+                <div class="flex items-center justify-center pt-8 lg:pt-4 w-full border-t border-LightGrey">
+                    <span class="text-body2 text-Grey text-center">2025 © Lorem Ipsum | Created by Someone - Powered by Lorem Ipsum</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./js/scripts.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('data', () => ({
+        }))
+    })
+
+    function clearInput() {
+        document.getElementById('inputField').value = '';
+    }
+</script>
+</body>
+
+</html>
