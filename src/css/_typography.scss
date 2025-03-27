@@ -31,9 +31,32 @@ p {
 }
 
 .text-block {
+  h1, .h1 {
+    @apply text-Top4 md:text-h2Mob
+  }
+
+  h2, .h2 {
+    @apply text-h2Mob md:text-Top1
+  }
+
+  h3, .h3 {
+    @apply text-Top1 md:text-Top3
+  }
+
+  h4, .h4 {
+    @apply text-Top3 md:text-base
+  }
+
+  h5, .h5 {
+    @apply text-body
+  }
+
+  h6, .h6 {
+    @apply text-body2
+  }
 
   h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    @apply mb-2 font-medium
+    @apply mb-4 font-medium
   }
 
   a {
@@ -41,7 +64,11 @@ p {
   }
 
   ul {
-    @apply list-disc font-medium pl-6
+    @apply list-disc font-medium pl-6 mb-4
+  }
+
+  p {
+    @apply mb-4
   }
 }
 
